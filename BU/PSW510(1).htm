@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no" name="viewport">
+  <title>Detail Personal Data</title>
+
+  <!-- General CSS Files -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+  <link rel="stylesheet" href="..%LWeb_dirMenu%//assets/bootstrap-4.3.1/dist/css/bootstrap.min.css">
+  <!-- CSS Libraries -->
+
+  <!-- Template CSS -->
+  <link rel="stylesheet" href="..%LWeb_dirMenu%//assets/css/style.css">
+  <link rel="stylesheet" href="..%LWeb_dirMenu%//assets/css/components.css">
+
+  <style>
+.dropdown-menu {
+  top: 58px;
+}
+.form-group .control-label, .form-group > label { 
+  font-size: 14px;
+}
+
+.form-group, .row {
+  margin-bottom: 0px;
+}
+  </style>
+
+
+
+</head>
+
+<body onload="body_onload()">
+
+<form name="PSW530" action="lnweb" method="post">
+
+  <table>
+    <tr>
+     <td><input TYPE=hidden name=LW_PrgNo value="%LWeb_prgno%">
+     <td><input TYPE=hidden  name=LW_rmid value="%LWeb_rmid%"></td>
+     <td><input TYPE=hidden  name=LW_key value="%LW_key%"></td>
+    </tr>
+  </table>
+
+              <nav aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                  <li class="breadcrumb-item">Home</a></li>
+                  <li class="breadcrumb-item">PSW510 Personal Data</li>
+                </ol>
+
+              </nav>
+      <button name="LW_prgfun" type="submit" class="btn btn-primary" value="Prn_Print" title="Print" style="margin-left: 15px;">Print</button><br>
+
+                <div class="form-row" style="margin-left: 10px;">
+                  <div class="col">
+
+                    <div class="form-group row">
+                      <label class="col-lg-2 col-form-label">Emp. No.</label>
+                      <div class="col-lg-2">
+                        <%@LW_HField_em_noind@@class="form-control form-control-sm" @%>
+                      </div>
+                      <label class="col-lg-1 col-form-label">PIN</label>
+                      <div class="col-lg-2">
+                        <%@LW_HField_em_PIN@@class="form-control form-control-sm" @%>
+                      </div>
+                    </div>
+
+                    <div class="form-group row">
+                      <label class="col-lg-2 col-form-label">Title, Nama</label>
+                      <div class="col-lg-2">
+                        <%@LW_HField_em_title@@class="form-control form-control-sm" @%>
+                      </div>
+                      <div class="col-lg-3">
+                        <%@LW_HField_em_name@@class="form-control form-control-sm" @%>
+                      </div>
+                    </div>
+
+                    <div class="form-group row">
+                      <label class="col-lg-2 col-form-label">Address</label>
+                      <div class="col-lg-5">
+                        <%@LW_HField_em_adr1@@class="form-control form-control-sm" @%>
+                      </div>
+                    </div>
+
+                    <div class="form-group row">
+                      <label class="col-lg-2 col-form-label">&nbsp;</label>
+                      <div class="col-lg-5">
+                        <%@LW_HField_em_adr2@@class="form-control form-control-sm" @%>
+                      </div>
+                    </div>
+
+                    <div class="form-group row">
+                      <label class="col-lg-2 col-form-label">&nbsp;</label>
+                      <div class="col-lg-5">
+                        <%@LW_HField_em_adr3@@class="form-control form-control-sm" @%>
+                      </div>
+                    </div>
+
+                    <div class="form-group row">
+                      <label class="col-lg-2 col-form-label">ZIP Code</label>
+                      <div class="col-lg-1">
+                        <%@LW_HField_em_adr4@@class="form-control form-control-sm" @%>
+                      </div>
+                      <label class="col-lg-1 col-form-label">Phone</label>
+                      <div class="col-lg-3">
+                        <%@LW_HField_em_phone@@class="form-control form-control-sm" @%>
+                      </div>
+                    </div>
+
+                    <div class="form-group row">
+                      <label class="col-lg-2 col-form-label">Email Address</label>
+                      <div class="col-lg-5">
+                        <%@LW_HField_em_email@@class="form-control form-control-sm" @%>
+                      </div>
+                    </div>
+
+                    <div class="form-group row">
+                      <label class="col-lg-2 col-form-label">Nationality</label>
+                      <div class="col-lg-5">
+                        <%@LW_HField_em_nation@@class="form-control form-control-sm" @%>
+                      </div>
+                    </div>
+
+                    <div class="form-group row">
+                      <label class="col-lg-2 col-form-label">Location</label>
+                      <div class="col-lg-5">
+                        <%@LW_HField_em_Loc@@class="form-control form-control-sm" @%>
+                      </div>
+                    </div>
+
+                    <div class="form-group row">
+                      <label class="col-lg-2 col-form-label">Dept</label>
+                      <div class="col-lg-5">
+                        <%@LW_HField_em_dept@@class="form-control form-control-sm" @%>
+                      </div>
+                    </div>
+
+                    <div class="form-group row">
+                      <label class="col-lg-2 col-form-label">Position</label>
+                      <div class="col-lg-5">
+                        <%@LW_HField_em_jabat@@class="form-control form-control-sm" @%>
+                      </div>
+                    </div>
+
+                    <div class="form-group row">
+                      <label class="col-lg-2 col-form-label">Level</label>
+                      <div class="col-lg-5">
+                        <%@LW_HField_em_level@@class="form-control form-control-sm" @%>
+                      </div>
+                    </div>
+
+                    <div class="form-group row">
+                      <label class="col-lg-2 col-form-label">Status</label>
+                      <div class="col-lg-5">
+                        <%@LW_HField_em_status@@class="form-control form-control-sm" @%>
+                      </div>
+                    </div>
+
+                    <div class="form-group row">
+                      <label class="col-lg-2 col-form-label">Golkar</label>
+                      <div class="col-lg-5">
+                        <%@LW_HField_em_golkar@@class="form-control form-control-sm" @%>
+                      </div>
+                    </div>
+
+                    <div class="form-group row">
+                      <label class="col-lg-2 col-form-label">Pay period</label>
+                      <div class="col-lg-5">
+                        <%@LW_HField_em_perTyp@@class="form-control form-control-sm" @%>
+                      </div>
+                    </div>
+
+                    <div class="form-group row">
+                      <label class="col-lg-2 col-form-label">Payment</label>
+                      <div class="col-lg-5">
+                        <%@LW_HField_em_pmtTyp@@class="form-control form-control-sm" @%>
+                      </div>
+                    </div>
+
+                    <div class="form-group row">
+                      <label class="col-lg-2 col-form-label">Fund type</label>
+                      <div class="col-lg-5">
+                        <%@LW_HField_em_fundTyp@@class="form-control form-control-sm" @%>
+                      </div>
+                    </div>
+
+                    <div class="form-group row">
+                      <label class="col-lg-2 col-form-label">&nbsp;</label>
+                      <div class="col-lg-5">
+                        &nbsp;
+                      </div>
+                    </div>
+
+                    <div class="form-group row">
+                      <label class="col-lg-2 col-form-label">Lpx Option</label>
+                      <div class="col-lg-5">
+                        <%@LW_HField_lpx_option@@class="form-control form-control-sm p-0 h-75" @%>
+                      </div>
+                    </div>
+
+                    <div class="form-group row">
+                      <label class="col-lg-2 col-form-label">Printer's file</label>
+                      <div class="col-lg-5">
+                        <%@LW_HField_s_prnfile@@class="form-control form-control-sm" @%>
+                      </div>
+                    </div>
+
+                    <div class="form-group row">
+                      <label class="col-lg-2 col-form-label">&nbsp;</label>
+                      <div class="col-lg-5">
+                        &nbsp;
+                      </div>
+                    </div>
+
+                  </div>
+
+                  <div class="col">
+
+                    <div class="form-group row">
+                      <label class="col-lg-2 col-form-label">Badge Id.</label>
+                      <div class="col-lg-5">
+                        <%@LW_HField_em_badgeid@@class="form-control form-control-sm" @%>
+                      </div>
+                    </div>
+
+                    <div class="form-group row">
+                      <label class="col-lg-2 col-form-label">Gender Code</label>
+                      <div class="col-lg-5">
+                        <%@LW_HField_em_sex@@class="form-control form-control-sm" @%>
+                      </div>
+                    </div>
+
+                    <div class="form-group row">
+                      <label class="col-lg-2 col-form-label">Marital Sts.</label>
+                      <div class="col-lg-3">
+                        <%@LW_HField_em_msts@@class="form-control form-control-sm" @%>
+                      </div>
+                      <label class="col-lg-1 col-form-label">Children</label>
+                      <div class="col-lg-1">
+                        <%@LW_HField_em_anak@@class="form-control form-control-sm" @%>
+                      </div>
+                    </div>
+
+                    <div class="form-group row">
+                      <label class="col-lg-2 col-form-label">PR sts</label>
+                      <div class="col-lg-3">
+                        <%@LW_HField_em_psts@@class="form-control form-control-sm" @%>
+                      </div>
+                      <label class="col-lg-1 col-form-label">Anak</label>
+                      <div class="col-lg-1">
+                        <%@LW_HField_em_panak@@class="form-control form-control-sm" @%>
+                      </div>
+                    </div>
+
+
+                    <div class="form-group row">
+                      <label class="col-lg-2 col-form-label">Date of birth</label>
+                      <div class="col-lg-2">
+                        <%@LW_HField_em_dob@@class="form-control form-control-sm" @%>
+                      </div>
+                      <label class="col-lg-2 col-form-label">Place</label>
+                      <div class="col-lg-2">
+                        <%@LW_HField_em_pob@@class="form-control form-control-sm" @%>
+                      </div>
+                    </div>
+
+                    <div class="form-group row">
+                      <label class="col-lg-2 col-form-label">Date of hire</label>
+                      <div class="col-lg-2">
+                        <%@LW_HField_em_doh@@class="form-control form-control-sm" @%>
+                      </div>
+                      <label class="col-lg-2 col-form-label">Dt. of join</label>
+                      <div class="col-lg-2">
+                        <%@LW_HField_em_doj@@class="form-control form-control-sm" @%>
+                      </div>
+                    </div>
+
+                    <div class="form-group row">
+                      <label class="col-lg-2 col-form-label">Date of resign</label>
+                      <div class="col-lg-2">
+                        <%@LW_HField_em_dor@@class="form-control form-control-sm" @%>
+                      </div>
+                    </div>
+
+                    <div class="form-group row">
+                      <label class="col-lg-2 col-form-label">&nbsp;</label>
+                      <div class="col-lg-5">
+                        &nbsp;
+                      </div>
+                    </div>
+
+                    <div class="form-group row">
+                      <label class="col-lg-2 col-form-label">Work location</label>
+                      <div class="col-lg-5">
+                        <%@LW_HField_em_wLoc@@class="form-control form-control-sm" @%>
+                      </div>
+                    </div>
+
+                    <div class="form-group row">
+                      <label class="col-lg-2 col-form-label">Cost code</label>
+                      <div class="col-lg-5">
+                        <%@LW_HField_em_costcd@@class="form-control form-control-sm" @%>
+                      </div>
+                    </div>
+
+                    <div class="form-group row">
+                      <label class="col-lg-2 col-form-label">Job code</label>
+                      <div class="col-lg-5">
+                        <%@LW_HField_em_jobcd@@class="form-control form-control-sm" @%>
+                      </div>
+                    </div>
+
+                    <div class="form-group row">
+                      <label class="col-lg-2 col-form-label">Grade</label>
+                      <div class="col-lg-5">
+                        <%@LW_HField_em_grade@@class="form-control form-control-sm" @%>
+                      </div>
+                    </div>
+
+                    <div class="form-group row">
+                      <label class="col-lg-2 col-form-label">N.P.W.P</label>
+                      <div class="col-lg-5">
+                        <%@LW_HField_em_npwp@@class="form-control form-control-sm" @%>
+                      </div>
+                    </div>
+
+                    <div class="form-group row">
+                      <!-- <label class="col-lg-1 col-form-label">reg</label> -->
+                      <label class="col-lg-2 col-form-label">&nbsp;</label>
+                      <div class="col-lg-2">
+                        <%@LW_HField_em_npwpReg@@class="form-control form-control-sm" @%>
+                      </div>
+                      <br>
+                      <!-- <label class="col-lg-1 col-form-label">date</label> -->
+                      <label class="col-lg-1 col-form-label">&nbsp;</label>
+                      <div class="col-lg-2">
+                        <%@LW_HField_em_npwpDt@@class="form-control form-control-sm" @%>
+                      </div>
+                    </div>
+
+                    <div class="form-group row">
+                      <label class="col-lg-2 col-form-label">Jamsostek</label>
+                      <div class="col-lg-2">
+                        <%@LW_HField_em_astek@@class="form-control form-control-sm" @%>
+                      </div>
+                      <label class="col-lg-1 col-form-label">Date</label>
+                      <div class="col-lg-2">
+                        <%@LW_HField_em_astekdt@@class="form-control form-control-sm" @%>
+                      </div>
+                    </div>
+
+                    <div class="form-group row">
+                      <label class="col-lg-2 col-form-label">Shift Grp</label>
+                      <div class="col-lg-5">
+                        <%@LW_HField_em_shftGrp@@class="form-control form-control-sm" @%>
+                      </div>
+                    </div>
+
+                    <div class="form-group row">
+                      <label class="col-lg-2 col-form-label">Leave/Medi cd</label>
+                      <div class="col-lg-2">
+                        <%@LW_HField_em_leaveMedi@@class="form-control form-control-sm" @%>
+                      </div>
+                      <label class="col-lg-1 col-form-label">User GL</label>
+                      <div class="col-lg-2">
+                        <%@LW_HField_em_userGL@@class="form-control form-control-sm" @%>
+                      </div>
+                      <label class="col-lg-1 col-form-label">u. Apprv.</label>
+                      <div class="col-lg-2">
+                        <%@LW_HField_em_userApprv@@class="form-control form-control-sm" @%>
+                      </div>
+                    </div>
+                    
+                    <div class="form-group row">
+                      <label class="col-lg-2 col-form-label">Education</label>
+                      <div class="col-lg-5">
+                        <%@LW_HField_em_educ@@class="form-control form-control-sm" @%>
+                      </div>
+                    </div>                  
+
+                    <div class="form-group row">
+                      <label class="col-lg-2 col-form-label">Remark</label>
+                      <div class="col-lg-5">
+                        <%@LW_HField_em_remark@@class="form-control form-control-sm" @%>
+                      </div>
+                    </div>
+
+                    <div class="form-group row">
+                      <label class="col-lg-2 col-form-label">&nbsp;</label>
+                      <div class="col-lg-5">
+                        &nbsp;
+                      </div>
+                    </div>
+
+                  </div>
+                </div>
+
+
+            <table TABLE cellpadding=0 cellspacing=0 style="table-layout:fixed;  border-collapse:collapse">
+                <tr class="button-table" style="font-size:10pt; font-family: Sans Serif" align="center">
+              <td>No</td>
+              <td>BankCd</td>
+                    <td>Bank Description</td>
+              <td>Account No.</td>
+                    <td>Account Name</td>
+              <td>Description a</td>
+                    <td>Description b</td>
+                  </tr>
+                  <tr>
+              <td style="font-size:10pt; font-family: Sans Serif">1</td>
+              <td><input class="fixed-size1" type=TEXT disabled="disabled" %@LW_HField_em_bankcd1@%></td>
+                    <td><input class="fixed-size2" type=TEXT disabled="disabled" %@LW_HField_em_bankds1@%></td>
+              <td><input class="fixed-size2" type=TEXT disabled="disabled" %@LW_HField_em_bankac1@%></td>
+                    <td><input class="fixed-size" type=TEXT disabled="disabled" %@LW_HField_em_bankna1@%></td>
+              <td><input class="fixed-size5" type=TEXT disabled="disabled" %@LW_HField_em_bankda1@%></td>
+                    <td><input class="fixed-size" type=TEXT disabled="disabled" %@LW_HField_em_bankdb1@%></td>
+                  </tr>
+                  <tr>
+              <td style="font-size:10pt; font-family: Sans Serif">2</td>
+              <td><input class="fixed-size1" type=TEXT disabled="disabled" %@LW_HField_em_bankcd2@%></td>
+                    <td><input class="fixed-size2" type=TEXT disabled="disabled" %@LW_HField_em_bankds2@%></td>
+              <td><input class="fixed-size2" type=TEXT disabled="disabled" %@LW_HField_em_bankac2@%></td>
+                    <td><input class="fixed-size" type=TEXT disabled="disabled" %@LW_HField_em_bankna2@%></td>
+              <td><input class="fixed-size5" type=TEXT disabled="disabled" %@LW_HField_em_bankda2@%></td>
+                    <td><input class="fixed-size" type=TEXT disabled="disabled" %@LW_HField_em_bankdb2@%></td>
+                  </tr>
+                  <tr>
+              <td style="font-size:10pt; font-family: Sans Serif">3</td>
+              <td><input class="fixed-size1" type=TEXT disabled="disabled" %@LW_HField_em_bankcd3@%></td>
+                    <td><input class="fixed-size2" type=TEXT disabled="disabled" %@LW_HField_em_bankds3@%></td>
+              <td><input class="fixed-size2" type=TEXT disabled="disabled" %@LW_HField_em_bankac3@%></td>
+                    <td><input class="fixed-size" type=TEXT disabled="disabled" %@LW_HField_em_bankna3@%></td>
+              <td><input class="fixed-size5" type=TEXT disabled="disabled" %@LW_HField_em_bankda3@%></td>
+                    <td><input class="fixed-size" type=TEXT disabled="disabled" %@LW_HField_em_bankdb3@%></td>
+                  </tr>
+                  <tr>
+              <td style="font-size:10pt; font-family: Sans Serif">4</td>
+              <td><input class="fixed-size1" type=TEXT disabled="disabled" %@LW_HField_em_bankcd4@%></td>
+                    <td><input class="fixed-size2" type=TEXT disabled="disabled" %@LW_HField_em_bankds4@%></td>
+              <td><input class="fixed-size2" type=TEXT disabled="disabled" %@LW_HField_em_bankac4@%></td>
+                    <td><input class="fixed-size" type=TEXT disabled="disabled" %@LW_HField_em_bankna4@%></td>
+              <td><input class="fixed-size5" type=TEXT disabled="disabled" %@LW_HField_em_bankda4@%></td>
+                    <td><input class="fixed-size" type=TEXT disabled="disabled" %@LW_HField_em_bankdb4@%></td>
+                  </tr>
+                  <tr>
+              <td style="font-size:10pt; font-family: Sans Serif">5</td>
+              <td><input class="fixed-size1" type=TEXT disabled="disabled" %@LW_HField_em_bankcd5@%></td>
+                    <td><input class="fixed-size2" type=TEXT disabled="disabled" %@LW_HField_em_bankds5@%></td>
+              <td><input class="fixed-size2" type=TEXT disabled="disabled" %@LW_HField_em_bankac5@%></td>
+                    <td><input class="fixed-size" type=TEXT disabled="disabled" %@LW_HField_em_bankna5@%></td>
+              <td><input class="fixed-size5" type=TEXT disabled="disabled" %@LW_HField_em_bankda5@%></td>
+                    <td><input class="fixed-size" type=TEXT disabled="disabled" %@LW_HField_em_bankdb5@%></td>
+                  </tr>
+                 <tr>
+              <td style="font-size:10pt; font-family: Sans Serif">6</td>
+              <td><input class="fixed-size1" type=TEXT disabled="disabled" %@LW_HField_em_bankcd6@%></td>
+                    <td><input class="fixed-size2" type=TEXT disabled="disabled" %@LW_HField_em_bankds6@%></td>
+              <td><input class="fixed-size2" type=TEXT disabled="disabled" %@LW_HField_em_bankac6@%></td>
+                    <td><input class="fixed-size" type=TEXT disabled="disabled" %@LW_HField_em_bankna6@%></td>
+              <td><input class="fixed-size5" type=TEXT disabled="disabled" %@LW_HField_em_bankda6@%></td>
+                    <td><input class="fixed-size" type=TEXT disabled="disabled" %@LW_HField_em_bankdb6@%></td>
+                  </tr>
+               
+            </table>
+                  
+
+                <div class="table-responsive" id="iframe">
+          <!-- <script>$('#iframe').load(('..%LWeb_ifi%').replace(/\s/g,'%20'));</script> -->
+          <!-- <iframe style="border:0" width="100%" height="85%" src="..%LWeb_ifi%" id="form_head"></iframe> -->
+          <!-- <iframe width=100% height=500px frameborder=yes src="../%LWeb_dir%/%@s_prnfile@%"></iframe> -->
+        </div>
+
+              </form>
+
+
+ %@LW_onload@%
+%@LW_output@1000,500@%
+
+<!-- General JS Scripts -->
+  <script src="..%LWeb_dirMenu%//assets/js/jquery-3.3.1.min.js"></script>
+  <script src="..%LWeb_dirMenu%//assets/bootstrap-4.3.1/dist/js/bootstrap.min.js"></script>
+  <script src="..%LWeb_dirMenu%//assets/popper.min.js"></script>
+  <script src="..%LWeb_dirMenu%//assets/jquery.nicescroll.min.js"></script>
+  <script src="..%LWeb_dirMenu%//assets/moment.min.js"></script>
+  <script src="..%LWeb_dirMenu%//assets/js/stisla.js"></script>
+
+  <!-- JS Libraies -->
+
+  <!-- Page Specific JS File -->
+
+  <!-- Template JS File -->
+  <script src="..%LWeb_dirMenu%//assets/js/scripts.js"></script>
+  <script src="..%LWeb_dirMenu%//assets/js/custom.js"></script>
+</body>
+</html>

@@ -1,0 +1,144 @@
+  <!DOCTYPE html>
+  <html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no" name="viewport">
+    <title>Leave Request Record</title>
+
+    <!-- General CSS Files -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <link rel="stylesheet" href="..%LWeb_dirMenu%//assets/bootstrap-4.3.1/dist/css/bootstrap.min.css">
+    <!-- CSS Libraries -->
+
+    <!-- Template CSS -->
+    <link rel="stylesheet" href="..%LWeb_dirMenu%//assets/css/style.css">
+    <link rel="stylesheet" href="..%LWeb_dirMenu%//assets/css/components.css">
+
+    <style>
+  .dropdown-menu {
+    top: 58px;
+  }
+  .form-group .control-label, .form-group > label { 
+    font-size: 14px;
+  }
+
+  .form-group, .row {
+    margin-bottom: 0px;
+  }
+    
+  .lrn {
+    color:#34395e;
+    font-weight:600;
+    }
+    </style>
+
+
+
+  </head>
+
+  <body onload="body_onload()">
+
+  <form name="PSW210" action="lnweb" method="post">
+
+    <table>
+      <tr>
+       <td><INPUT TYPE=hidden name=LW_PrgNo value="PSW210">
+        <td><INPUT TYPE=hidden  name=LW_rmid value="%LWeb_rmid%"></td>
+        <td><INPUT TYPE=hidden  name=LW_trxno value="%LW_trxno%"></td>
+        <td><INPUT TYPE=hidden  name=LW_key value="%LW_key%"></td>
+      </tr>
+    </table>
+
+                <nav aria-label="breadcrumb">
+                  <ol class="breadcrumb">
+                    <li class="breadcrumb-item">Home</a></li>
+                    <li class="breadcrumb-item">Personal Records</a></li>
+                    <li class="breadcrumb-item active" aria-current="page"><b>PSW210 Medical Allowance Balance</b></li>
+                  </ol>
+                </nav>
+
+                  <div class="card">
+                    
+                    <div class="card-body">
+                    
+                    <div class="form-group row">
+                      <div class="col-sm-3">
+                        <button name="LW_prgfun" type="submit" class="btn btn-primary" id="PSW210_F5" value="PSW210_F5" title="Detail">Create/View Request</button>
+                      </div>
+                    </div>
+                    
+                     
+                    
+                      <div class="form-group row">
+                        <label class="col-sm-1 col-form-label">Period</label>
+                        <div class="col-sm-4">
+                          <%@LW_HField_PR_perDescr@@class="form-control form-control-sm" @%>
+                        </div>
+                      </div>
+
+                      <div class="form-group row">
+                        <label class="col-sm-1 col-form-label">Emp. No.</label>
+                        <div class="col-sm-1" style="margin-left: 0px;">
+                          <%@LW_HField_em_noind@@class="form-control form-control-sm" @%>
+                          
+                        </div>
+                        <div class="col-sm-3" style="margin-left: 0px;">
+                        <%@LW_HField_em_name@@class="form-control form-control-sm"@%>
+                          
+                        </div>
+                        
+                      </div>
+
+                      <div class="form-group row">
+                        <label class="col-sm-1 col-form-label">Dept</label>
+                        <div class="col-sm-4">
+                          <%@LW_HField_em_dept@@class="form-control form-control-sm"@%>
+                        </div>
+                      </div>
+
+                      <div class="form-group row">
+                        <label class="col-sm-1 col-form-label">Record Type</label>
+                        <div class="col-sm-4">
+                          <%@LW_HField_er_rtype@@class="form-control form-control-sm" @%>
+                        </div>
+                      </div>
+
+                      <div class="form-group row">
+                        <label class="col-sm-1 col-form-label">Balance</label>
+                        <div class="col-sm-9 row" style="margin-left: 0px;">
+                          <%@LW_HField_er_amt_q +er_amt_i -er_amt_o@@class="form-control form-control-sm" style="width: 250px;" @%>
+                        </div>
+                      </div>
+
+                      </div>
+                      
+                      
+                    </div>
+                        
+                        
+                    <div class="table-responsive" id="iframe">
+  <!--           <script>$('#iframe').load(('..%LWeb_ifi%').replace(/\s/g,'%20'));</script> -->
+            			<iframe style="border:0" width="100%" height="85%" src="..%LWeb_ifi%" id="form_head"></iframe>
+                    </div>
+                  </div>
+                </form>
+   %@LW_onload@%
+
+
+  <!-- General JS Scripts -->
+    <script src="..%LWeb_dirMenu%//assets/js/jquery-3.3.1.min.js"></script>
+    <script src="..%LWeb_dirMenu%//assets/bootstrap-4.3.1/dist/js/bootstrap.min.js"></script>
+    <script src="..%LWeb_dirMenu%//assets/popper.min.js"></script>
+    <script src="..%LWeb_dirMenu%//assets/jquery.nicescroll.min.js"></script>
+    <script src="..%LWeb_dirMenu%//assets/moment.min.js"></script>
+    <script src="..%LWeb_dirMenu%//assets/js/stisla.js"></script>
+
+    <!-- JS Libraies -->
+
+    <!-- Page Specific JS File -->
+
+    <!-- Template JS File -->
+    <script src="..%LWeb_dirMenu%//assets/js/scripts.js"></script>
+    <script src="..%LWeb_dirMenu%//assets/js/custom.js"></script>
+  </body>
+  </html>

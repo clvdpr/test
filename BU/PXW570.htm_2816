@@ -1,0 +1,565 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no" name="viewport">
+  <title>Payroll Slip</title>
+
+  <!-- General CSS Files -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+  <link rel="stylesheet" href="..%LWeb_dirMenu%//assets/bootstrap-4.3.1/dist/css/bootstrap.min.css">
+  <!-- CSS Libraries -->
+
+  <!-- Template CSS -->
+  <link rel="stylesheet" href="..%LWeb_dirMenu%//assets/css/style.css">
+  <link rel="stylesheet" href="..%LWeb_dirMenu%//assets/css/components.css">
+
+  <style>
+.dropdown-menu {
+  top: 58px;
+}
+.form-group .control-label, .form-group > label { 
+  font-size: 14px;
+}
+
+.form-group, .row {
+  margin-bottom: 0px;
+}
+  
+.lrn {
+  color:#34395e;
+  font-weight:600;
+  }
+  </style>
+
+
+
+</head>
+
+<body onload="body_onload()">
+
+<form name="PXW570" action="lnweb" method="post">
+
+  <table>
+    <tr>
+     <td><input TYPE=hidden name=LW_PrgNo value="PXW570">
+     <td><input TYPE=hidden  name=LW_rmid value="%LWeb_rmid%"></td>
+     <td><input TYPE=hidden  name=LW_key value="%LW_key%"></td>
+    </tr>
+  </table>
+
+              <nav aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                  <li class="breadcrumb-item">Home</a></li>
+                  <li class="breadcrumb-item">History</a></li>
+                  <li class="breadcrumb-item active" aria-current="page"><b>PXW570 Detail of Annual Tax Data</b></li>
+                </ol>
+              </nav>
+
+                <div class="card">
+                  <div class="card-body row">
+                   
+                  <div class="col-md-4">
+                    <div class="form-group">
+                      <div class="col-sm-12 p-0 row" style="margin-left: 0px;">
+                        <label class="col-sm-3 col-form-label lrn px-0">Seq. No.</label>
+                        <%@LW_HField_em_norut@@class="form-control form-control-sm mx-1 col-2" @%>
+                        <label class="col-sm-2 col-form-label lrn px-0 text-right">Emp. No.</label>
+                        <%@LW_HField_em_noind@@class="form-control form-control-sm mx-1 col-2" @%>
+                        <%@LW_HField_em_SPTno@@class="form-control form-control-sm mx-1 col-2" @%>
+                      </div>
+                    </div>
+
+                    <div class="form-group">
+                      <div class="col-sm-12 p-0 row" style="margin-left: 0px;">
+                        <label class="col-sm-3 col-form-label lrn px-0">Title,Name</label>
+                        <%@LW_HField_em_title@@class="form-control form-control-sm mx-1 col-2" @%>
+                        <%@LW_HField_em_name@@class="form-control form-control-sm mx-1 col-6" @%>
+                      </div>
+                    </div>
+
+                    <div class="form-group">
+                      <div class="col-sm-12 p-0 row" style="margin-left: 0px;">
+                        <label class="col-sm-3 col-form-label lrn px-0">Address</label>
+                        <%@LW_HField_em_adr1@@class="form-control form-control-sm mx-1 col-8" @%>
+                      </div>
+                    </div>
+
+                    <div class="form-group">
+                      <div class="col-sm-12 p-0 row" style="margin-left: 0px;">
+                        <label class="col-sm-3 col-form-label lrn px-0"></label>
+                        <%@LW_HField_em_adr2@@class="form-control form-control-sm mx-1 col-8" @%>
+                      </div>
+                    </div>
+
+                    <div class="form-group">
+                      <div class="col-sm-12 p-0 row" style="margin-left: 0px;">
+                        <label class="col-sm-3 col-form-label lrn px-0"></label>
+                        <%@LW_HField_em_adr3@@class="form-control form-control-sm mx-1 col-8" @%>
+                      </div>
+                    </div>
+
+                    <div class="form-group">
+                      <div class="col-sm-12 p-0 row" style="margin-left: 0px;">
+                        <label class="col-sm-3 col-form-label lrn px-0">Nationality</label>
+                        <%@LW_HField_em_nation@@class="form-control form-control-sm mx-1 col-8" @%>
+                      </div>
+                    </div>
+
+                    <div class="form-group">
+                      <div class="col-sm-12 p-0 row" style="margin-left: 0px;">
+                        <label class="col-sm-3 col-form-label lrn px-0">Email</label>
+                        <%@LW_HField_em_email@@class="form-control form-control-sm mx-1 col-8" @%>
+                      </div>
+                    </div>
+
+                    <div class="form-group">
+                      <div class="col-sm-12 p-0 row" style="margin-left: 0px;">
+                        <label class="col-sm-3 col-form-label lrn px-0">N.P.W.P</label>
+                        <%@LW_HField_em_npwp@@class="form-control form-control-sm mx-1 col-8" @%>
+                      </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="form-group">
+                      <div class="col-sm-12 p-0 row" style="margin-left: 0px;">
+                        <label class="col-sm-3 col-form-label lrn px-0">Loc</label>
+                        <%@LW_HField_em_loc@@class="form-control form-control-sm mx-1 col-4" @%>
+                      </div>
+                    </div>
+ 
+                    <div class="form-group">
+                      <div class="col-sm-12 p-0 row" style="margin-left: 0px;">
+                        <label class="col-sm-3 col-form-label lrn px-0">PIN</label>
+                        <%@LW_HField_em_pin@@class="form-control form-control-sm mx-1 col-4" @%>
+                      </div>
+                    </div>
+ 
+                    <div class="form-group">
+                      <div class="col-sm-12 p-0 row" style="margin-left: 0px;">
+                        <label class="col-sm-3 col-form-label lrn px-0">Gender Code</label>
+                        <%@LW_HField_em_sex@@class="form-control form-control-sm mx-1 col-4" @%>
+                      </div>
+                    </div>
+ 
+                    <div class="form-group">
+                      <div class="col-sm-12 p-0 row" style="margin-left: 0px;">
+                        <label class="col-sm-3 col-form-label lrn px-0">Marital Sts</label>
+                        <%@LW_HField_em_Psts@@class="form-control form-control-sm mx-1 col-4" @%>
+
+                        <label class="col-sm-2 col-form-label lrn px-0 text-right">Children</label>
+                        <%@LW_HField_em_Panak@@class="form-control form-control-sm mx-1 col-1" @%>
+                      </div>
+                    </div>
+ 
+                    <div class="form-group">
+                      <div class="col-sm-12 p-0 row" style="margin-left: 0px;">
+                        <label class="col-sm-3 col-form-label lrn px-0">Date of Hire</label>
+                        <%@LW_HField_em_doh@@class="form-control form-control-sm mx-1 col-3" @%>
+
+                        <label class="col-sm-2 col-form-label lrn px-0 text-right">Masa</label>
+                        <%@LW_HField_em_daymasa+" "+em_dayanum@@class="form-control form-control-sm mx-1 col-3" @%>
+                      </div>
+                    </div>
+ 
+                    <div class="form-group">
+                      <div class="col-sm-12 p-0 row" style="margin-left: 0px;">
+                        <label class="col-sm-3 col-form-label lrn px-0">Date of Resign</label>
+                        <%@LW_HField_em_dor@@class="form-control form-control-sm mx-1 col-3" @%>
+
+                        <label class="col-sm-2 col-form-label lrn px-0 text-right">Masa</label>
+                        <%@LW_HField_em_permasa+" "+em_peranum@@class="form-control form-control-sm mx-1 col-3" @%>
+                      </div>
+                    </div>
+        </div>
+
+        <div class="col-md-4">
+          <br>
+                    <div class="form-group">
+                      <div class="col-sm-12 p-0 row" style="margin-left: 0px;">
+                        <label class="col-sm-3 col-form-label lrn px-0">KTP</label>
+                        <%@LW_HField_em_ktpNo@@class="form-control form-control-sm mx-1 col-6" @%>
+                      </div>
+                    </div>
+
+                    <div class="form-group">
+                      <div class="col-sm-12 p-0 row" style="margin-left: 0px;">
+                        <label class="col-sm-3 col-form-label lrn px-0">Passport</label>
+                        <%@LW_HField_em_passport@@class="form-control form-control-sm mx-1 col-6" @%>
+                      </div>
+                    </div>
+
+ 
+                    <div class="form-group">
+                      <div class="col-sm-12 p-0 row" style="margin-left: 0px;">
+                        <label class="col-sm-3 col-form-label lrn px-0">Dept.</label>
+                        <%@LW_HField_em_dept@@class="form-control form-control-sm mx-1 col-6" @%>
+                      </div>
+                    </div>
+ 
+                    <div class="form-group">
+                      <div class="col-sm-12 p-0 row" style="margin-left: 0px;">
+                        <label class="col-sm-3 col-form-label lrn px-0">Position</label>
+                        <%@LW_HField_em_jabatan@@class="form-control form-control-sm mx-1 col-8" @%>
+                      </div>
+                    </div>
+
+                    <div class="form-group">
+                      <div class="col-sm-12 p-0 row" style="margin-left: 0px;">
+                        <label class="col-sm-3 col-form-label lrn px-0">Gol. Karyawan</label>
+                        <%@LW_HField_em_golkar@@class="form-control form-control-sm mx-1 col-8" @%>
+                      </div>
+                    </div>
+        
+                    <div class="form-group">
+                      <div class="col-sm-12 p-0 row" style="margin-left: 0px;">
+                        <label class="col-sm-3 col-form-label lrn px-0">Grossup Code</label>
+                        <%@LW_HField_em_grossup@@class="form-control form-control-sm mx-1 col-8" @%>
+                      </div>
+                    </div>
+        
+                    <div class="form-group">
+                      <div class="col-sm-12 p-0 row" style="margin-left: 0px;">
+                        <label class="col-sm-3 col-form-label lrn px-0">UMR Code</label>
+                        <%@LW_HField_em_umrcd@@class="form-control form-control-sm mx-1 col-8" @%>
+                      </div>
+                    </div>
+        
+        </div>
+
+            </div>
+          </div>
+
+          <div class="card">
+          <div class="card-body">
+
+                  <div class="form-group row">
+                    <label class="col-sm-2 col-form-label">1. Gaji/Pensiun/THT</label>
+                    <div class="col-sm-2">
+                        <%@LW_HField_em_N_gaji@@class="form-control form-control-sm w-100"@%>
+                    </div>
+                    <div class="col-sm-2">
+                      <%@LW_HField_em_G_gaji@@class="form-control form-control-sm w-100"@%>
+                    </div>
+                    </div>
+                    
+                  <div class="form-group row">
+                    <label class="col-sm-2 col-form-label">2. Tunjangan pph</label>
+                    <div class="col-sm-2">
+                        <%@LW_HField_em_taxal@@class="form-control form-control-sm"@%>
+                    </div>
+                    <div class="col-sm-2">
+                      <%@LW_HField_em_taxalb@@class="form-control form-control-sm"@%>
+                    </div>
+                    </div>
+
+                    <div class="form-group row">
+                      <label class="col-sm-2 col-form-label">Manual tax allowance</label>
+                      <div class="col-sm-2">
+                          <%@LW_HField_em_taxalM@@class="form-control form-control-sm"@%>
+                      </div>
+                    </div>
+                    
+                    <div class="form-group row">
+                      <label class="col-sm-2 col-form-label">3. Tunjangan lainnya, uang lembur</label>
+                      <div class="col-sm-2">
+                          <%@LW_HField_em_N_tunj@@class="form-control form-control-sm"@%>
+                      </div>
+                      <div class="col-sm-2">
+                        <%@LW_HField_em_G_tunj@@class="form-control form-control-sm"@%>
+                      </div>
+                    </div>
+
+                    <div class="form-group row">
+                      <label class="col-sm-2 col-form-label">4. Honorarium</label>
+                      <div class="col-sm-2">
+                          <%@LW_HField_em_N_honor@@class="form-control form-control-sm"@%>
+                      </div>
+                      <div class="col-sm-2">
+                        <%@LW_HField_em_G_honor@@class="form-control form-control-sm"@%>
+                      </div>
+                    </div>
+
+                    <div class="form-group row">
+                      <label class="col-sm-2 col-form-label">5. Premi Asuransi</label>
+                      <div class="col-sm-2">
+                          <%@LW_HField_em_N_premi@@class="form-control form-control-sm"@%>
+                      </div>
+                      <div class="col-sm-2">
+                        <%@LW_HField_em_G_premi@@class="form-control form-control-sm"@%>
+                      </div>
+                    </div>
+
+                    <div class="form-group row">
+                      <label class="col-sm-2 col-form-label">6. Penerimaan dalam bentuk Natura</label>
+                      <div class="col-sm-2">
+                          <%@LW_HField_em_N_Ntura@@class="form-control form-control-sm"@%>
+                      </div>
+                      <div class="col-sm-2">
+                        <%@LW_HField_em_G_Ntura@@class="form-control form-control-sm"@%>
+                      </div>
+                    </div>
+
+                    <div class="form-group row">
+                      <label class="col-sm-2 col-form-label">7. Jumlah (1 s/d 6)</label>
+                      <div class="col-sm-2">
+                      </div>
+                      <div class="col-sm-2">
+                      </div>
+                      <div class="col-sm-2">
+                          <%@LW_HField_jml_7@@class="form-control form-control-sm"@%>
+                      </div>
+                    </div>
+
+                    <div class="form-group row">
+                      <label class="col-sm-2 col-form-label">8. Tantiem, bonus</label>
+                      <div class="col-sm-2">
+                          <%@LW_HField_em_N_bonus@@class="form-control form-control-sm"@%>
+                      </div>
+                      <div class="col-sm-2">
+                        <%@LW_HField_em_G_bonus@@class="form-control form-control-sm"@%>
+                      </div>
+                    </div>
+
+                    <div class="form-group row">
+                      <label class="col-sm-2 col-form-label">9. Jumlah penghasilan bruto (7+8)</label>
+                      <div class="col-sm-2">
+                      </div>
+                      <div class="col-sm-2">
+                      </div>
+                      <div class="col-sm-2">
+                          <%@LW_HField_em_GBruto@@class="form-control form-control-sm"@%>
+                      </div>
+                    </div>
+
+                    <div class="form-group row">
+                      <label class="col-sm-2 col-form-label">10. Biaya jabatan</label>
+                      <div class="col-sm-2"></div>
+                      <div class="col-sm-2">
+                          <%@LW_HField_em_tjabat@@class="form-control form-control-sm"@%>
+                      </div>
+                    </div>
+
+                    <div class="form-group row">
+                      <label class="col-sm-2 col-form-label">11. Biaya jabatan atas bonus</label>
+                      <div class="col-sm-2"></div>
+                      <div class="col-sm-2">
+                          <%@LW_HField_em_tjabab@@class="form-control form-control-sm"@%>
+                      </div>
+                    </div>
+
+                    <div class="form-group row">
+                      <label class="col-sm-2 col-form-label">12. Iuran pensiun, THT</label>
+                      <div class="col-sm-2"></div>
+                      <div class="col-sm-2">
+                          <%@LW_HField_em_nontax@@class="form-control form-control-sm"@%>
+                      </div>
+                    </div>
+
+                    <div class="form-group row">
+                      <label class="col-sm-2 col-form-label">13. Jumlah pengurangan (10+11+12)</label>
+                      <div class="col-sm-2">
+                      </div>
+                      <div class="col-sm-2">
+                      </div>
+                      <div class="col-sm-2">
+                          <%@LW_HField_jml_13@@class="form-control form-control-sm"@%>
+                      </div>
+                    </div>
+
+                    <div class="form-group row">
+                      <label class="col-sm-2 col-form-label">14. Jumlah penghasilan Netto (9-13)</label>
+                      <div class="col-sm-2">
+                      </div>
+                      <div class="col-sm-2">
+                      </div>
+                      <div class="col-sm-2">
+                          <%@LW_HField_jml_14@@class="form-control form-control-sm"@%>
+                      </div>
+                    </div>
+
+                    <div class="form-group row">
+                      <label class="col-sm-2 col-form-label">15. Penghasilan Netto masa sebelumnya</label>
+                      <div class="col-sm-2">
+                      </div>
+                      <div class="col-sm-2">
+                          <%@LW_HField_em_pv_nsal@@class="form-control form-control-sm"@%>
+                      </div>
+                      <div class="col-sm-2">
+                          <%@LW_HField_em_pv_nett@@class="form-control form-control-sm"@%>
+                      </div>
+                    </div>
+
+                    <div class="form-group row">
+                      <label class="col-sm-2 col-form-label">16. Penghasilan Netto untuk penghitungan pph</label>
+                      <div class="col-sm-2">
+                      </div>
+                      <div class="col-sm-2">
+                      </div>
+                      <div class="col-sm-2">
+                          <%@LW_HField_em_anetto@@class="form-control form-control-sm"@%>
+                      </div>
+                    </div>
+
+                    <div class="form-group row">
+                      <label class="col-sm-2 col-form-label">17. PTKP</label>
+                      <div class="col-sm-2">
+                      </div>
+                      <div class="col-sm-2">
+                      </div>
+                      <div class="col-sm-2">
+                          <%@LW_HField_em_PTKP@@class="form-control form-control-sm"@%>
+                      </div>
+                    </div>
+
+                    <div class="form-group row">
+                      <label class="col-sm-2 col-form-label">18. PKP</label>
+                      <div class="col-sm-2">
+                      </div>
+                      <div class="col-sm-2">
+                      </div>
+                      <div class="col-sm-2">
+                          <%@LW_HField_em_PKP@@class="form-control form-control-sm"@%>
+                      </div>
+                    </div>
+
+                    <div class="form-group row">
+                      <label class="col-sm-2 col-form-label">19. Pph PASAL 21 ATAS PENGHASILAN</label>
+                      <div class="col-sm-2"></div>
+                      <div class="col-sm-2"></div>
+                      <div class="col-sm-2">
+                          <%@LW_HField_em_atax +em_ataxb@@class="form-control form-control-sm"@%>
+                      </div>
+                    </div>
+
+                    <div class="form-group row">
+                      <label class="col-sm-2 col-form-label">20. Pph PASAL 21 yang telah dipotong masa sebelumnya</label>
+                      <div class="col-sm-2">
+                      </div>
+                      <div class="col-sm-2">
+                          <%@LW_HField_em_pv_txal@@class="form-control form-control-sm"@%>
+                      </div>
+                      <div class="col-sm-2">
+                          <%@LW_HField_em_pv_tax@@class="form-control form-control-sm"@%>
+                      </div>
+                    </div>
+
+                    <div class="form-group row">
+                      <label class="col-sm-2 col-form-label">21. Pph PASAL 21 TERUTANG</label>
+                      <div class="col-sm-2">
+                      </div>
+                      <div class="col-sm-2">
+                          <%@LW_HField_em_adtaxb@@class="form-control form-control-sm"@%>
+                      </div>
+                      <div class="col-sm-2">
+                          <%@LW_HField_em_adtax@@class="form-control form-control-sm"@%>
+                      </div>
+                    </div>
+
+                    <div class="form-group row">
+                      <label class="col-sm-2 col-form-label">22. Pph PASAL 21 ditanggung pemerintah</label>
+                      <div class="col-sm-2">
+                      </div>
+                      <div class="col-sm-2">
+                      </div>
+                      <div class="col-sm-2">
+                          <%@LW_HField_em_amtaxg@@class="form-control form-control-sm"@%>
+                      </div>
+                    </div>
+
+                    <div class="form-group row">
+                      <label class="col-sm-2 col-form-label">Pph PASAL 21 ditanggung pemerintah (manual)</label>
+                      <div class="col-sm-2">
+                      </div>
+                      <div class="col-sm-2">
+                      </div>
+                      <div class="col-sm-2">
+                          <%@LW_HField_em_adtaxg@@class="form-control form-control-sm"@%>
+                      </div>
+                    </div>
+
+                    <div class="form-group row">
+                      <label class="col-sm-2 col-form-label">23. Pph PASAL 21 yg harus dipotong (21-22)</label>
+                      <div class="col-sm-2">
+                      </div>
+                      <div class="col-sm-2">
+                      </div>
+                      <div class="col-sm-2">
+                          <%@LW_HField_em_adtax +em_adtaxb -em_adtaxg -em_amtaxg@@class="form-control form-control-sm"@%>
+                      </div>
+                    </div>
+
+                    <div class="form-group row">
+                      <label class="col-sm-2 col-form-label">24. Pph PASAL 21 yg telah dipotong dan dilunasi</label>
+                      <div class="col-sm-2">
+                      </div>
+                      <div class="col-sm-2">
+                      </div>
+                      <div class="col-sm-2">
+                          <%@LW_HField_em_PaidTax@@class="form-control form-control-sm"@%>
+                      </div>
+                    </div>
+
+                    <div class="form-group row">
+                      <label class="col-sm-2 col-form-label">25. Jumlah Pph PASAL 21 yang kurang</label>
+                      <div class="col-sm-2">
+                      </div>
+                      <div class="col-sm-2">
+                      </div>
+                      <div class="col-sm-2">
+                          <%@LW_HField_em_adtax +em_adtaxb -em_adtaxg -em_amtaxg -em_PaidTax@@class="form-control form-control-sm"@%>
+                      </div>
+                    </div>
+
+                    
+                  </div>
+                </div>
+
+                  <div class="card">
+          <div class="card-body">
+
+                  <div class="form-group row">
+                    <label class="col-sm-1 col-form-label">Lpx Option</label>
+                    <div class="col-sm-5">
+                        <%@LW_HField_lpx_option@@class="form-control form-control-sm p-0 h-75@%>
+                    </div>
+                  </div>
+
+                    <div class="form-group row">
+                      <label class="col-sm-1 col-form-label">Printers File</label>
+                      <div class="col-sm-5">
+                        <%@LW_HField_s_prnfile@@class="form-control form-control-sm" @%>
+                      </div>
+                    </div>
+                    
+                  </div>
+                  <div class="card-footer">
+                    <button name="LW_fun" type="submit" class="btn btn-primary" value="print">Print</button>
+                  </div>
+                </div>
+              </form>
+
+<div>
+  <iframe width=800 height=400 frameborder=yes src="../%LWeb_dir%/%@s_prnfile@%"></iframe>
+</div>
+ %@LW_onload@%
+
+
+<!-- General JS Scripts -->
+  <script src="..%LWeb_dirMenu%//assets/js/jquery-3.3.1.min.js"></script>
+  <script src="..%LWeb_dirMenu%//assets/bootstrap-4.3.1/dist/js/bootstrap.min.js"></script>
+  <script src="..%LWeb_dirMenu%//assets/popper.min.js"></script>
+  <script src="..%LWeb_dirMenu%//assets/jquery.nicescroll.min.js"></script>
+  <script src="..%LWeb_dirMenu%//assets/moment.min.js"></script>
+  <script src="..%LWeb_dirMenu%//assets/js/stisla.js"></script>
+
+  <!-- JS Libraies -->
+
+  <!-- Page Specific JS File -->
+
+  <!-- Template JS File -->
+  <script src="..%LWeb_dirMenu%//assets/js/scripts.js"></script>
+  <script src="..%LWeb_dirMenu%//assets/js/custom.js"></script>
+</body>
+</html> 

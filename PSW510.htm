@@ -1,0 +1,599 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, viewport-fit=cover" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="theme-color" content="#000000" />
+    <title>%LWeb_title%</title>
+    <meta name="description" content="Larona Time Record" />
+    <meta name="keywords" content="Time Record, Absensi, Absen, Larona, Aplikasi Absen" />
+    <link rel=" icon" type="image/png" href="..%LWeb_dirMenu%/assets/mobile/img/icon/android-icon-36x36.png" sizes="36x36" />
+    <link rel="apple-touch-icon" sizes="180x180" href="..%LWeb_dirMenu%/assets/mobile/img/icon/android-icon-192x192.png" />
+    <link rel="stylesheet" href="..%LWeb_dirMenu%/assets/mobile/css/style.css" />
+    <link href="https://code.jquery.com/ui/1.12.1/themes/dot-luv/jquery-ui.css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Concert+One&family=Dosis&family=Lato&family=Merriweather&family=Montserrat&family=Noto+Sans&family=Nunito+Sans&family=Open+Sans&family=Oswald&family=PT+Sans&family=Prompt&family=Raleway&family=Roboto&family=Slabo+27px&family=Source+Sans+Pro&family=Work+Sans&display=swap"
+      rel="stylesheet" />
+
+    <!-- TB_print Color Function  -->
+    <style>
+      .appheader,
+      .headerButton {
+        background: %LW_color_hd_bg% !important;
+        color: %LW_color_hd_tx% !important;
+        border-bottom-color: %LW_color_hd_bg% !important;
+      }
+
+      .nav-tabs.lined .nav-item .nav-link.active,
+      .form-group.basic .form-control:focus {
+        color: %LW_color_hd_bg% !important;
+        border-bottom-color: %LW_color_hd_bg% !important;
+      }
+
+      .form-group .label,
+      .form-group .input-wrapper.active .label {
+        color: %LW_color_hd_bg% !important;
+      }
+
+      .buttonlw {
+        background: %LW_color_hd_bg% !important;
+        border-color: %LW_color_hd_bg% !important;
+        color: %LW_color_hd_tx% !important;
+      }
+    </style>
+    <!-- TB_print Color Function  -->
+  </head>
+
+  <body onload="body_onload()">
+    <form name="PSW510" action="lnweb" method="post">
+      <!-- LW Function  -->
+      <input type="hidden" name="LW_PrgNo" value="PSW510" />
+      <input type="hidden" name="LW_rmid" value="%LWeb_rmid%" />
+      <input type="hidden" name="LW_trxno" value="%LW_trxno%" />
+      <input name="LW_key" type="text" hidden />
+      <!-- LW Function  -->
+
+      <!-- loader -->
+      <div id="loader">
+        <!-- <img src="..%LWeb_dirMenu%/assets/mobile/img/logo_larona_160x160.png" alt="icon" class="loading-icon" /> -->
+        <img src="..%LWeb_dirMenu%/assets/mobile/img/logo-press.svg" alt="icon" class="loading-icon" />
+      </div>
+
+      <!-- * loader-->
+
+      <!-- Iconed Action Sheet -->
+      <div class="modal fade action-sheet" id="actionSheetIconed" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title">%LWeb_title%</h5>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- * Iconed Action Sheet -->
+
+      <!-- App Header -->
+      <div class="appHeader">
+        <div class="left">
+          <a href="#" type="button" onclick="location.href='lnweb?PSW510%rmid%';" class="headerButton">
+            <ion-icon name="refresh-outline"></ion-icon>
+          </a>
+        </div>
+        <div class="pageTitle">%LWeb_title%</div>
+        <div class="right">
+          <button class="btn btn-list pr0" type="submit" name="LW_prgfun" value="Prn_Print">
+            <a class="headerButton item pr0">
+              <ion-icon name="print"></ion-icon>
+            </a>
+          </button>
+        </div>
+      </div>
+      <!-- * App Header -->
+
+      <!-- App Capsule -->
+      <div id="appCapsule">
+        <div class="section full mt-5">
+          <!-- CARD  -->
+          <div class="card">
+            <div class="card-body pt-0">
+              <ul class="nav nav-tabs lined" role="tablist">
+                <li class="nav-item">
+                  <a class="nav-link active" data-bs-toggle="tab" href="#section1" role="tab">
+                    <ion-icon name="person"></ion-icon>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" data-bs-toggle="tab" href="#section2" role="tab">
+                    <ion-icon name="briefcase"></ion-icon>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" data-bs-toggle="tab" href="#section3" role="tab">
+                    <ion-icon name="document-text"></ion-icon>
+                  </a>
+                </li>
+              </ul>
+
+              <div class="tab-content mt-2">
+                <!-- Tab Content 1  -->
+                <div class="tab-pane fade active show" id="section1" role="tabpanel">
+                  <div class="form-group basic">
+                    <div class="row">
+                      <div class="input-wrapper col-6">
+                        <label class="label">Emp No.</label>
+                        <%@LW_HField_em_noind@@class="form-control"@%>
+                        <i class="clear-input">
+                          <ion-icon name="close-circle"></ion-icon>
+                        </i>
+                      </div>
+                      <div class="input-wrapper col-6">
+                        <label class="label">PIN</label>
+                        <%@LW_HField_em_PIN@@class="form-control"@%>
+                        <i class="clear-input">
+                          <ion-icon name="close-circle"></ion-icon>
+                        </i>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="form-group basic">
+                    <div class="row">
+                      <div class="input-wrapper col-3">
+                        <label class="label">Title</label>
+                        <%@LW_HField_em_title@@class="form-control"@%>
+                        <i class="clear-input">
+                          <ion-icon name="close-circle"></ion-icon>
+                        </i>
+                      </div>
+                      <div class="input-wrapper col-9">
+                        <label class="label">Nama</label>
+                        <%@LW_HField_em_name@@class="form-control"@%>
+                        <i class="clear-input">
+                          <ion-icon name="close-circle"></ion-icon>
+                        </i>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="form-group basic">
+                    <div class="input-wrapper">
+                      <label class="label">Address</label>
+                      <%@LW_HField_em_adr1@@class="form-control"@%>
+                      <i class="clear-input">
+                        <ion-icon name="close-circle"></ion-icon>
+                      </i>
+                    </div>
+                  </div>
+
+                  <div class="form-group basic">
+                    <div class="row">
+                      <div class="input-wrapper col-6">
+                        <label class="label"></label>
+                        <%@LW_HField_em_adr3@@class="form-control"@%>
+                        <i class="clear-input">
+                          <ion-icon name="close-circle"></ion-icon>
+                        </i>
+                      </div>
+                      <div class="input-wrapper col-6">
+                        <label class="label"></label>
+                        <%@LW_HField_em_adr2@@class="form-control"@%>
+                        <i class="clear-input">
+                          <ion-icon name="close-circle"></ion-icon>
+                        </i>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="form-group basic">
+                    <div class="row">
+                      <div class="input-wrapper col-6">
+                        <label class="label">Phone</label>
+                        <%@LW_HField_em_phone@@class="form-control"@%>
+                        <i class="clear-input">
+                          <ion-icon name="close-circle"></ion-icon>
+                        </i>
+                      </div>
+                      <div class="input-wrapper col-6">
+                        <label class="label">Zip Code</label>
+                        <%@LW_HField_em_adr4@@class="form-control"@%>
+                        <i class="clear-input">
+                          <ion-icon name="close-circle"></ion-icon>
+                        </i>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="form-group basic">
+                    <div class="input-wrapper">
+                      <label class="label">Email</label>
+                      <%@LW_HField_em_email@@class="form-control"@%>
+                      <i class="clear-input">
+                        <ion-icon name="close-circle"></ion-icon>
+                      </i>
+                    </div>
+                  </div>
+
+                  <div class="form-group basic">
+                    <div class="row">
+                      <div class="input-wrapper col-6">
+                        <label class="label">Nationality</label>
+                        <%@LW_HField_em_nation@@class="form-control"@%>
+                        <i class="clear-input">
+                          <ion-icon name="close-circle"></ion-icon>
+                        </i>
+                      </div>
+                      <div class="input-wrapper col-6">
+                        <label class="label">Badge ID</label>
+                        <%@LW_HField_em_badgeid@@class="form-control"@%>
+                        <i class="clear-input">
+                          <ion-icon name="close-circle"></ion-icon>
+                        </i>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="form-group basic">
+                    <div class="input-wrapper">
+                      <label class="label">Gender Code</label>
+                      <%@LW_HField_em_sex@@class="form-control"@%>
+                      <i class="clear-input">
+                        <ion-icon name="close-circle"></ion-icon>
+                      </i>
+                    </div>
+                  </div>
+
+                  <div class="form-group basic">
+                    <div class="row">
+                      <div class="input-wrapper col-6">
+                        <label class="label">Marital Sts</label>
+                        <%@LW_HField_em_msts@@class="form-control"@%>
+                        <i class="clear-input">
+                          <ion-icon name="close-circle"></ion-icon>
+                        </i>
+                      </div>
+                      <div class="input-wrapper col-6">
+                        <label class="label">Children</label>
+                        <%@LW_HField_em_anak@@class="form-control"@%>
+                        <i class="clear-input">
+                          <ion-icon name="close-circle"></ion-icon>
+                        </i>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="form-group basic">
+                    <div class="row">
+                      <div class="input-wrapper col-6">
+                        <label class="label">PR Sts</label>
+                        <%@LW_HField_em_psts@@class="form-control"@%>
+                        <i class="clear-input">
+                          <ion-icon name="close-circle"></ion-icon>
+                        </i>
+                      </div>
+                      <div class="input-wrapper col-6">
+                        <label class="label">Anak</label>
+                        <%@LW_HField_em_panak@@class="form-control"@%>
+                        <i class="clear-input">
+                          <ion-icon name="close-circle"></ion-icon>
+                        </i>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="form-group basic">
+                    <div class="row">
+                      <div class="input-wrapper col-6">
+                        <label class="label">Date of Birth</label>
+                        <%@LW_HField_em_dob@@class="form-control"@%>
+                        <i class="clear-input">
+                          <ion-icon name="close-circle"></ion-icon>
+                        </i>
+                      </div>
+                      <div class="input-wrapper col-6">
+                        <label class="label">Place</label>
+                        <%@LW_HField_em_pob@@class="form-control"@%>
+                        <i class="clear-input">
+                          <ion-icon name="close-circle"></ion-icon>
+                        </i>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- Tab Content 1  -->
+
+                <!-- Tab Content 2  -->
+                <div class="tab-pane fade" id="section2" role="tabpanel">
+                  <div class="form-group basic">
+                    <div class="input-wrapper">
+                      <label class="label">Location</label>
+                      <%@LW_HField_em_Loc@@class="form-control"@%>
+                      <i class="clear-input">
+                        <ion-icon name="close-circle"></ion-icon>
+                      </i>
+                    </div>
+                  </div>
+
+                  <div class="form-group basic">
+                    <div class="row">
+                      <div class="input-wrapper col-6">
+                        <label class="label">Department</label>
+                        <%@LW_HField_em_dept@@class="form-control"@%>
+                        <i class="clear-input">
+                          <ion-icon name="close-circle"></ion-icon>
+                        </i>
+                      </div>
+                      <div class="input-wrapper col-6">
+                        <label class="label">Position</label>
+                        <%@LW_HField_em_jabat@@class="form-control"@%>
+                        <i class="clear-input">
+                          <ion-icon name="close-circle"></ion-icon>
+                        </i>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="form-group basic">
+                    <div class="row">
+                      <div class="input-wrapper col-6">
+                        <label class="label">Level</label>
+                        <%@LW_HField_em_level@@class="form-control"@%>
+                        <i class="clear-input">
+                          <ion-icon name="close-circle"></ion-icon>
+                        </i>
+                      </div>
+                      <div class="input-wrapper col-6">
+                        <label class="label">Status</label>
+                        <%@LW_HField_em_status@@class="form-control"@%>
+                        <i class="clear-input">
+                          <ion-icon name="close-circle"></ion-icon>
+                        </i>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="form-group basic">
+                    <div class="input-wrapper">
+                      <label class="label">Golkar</label>
+                      <%@LW_HField_em_golkar@@class="form-control"@%>
+                      <i class="clear-input">
+                        <ion-icon name="close-circle"></ion-icon>
+                      </i>
+                    </div>
+                  </div>
+
+                  <div class="form-group basic">
+                    <div class="row">
+                      <div class="input-wrapper col-6">
+                        <label class="label">Pay Period</label>
+                        <%@LW_HField_em_perTyp@@class="form-control"@%>
+                        <i class="clear-input">
+                          <ion-icon name="close-circle"></ion-icon>
+                        </i>
+                      </div>
+                      <div class="input-wrapper col-6">
+                        <label class="label">Payment</label>
+                        <%@LW_HField_em_pmtTyp@@class="form-control"@%>
+                        <i class="clear-input">
+                          <ion-icon name="close-circle"></ion-icon>
+                        </i>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="form-group basic">
+                    <div class="input-wrapper">
+                      <label class="label">Fund Type</label>
+                      <%@LW_HField_em_FundTyp@@class="form-control"@%>
+                      <i class="clear-input">
+                        <ion-icon name="close-circle"></ion-icon>
+                      </i>
+                    </div>
+                  </div>
+
+                  <div class="form-group basic">
+                    <div class="row">
+                      <div class="input-wrapper col-6">
+                        <label class="label">Date of Hire</label>
+                        <%@LW_HField_em_doh@@class="form-control"@%>
+                        <i class="clear-input">
+                          <ion-icon name="close-circle"></ion-icon>
+                        </i>
+                      </div>
+                      <div class="input-wrapper col-6">
+                        <label class="label">Date of Join</label>
+                        <%@LW_HField_em_doj@@class="form-control"@%>
+                        <i class="clear-input">
+                          <ion-icon name="close-circle"></ion-icon>
+                        </i>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="form-group basic">
+                    <div class="input-wrapper">
+                      <label class="label">Date of Resign</label>
+                      <%@LW_HField_em_dor@@class="form-control"@%>
+                      <i class="clear-input">
+                        <ion-icon name="close-circle"></ion-icon>
+                      </i>
+                    </div>
+                  </div>
+                </div>
+                <!-- Tab Content 2  -->
+
+                <!-- Tab Content 3  -->
+                <div class="tab-pane fade" id="section3" role="tabpanel">
+                  <div class="form-group basic">
+                    <div class="row">
+                      <div class="input-wrapper col-6">
+                        <label class="label">Work Location</label>
+                        <%@LW_HField_em_wLoc@@class="form-control"@%>
+                        <i class="clear-input">
+                          <ion-icon name="close-circle"></ion-icon>
+                        </i>
+                      </div>
+                      <div class="input-wrapper col-6">
+                        <label class="label">Cust Code</label>
+                        <%@LW_HField_em_costcd@@class="form-control"@%>
+                        <i class="clear-input">
+                          <ion-icon name="close-circle"></ion-icon>
+                        </i>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="form-group basic">
+                    <div class="row">
+                      <div class="input-wrapper col-6">
+                        <label class="label">Job Code</label>
+                        <%@LW_HField_em_jobcd@@class="form-control"@%>
+                        <i class="clear-input">
+                          <ion-icon name="close-circle"></ion-icon>
+                        </i>
+                      </div>
+                      <div class="input-wrapper col-6">
+                        <label class="label">Grade</label>
+                        <%@LW_HField_em_grade@@class="form-control"@%>
+                        <i class="clear-input">
+                          <ion-icon name="close-circle"></ion-icon>
+                        </i>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="form-group basic">
+                    <div class="input-wrapper">
+                      <label class="label">N.P.W.P</label>
+                      <%@LW_HField_em_npwp@@class="form-control"@%>
+                      <i class="clear-input">
+                        <ion-icon name="close-circle"></ion-icon>
+                      </i>
+                    </div>
+                  </div>
+
+                  <div class="form-group basic">
+                    <div class="row">
+                      <div class="input-wrapper col-6">
+                        <label class="label">Reg 1</label>
+                        <%@LW_HField_em_npwpReg@@class="form-control"@%>
+                        <i class="clear-input">
+                          <ion-icon name="close-circle"></ion-icon>
+                        </i>
+                      </div>
+                      <div class="input-wrapper col-6">
+                        <label class="label">Date</label>
+                        <%@LW_HField_em_npwpDt@@class="form-control"@%>
+                        <i class="clear-input">
+                          <ion-icon name="close-circle"></ion-icon>
+                        </i>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="form-group basic">
+                    <div class="row">
+                      <div class="input-wrapper col-6">
+                        <label class="label">Jamsostek</label>
+                        <%@LW_HField_em_astek@@class="form-control"@%>
+                        <i class="clear-input">
+                          <ion-icon name="close-circle"></ion-icon>
+                        </i>
+                      </div>
+                      <div class="input-wrapper col-6">
+                        <label class="label">Date</label>
+                        <%@LW_HField_em_astekDt@@class="form-control"@%>
+                        <i class="clear-input">
+                          <ion-icon name="close-circle"></ion-icon>
+                        </i>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="form-group basic">
+                    <div class="row">
+                      <div class="input-wrapper col-6">
+                        <label class="label">Shift Group</label>
+                        <%@LW_HField_em_shftGrp@@class="form-control"@%>
+                        <i class="clear-input">
+                          <ion-icon name="close-circle"></ion-icon>
+                        </i>
+                      </div>
+                      <div class="input-wrapper col-6">
+                        <label class="label">Leave / Medicd</label>
+                        <%@LW_HField_em_leaveMedi@@class="form-control"@%>
+                        <i class="clear-input">
+                          <ion-icon name="close-circle"></ion-icon>
+                        </i>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="form-group basic">
+                    <div class="row">
+                      <div class="input-wrapper col-6">
+                        <label class="label">User GL</label>
+                        <%@LW_HField_em_userGL@@class="form-control"@%>
+                        <i class="clear-input">
+                          <ion-icon name="close-circle"></ion-icon>
+                        </i>
+                      </div>
+                      <div class="input-wrapper col-6">
+                        <label class="label">User Approve</label>
+                        <%@LW_HField_em_userApprv@@class="form-control"@%>
+                        <i class="clear-input">
+                          <ion-icon name="close-circle"></ion-icon>
+                        </i>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="form-group basic">
+                    <div class="row">
+                      <div class="input-wrapper col-6">
+                        <label class="label">Education</label>
+                        <%@LW_HField_em_educ@@class="form-control"@%>
+                        <i class="clear-input">
+                          <ion-icon name="close-circle"></ion-icon>
+                        </i>
+                      </div>
+                      <div class="input-wrapper col-6">
+                        <label class="label">Remark</label>
+                        <%@LW_HField_em_remark@@class="form-control"@%>
+                        <i class="clear-input">
+                          <ion-icon name="close-circle"></ion-icon>
+                        </i>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- Tab Content 3  -->
+              </div>
+            </div>
+          </div>
+          <!-- CARD  -->
+        </div>
+
+        <div class="section mt-2">
+          <iframe
+            width="100%"
+            height="480px"
+            frameborder="0"
+            src="https://docs.google.com/viewer?url=devi.larona.id%LWeb_dir%/%@s_prnfile@%&embedded=true"
+            style="margin-top: 10px"></iframe>
+        </div>
+      </div>
+      <!-- * App Capsule -->
+    </form>
+
+    <!-- Base Js File -->
+    <script src="..%LWeb_dirMenu%/assets/mobile/js/lib/bootstrap.bundle.min.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <script src="..%LWeb_dirMenu%/assets/mobile/js/base.js"></script>
+    <!-- Base Js File -->
+  </body>
+</html>

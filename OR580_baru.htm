@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, viewport-fit=cover" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="theme-color" content="#000000" />
+    <title>%LWeb_title%</title>
+    <meta name="description" content="Larona Time Record" />
+    <meta name="keywords" content="Time Record, Absensi, Absen, Larona, Aplikasi Absen" />
+    <link rel=" icon" type="image/png" href="..%LWeb_dirMenu%/assets/mobile/img/icon/android-icon-36x36.png" sizes="36x36" />
+    <link rel="apple-touch-icon" sizes="180x180" href="..%LWeb_dirMenu%/assets/mobile/img/icon/android-icon-192x192.png" />
+    <link rel="stylesheet" href="..%LWeb_dirMenu%/assets/mobile/css/style.css" />
+    <link href="https://code.jquery.com/ui/1.12.1/themes/dot-luv/jquery-ui.css" rel="stylesheet" />
+
+    <!-- TB_print Color Function  -->
+    <style>
+      .appheader,
+      .headerButton {
+        background: %LW_color_hd_bg% !important;
+        color: %LW_color_hd_tx% !important;
+        border-bottom-color: %LW_color_hd_bg% !important;
+      }
+
+      .nav-tabs.lined .nav-item .nav-link.active,
+      .form-group.basic .form-control:focus {
+        color: %LW_color_hd_bg% !important;
+        border-bottom-color: %LW_color_hd_bg% !important;
+      }
+
+      .form-group .label,
+      .form-group .input-wrapper.active .label {
+        color: %LW_color_hd_bg% !important;
+      }
+
+      .buttonlw {
+        background: %LW_color_hd_bg% !important;
+        border-color: %LW_color_hd_bg% !important;
+        color: %LW_color_hd_tx% !important;
+      }
+    </style>
+    <!-- TB_print Color Function  -->
+  </head>
+
+  <body onload="body_onload()">
+    <form name="OR580" action="lnweb" method="post">
+      <!-- LW Function  -->
+      <input class="form-control" type="hidden" name="LW_PrgNo" value="OR580" />
+      <input class="form-control" type="hidden" name="LW_rmid" value="%LWeb_rmid%" />
+      <input class="form-control" type="hidden" name="LW_key" value="%LW_key%" />
+      <input type="hidden" name="LW_delrec" value="delete" />
+
+      <!-- LW Function  -->
+
+      <!-- loader -->
+      <div id="loader">
+        <img src="..%LWeb_dirMenu%/assets/mobile/img/logo-press.svg" alt="icon" class="loading-icon" />
+      </div>
+
+      <!-- * loader-->
+
+      <!-- Iconed Action Sheet -->
+      <div class="modal fade action-sheet" id="actionSheetIconed" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title">%LWeb_title%</h5>
+            </div>
+            <div class="modal-body">
+              <ul class="action-button-list">
+                <li>
+                    %@LW_Button_OR580_F3@@<button type="submit" name="LW_prgfun" value="OR580_F3" class="btn btn-list" data-bs-dismiss="modal">
+                    <span>
+                      <ion-icon name="create-outline"></ion-icon>
+                      Create
+                    </span>
+                  </button>@%
+                </li>
+                <li>
+                    %@LW_Button_OR580_F5@@<button type="submit" name="LW_prgfun" value="OR580_F5" class="btn btn-list" data-bs-dismiss="modal">
+                    <span>
+                      <ion-icon name="document-text-outline"></ion-icon>
+                      Detail
+                    </span>
+                  </button>@%
+                </li>
+                <li>
+                    %@LW_Button_OR580_F6@@<button type="submit" name="LW_prgfun" value="OR580_F6" class="btn btn-list" data-bs-dismiss="modal">
+                    <span>
+                      <ion-icon name="people-outline"></ion-icon>
+                      Group Done
+                    </span>
+                  </button>@%
+                </li>
+
+                <li>
+                    %@LW_Button_OR580_F6@@<button type="submit" name="LW_prgfun" value="OR580_F7" class="btn btn-list" data-bs-dismiss="modal">
+                    <span>
+                      <ion-icon name="print-outline">Print</ion-icon>
+                      Print
+                    </span>
+                  </button>@%
+                </li>
+
+                <li>
+                    %@LW_Button_delete@@<button type="button" value="delete" onClick="confirm_del(document.all.LW_key.value)" class="btn btn-list text-danger" data-bs-dismiss="modal">
+                    <span>
+                      <ion-icon name="trash-outline"></ion-icon>
+                      Delete
+                    </span>
+                  </button>@%
+                </li>
+
+                <li class="action-divider"></li>
+                <li>
+                  <a href="#" class="btn btn-list text-danger" data-bs-dismiss="modal">
+                    <span>
+                      <ion-icon name="close-outline"></ion-icon>
+                      Cancel
+                    </span>
+                  </a>
+                </li>
+
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- * Iconed Action Sheet -->
+
+      <!-- App Header -->
+      <div class="appHeader">
+        <div class="left">
+          <a href="#" type="button" onclick="location.href='lnweb?OR580%rmid%';" class="headerButton">
+            <ion-icon name="refresh-outline"></ion-icon>
+          </a>
+        </div>
+        <div class="pageTitle">%LWeb_title%</div>
+        <div class="right">
+          <a href="#" class="headerButton item" data-bs-toggle="modal" data-bs-target="#actionSheetIconed">
+            <ion-icon name="menu-outline"></ion-icon>
+          </a>
+        </div>
+      </div>
+      <!-- * App Header -->
+
+      <!-- App Capsule -->
+      <div id="appCapsule">
+        <div class="section full mt-5">
+          <iframe width="100%" height="485px" frameborder="0" src="..%LWeb_ifi%"></iframe>
+        </div>
+      </div>
+      <!-- * App Capsule -->
+    </form>
+
+    <!-- Base Js File -->
+    <script src="..%LWeb_dirMenu%/assets/mobile/js/lib/bootstrap.bundle.min.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <script src="..%LWeb_dirMenu%/assets/mobile/js/base.js"></script>
+    <!-- Base Js File -->
+  </body>
+</html>

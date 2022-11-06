@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en" class=" ">
+  <!-- HEAD START -->
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>%LWeb_title%</title>
+    <meta content="Larona Employee Self Service" name="description" />
+    <meta content="Larona" name="Larona" />
+    <link rel="manifest" href="..%LWeb_dirMenu%//assets/press/assets/images/icons/manifest.json" />
+    <meta name="msapplication-TileColor" content="#ffffff" />
+    <meta name="msapplication-TileImage" content="..%LWeb_dirMenu%//assets/press/assets/images/icons/ms-icon-144x144.png" />
+    <meta name="theme-color" content="#ffffff" />
+
+    <!-- CORE CSS FRAMEWORK START -->
+    <link rel="stylesheet" media="screen" type="text/css" href="..%LWeb_dirMenu%//assets/press/assets/css/preloader.css" />
+    <link rel="stylesheet" media="screen" type="text/css" href="..%LWeb_dirMenu%//assets/press/modules/materialize/materialize.min.css" />
+    <link rel="stylesheet" media="screen" type="text/css" href="..%LWeb_dirMenu%//assets/press/modules/fonts/mdi/appicon/appicon.css" />
+    <link rel="stylesheet" media="screen" type="text/css" href="..%LWeb_dirMenu%//assets/press/modules/fonts/mdi/materialdesignicons.min.css" />
+    <link rel="stylesheet" media="screen" type="text/css" href="..%LWeb_dirMenu%//assets/press/modules/perfect-scrollbar/perfect-scrollbar.css" />
+    <!-- CORE CSS FRAMEWORK END -->
+
+    <!-- CORE CSS TEMPLATE START -->
+    <link rel="stylesheet" media="screen" type="text/css" id="main-style" href="..%LWeb_dirMenu%//assets/press/assets/css/style.css" />
+    <!-- CORE CSS TEMPLATE END -->
+
+    <!-- OTHER STYLE INCLUDED ON THIS PAGE START -->
+    <style>
+      input[type='text'] {
+        direction: ltr;
+      }
+      .dropdown-content {
+        height: 195px;
+      }
+    </style>
+    <!-- OTHER STYLE INCLUDED ON THIS PAGE END -->
+
+    <!-- /* Tb_print color function */ -->
+    <style>
+      /* Background Body  */
+      .bodylw,
+      li.tab.col.s4,
+      .input-field.col:read-only,
+      .input-field:read-only {
+        background: %LW_color_bg% !important;
+        color: %LW_color_tx% !important;
+      }
+
+      /* Background Header  */
+      .headerlw,
+      .pagehead-bg,
+      .tabs .tab a.active,
+      .tabs .indicator {
+        background: %LW_color_hd_bg% !important;
+        color: %LW_color_hd_tx% !important;
+        border-color: #6ealcc !important;
+      }
+
+      /* Button Color  */
+      .buttonlw {
+        background: %LW_color_hd_bg% !important;
+        color: %LW_color_hd_tx% !important;
+      }
+
+      /* ==============================TABLE============================ */
+
+      /* Header Table  */
+      .ui-widget-header,
+      select {
+        background: %LW_color_ch_bg% !important;
+        color: %LW_color_ch_tx% !important;
+      }
+
+      /* Header Table  */
+      .display > thead > tr > th,
+      .dataTables_wrapper .dataTables_filter input,
+      tr.child,
+      td.child {
+        background: %LW_color_ch_bg% !important;
+        color: %LW_color_ch_tx%;
+      }
+
+      /* Header Table  */
+      .ui-widget-header,
+      select {
+        background: %LW_color_ch_bg% !important;
+        color: %LW_color_ch_tx% !important;
+      }
+
+      tr.odd {
+        background: %LW_color_ro_bg% !important;
+        color: %LW_color_ro_tx% !important;
+      }
+
+      tr.even {
+        background: %LW_color_re_bg% !important;
+        color: %LW_color_re_tx% !important;
+      }
+    </style>
+    <!-- /* Tb_print color function */ -->
+  </head>
+  <!-- HEAD END-->
+
+  <!-- BODY START -->
+  <body
+    onload="body_onload()"
+    class="bodylw menu-full header-image html"
+    data-header="light"
+    data-menu="light"
+    data-footer="light"
+    data-site_mode="light"
+    data-header_align="app"
+    data-menu_type="left"
+    data-menu_icons="on"
+    data-footer_type="left"
+    data-footer_menu="show"
+    data-footer_menu_style="light">
+    <form name="OR580" action="lnweb" method="post">
+      <div class="preloader-background">
+        <div class="preloader-wrapper">
+          <div class="loader"></div>
+        </div>
+      </div>
+
+      <!-- HIDDEN FOR ENDPOINT START -->
+      <input class="form-control" type="hidden" name="LW_PrgNo" value="OR580_F3" />
+      <input class="form-control" type="hidden" name="LW_rmid" value="%LWeb_rmid%" />
+      <input class="form-control" type="hidden" name="LW_trxno" value="%LW_trxno%" />
+      <input class="form-control" type="hidden" name="LW_key" value="%LW_key%" />
+      <input class="form-control" type="hidden" name="LW_prgAdd" value="A" />
+      <input class="form-control" type="hidden" name="LW_PrgBos" value="OR580" />
+      <!-- HIDDEN FOR ENDPOINT END -->
+
+      <!-- START CONTENT AREA  -->
+      <div class="bodylw content-area" style="margin-top: -50px">
+        <div class="headerlw pagehead-bg"></div>
+
+        <div class="container has-pagehead is-pagetitle">
+          <div class="section">
+            <h5 class="headerlw pagetitle">%LWeb_title%</h5>
+          </div>
+        </div>
+
+        <!-- CONTAINER START -->
+        <div class="bodylw container over">
+          <div class="section pt0">
+            <div class="row">
+              <div class="col s12 pad-0">
+                <!-- BUTTON START -->
+                <div class="row" style="margin: 10px 0px 10px 4px">
+                  <button class="buttonlw waves-effect waves-light btn-small lighten-2 mb-5" type="button" onclick="location.href='lnweb?OR580%rmid%';">
+                    <i class="mdi mdi-arrow-left-bold"> </i>
+                    OR580
+                  </button>
+
+                  %@LW_Button_Ok@@
+                  <button class="waves-effect waves-light btn-small lighten-2 bg-primary mb-5" type="submit" name="LW_fun" value="Ok">
+                    <i class="mdi mdi-account-check"> </i>
+                    OK</button
+                  >&nbsp;@% %@LW_Button_Cancel@@
+                  <button class="waves-effect waves-light btn-small lighten-2 red mb-5" type="submit" name="LW_fun" value="Cancel">
+                    <i class="mdi mdi-account-remove"> </i>
+                    Cancel</button
+                  >&nbsp;@%
+                </div>
+                <!-- BUTTON END -->
+
+                <div class="row" style="margin-top: 20px">
+                  <div class="col s12 pad-0">
+                    <div class="pad-15">
+                      <div class="input-field col s6">
+                        <%@LW_HField_s_JobCd@@ class="jobcode" type="text" @%>
+                        <label class="active">Code</label>
+                      </div>
+                      <div class="input-field col s6">
+                        <%@LW_HField_s_Cust@@ type="text" @%>
+                        <label class="active">Cust</label>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- BARIS 1 -->
+
+                <div class="row">
+                  <div class="col s12 pad-0">
+                    <div class="pad-15">
+                      <div class="input-field col s6">
+                        <%@LW_HField_s_peri@% />
+                        <label class="active">Period</label>
+                      </div>
+                      <div class="input-field col s6">
+                        <%@LW_HField_s_date@% />
+                        <label class="active">Date</label>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- BARIS 2 -->
+
+                <div class="row">
+                  <div class="col s12 pad-0">
+                    <div class="pad-15">
+                    </div>
+                  </div>
+                </div>
+                <!-- BARIS 3 -->
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- CONTAINER END -->
+
+        <!-- BACK TO TOP BUTTON START -->
+        <div class="backtotop">
+          <a class="buttonlw btn-floating btn">
+            <i class="mdi mdi-chevron-up"> </i>
+          </a>
+        </div>
+        <!-- BACK TO TOP BUTTON END -->
+      </div>
+      <!-- CONTENT AREA END -->
+    </form>
+    %@LW_onload@%
+
+    <!-- SCRIPT FOR DISABLE ALERT START -->
+    <script>
+      window.alert = function body_onload() {};
+    </script>
+    <!-- SCRIPT FOR DISABLE ALERT END -->
+
+    <!-- LOAD FILES AT PAGE END FOR FASTER LOADING START-->
+    <script src="..%LWeb_dirMenu%//assets/press/assets/js/pwa.js"></script>
+    <!-- LOAD FILES AT PAGE END FOR FASTER LOADING END-->
+
+    <!-- CORE JS FRAMEWORK START -->
+    <script src="..%LWeb_dirMenu%//assets/press/modules/jquery/jquery-2.2.4.min.js"></script>
+    <script src="..%LWeb_dirMenu%//assets/press/modules/materialize/materialize.js"></script>
+    <script src="..%LWeb_dirMenu%//assets/press/modules/perfect-scrollbar/perfect-scrollbar.min.js"></script>
+    <script src="..%LWeb_dirMenu%//assets/press/assets/js/variables.js"></script>
+    <!-- CORE JS FRAMEWORK END -->
+
+    <!-- OTHER SCRIPTS INCLUDED ON THIS PAGE START -->
+    <script src="..%LWeb_dirMenu%//assets/press/assets/js/common.js"></script>
+    <script src="..%LWeb_dirMenu%//assets/press/assets/js/preloader.js"></script>
+    <!-- OTHER SCRIPTS INCLUDED ON THIS PAGE END -->
+
+    <!-- CORE TEMPLATE JS START -->
+    <script src="..%LWeb_dirMenu%//assets/press/modules/app/init.js"></script>
+    <script src="..%LWeb_dirMenu%//assets/press/modules/app/settings.js"></script>
+    <script src="..%LWeb_dirMenu%//assets/press/modules/app/scripts.js"></script>
+    <!-- CORE TEMPLATE JS END -->
+  </body>
+</html>

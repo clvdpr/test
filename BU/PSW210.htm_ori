@@ -1,0 +1,124 @@
+<html>
+ <BODY BGCOLOR="#99ffff" TEXT="#0000FF" style="margin-top:0; margin-left:0; position:absolute;font-size:8pt">
+  <TITLE>PSW210 on Larona Web page</TITLE>
+<style>
+.button{
+    display: inline-block;
+    text-align: center;
+    vertical-align: middle;
+    padding: 5px 2px;
+    border: 3px solid #0e98d8;
+    border-radius: 14px;
+    background: #00ccff;
+    background: -webkit-gradient(linear, left top, left bottom, from(#00eeFF), to(#0e98d8));
+    background: -moz-linear-gradient(top, #00eeFF, #0e98d8);
+    background: linear-gradient(to bottom, #00eeFF, #0e98d8);
+    text-shadow: #195a13 1px 1px 1px;
+    font: normal normal bold 10px verdana;
+    color: #ffffff;
+    text-decoration: none;
+}
+.button:hover,
+.button:focus {
+    border: 3px solid #0066ff;
+    background: #00ffff;
+    background: -webkit-gradient(linear, left top, left bottom, from(#99ffff), to(#3366ff));
+    background: -moz-linear-gradient(top, #99ffff, #3366ff);
+    background: linear-gradient(to bottom, #99ffff, #3366ff);
+    color: #ffffff;
+    text-decoration: none;
+}
+.button:active {
+    background: #0000ff;
+    background: -webkit-gradient(linear, left top, left bottom, from(#0000ff), to(#0000ff));
+    background: -moz-linear-gradient(top, #0000ff, #0000ff);
+    background: linear-gradient(to bottom, #0000ff, #0000ff);
+}
+.image{
+    content:  "\0000a0";
+    display: inline-block;
+    height: 17px;
+    width: 17px;
+    line-height: 20px;
+    margin: 0 4px -6px -4px;
+    position: relative;
+    top: 0px;
+    left: 0px;
+    background-size: 100% 100%;
+}
+</style>
+
+  <SCRIPT>
+   function confirm_del(msg){iret = confirm("confirm for deletion...\n"+msg);if (iret) {document.all.LW_delrec.value="delete";PSW210.submit();} }
+  </script>
+   
+   <form name="PSW210" action="lnweb" method="post">
+    <fieldset>
+     <legend>
+      <TABLE>
+       <tr>
+        <td><INPUT readonly TYPE=text style="font-size:13px;" value="PSW210" size=6 onclick="body_onload()"> <text style="font-size:13px;">Leave Request Record</text></td>
+        <td><INPUT TYPE=hidden name=LW_PrgNo value="PSW210">
+        <td><INPUT TYPE=hidden  name=LW_rmid value="%LWeb_rmid%"></td>
+        <td><INPUT TYPE=hidden  name=LW_trxno value="%LW_trxno%"></td>
+       </tr>
+      </TABLE>
+     </legend>
+     <TABLE cellpadding=0 cellspacing=0 style="table-layout:fixed; font-size:8pt; height:8; border-collapse:collapse">
+      <td><button type="submit" class="button" name="LW_prgfun" value="PSW210_F5" title="Detail">&nbsp;&nbsp;&nbsp;<img class="image" src="..%LWeb_dirMenu%/img/crt.png"> Create/View Request&nbsp;&nbsp;</button></td>
+     </table>
+     <table cellpadding=0 cellspacing=0 style="table-layout:fixed; font-size:8pt; height:8; border-collapse:collapse">
+      <tr><col width=75><col width=257></tr>
+      <tr>
+      <tr height=14pt>
+       <td>Period</td>
+       <td width="204"><%@LW_HField_PR_perDescr@%>
+      </tr>
+      <tr height=14pt>
+       <td>Emp.No</td>
+       <td width="257"><%@LW_HField_er_noind@%><%@LW_HField_em_name@%>
+      </tr>
+      <tr height=14pt>
+       <td>Dept.</td>
+       <td colspan="3" width="261"><%@LW_HField_em_dept@%>
+      </tr>
+      <tr height=14pt>
+       <td>Record type</td>
+       <td width="169"><%@LW_HField_er_rtype@%>
+      </tr>
+      <tr height=14pt>
+       <td>Starting date</td>
+       <td width="156"><%@LW_HField_er_DtStart@%>End date<%@LW_HField_er_DtEnd@%>
+      </tr>
+      <tr height=14pt>
+       <td>Quota</td>
+       <td width="150"><%@LW_HField_er_qty_q@%><%@LW_HField_er_amt_q@%>
+      </tr>
+      <tr height=14pt>
+       <td>Addition (In)</td>
+       <td width="150"><%@LW_HField_er_qty_i@%><%@LW_HField_er_amt_i@%>
+      </tr>
+      <tr height=14pt>
+       <td>Deduction (Out)</td>
+       <td width="150"><%@LW_HField_er_qty_o@%><%@LW_HField_er_amt_o@%>
+      </tr>
+      <tr height=14pt>
+       <td>Balance</td>
+       <td width="150"><%@LW_HField_er_qty_q +er_qty_i -er_qty_o@%><%@LW_HField_er_amt_q +er_amt_i -er_amt_o@%>
+      </tr>
+     </TABLE>
+
+     <table>
+      <td><input type=text name=LW_key size=33></td>
+      <td><input type=text name=LW_keySort size=33></td>
+     </table>
+     <table><td></td></table>
+
+     <iframe width=800 height=297 frameborder=yes src="..%LWeb_ifi%" id="form_head"></iframe>
+     <TABLE cellpadding=0 cellspacing=0 style="table-layout:fixed; font-size:8pt; height:8; border-collapse:collapse">
+      <td><button type="submit" class="button" name="LW_prgfun" value="PSW210_F5" title="Detail">&nbsp;&nbsp;&nbsp;<img class="image" src="..%LWeb_dirMenu%/img/crt.png"> Create/View Request&nbsp;&nbsp;</button></td>
+     </table>
+  %@LW_onload@%
+  </form>
+ </body>
+</html>

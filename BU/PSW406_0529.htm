@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no" name="viewport">
+  <title>Payroll Slip</title>
+
+  <!-- General CSS Files -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+  <link rel="stylesheet" href="..%LWeb_dirMenu%//assets/bootstrap-4.3.1/dist/css/bootstrap.min.css">
+  <!-- CSS Libraries -->
+
+  <!-- Template CSS -->
+  <link rel="stylesheet" href="..%LWeb_dirMenu%//assets/css/style.css">
+  <link rel="stylesheet" href="..%LWeb_dirMenu%//assets/css/components.css">
+
+  <style>
+.dropdown-menu {
+  top: 58px;
+}
+.form-group .control-label, .form-group > label { 
+  font-size: 14px;
+}
+
+.form-group, .row {
+  margin-bottom: 0px;
+}
+  </style>
+
+
+
+</head>
+
+<body onload="body_onload()">
+
+<form name="PSW406" action="lnweb" method="post">
+
+  <table>
+    <tr>
+     <td><input TYPE=hidden name=LW_PrgNo value="PSW406">
+     <td><input TYPE=hidden  name=LW_rmid value="%LWeb_rmid%"></td>
+     <td><input TYPE=hidden  name=LW_key value="%LW_key%"></td>
+    </tr>
+  </table>
+
+              <nav aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                  <li class="breadcrumb-item">Home</a></li>
+                  <li class="breadcrumb-item">History</a></li>
+                  <li class="breadcrumb-item active" aria-current="page"><b>PSW406 Payroll Slip History  </b></li>
+                </ol>
+              </nav>
+
+                <div class="card">
+                  
+                  <div class="card-body">
+                    <div class="form-group row">
+                      <label class="col-lg-2 col-form-label">Current Year</label>
+                      <div class="col-lg-3">
+                        <%@LW_HField_s_Year@@class="form-control form-control-sm" @%>
+                      </div>
+                    </div>
+
+                    <div class="form-group row">
+                      <label class="col-lg-2 col-form-label">Emp. No.</label>
+                      <div class="col-lg-3">
+                        <%@LW_HField_s_noind@@class="form-control form-control-sm" @%>
+                      </div>
+                    </div>
+
+                    <div class="form-group row">
+                      <label class="col-lg-2 col-form-label">Period</label>
+                      <div class="col-lg-3">
+                        <%@LW_HField_s_per@@class="form-control form-control-sm" @%>
+                        <%@LW_HField_s_slip@@class="form-control form-control-sm" @%>
+                      </div>
+                    </div>
+
+                    <div class="form-group row">
+                      <label class="col-lg-2 col-form-label">LPX Option</label>
+                      <div class="col-lg-3">
+                        <%@LW_HField_lpx_option@@class="form-control form-control-sm" @%>
+                      </div>
+                    </div>
+
+                    <div class="form-group row">
+                      <label class="col-lg-2 col-form-label">Printer's File</label>
+                      <div class="col-lg-3">
+                        <%@LW_HField_s_prnfile@@class="form-control form-control-sm" @%>
+                      </div>
+                    </div>
+                    
+                  </div>
+                  <div class="card-footer">
+                    <button name="LW_fun" type="submit" class="btn btn-primary" value="print">Print</button>
+                  </div>
+                </div>
+              </form>
+
+<div class="card">
+  <iframe width=100% height=500px frameborder=yes src="../%LWeb_dir%/%@s_prnfile@%"></iframe>
+</div>
+ %@LW_onload@%
+
+
+<!-- General JS Scripts -->
+  <script src="..%LWeb_dirMenu%//assets/js/jquery-3.3.1.min.js"></script>
+  <script src="..%LWeb_dirMenu%//assets/bootstrap-4.3.1/dist/js/bootstrap.min.js"></script>
+  <script src="..%LWeb_dirMenu%//assets/popper.min.js"></script>
+  <script src="..%LWeb_dirMenu%//assets/jquery.nicescroll.min.js"></script>
+  <script src="..%LWeb_dirMenu%//assets/moment.min.js"></script>
+  <script src="..%LWeb_dirMenu%//assets/js/stisla.js"></script>
+
+  <!-- JS Libraies -->
+
+  <!-- Page Specific JS File -->
+
+  <!-- Template JS File -->
+  <script src="..%LWeb_dirMenu%//assets/js/scripts.js"></script>
+  <script src="..%LWeb_dirMenu%//assets/js/custom.js"></script>
+</body>
+</html>

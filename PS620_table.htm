@@ -1,0 +1,147 @@
+<html>
+  <head>
+    <!-- CORE CSS FRAMEWORK START -->
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.12.1/css/dataTables.bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/fixedheader/3.2.4/css/fixedHeader.bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/responsive/2.3.0/css/responsive.bootstrap.min.css" />
+    <!-- CORE CSS FRAMEWORK END -->
+
+    <!-- CORE JS FRAMEWORK START -->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script type="text/javascript" src="https://cdn.datatables.net/1.12.1/js/jquery.dataTables.min.js"></script>
+    <script type="text/javascript" src="https://cdn.datatables.net/1.12.1/js/dataTables.bootstrap.min.js"></script>
+    <script type="text/javascript" src="https://cdn.datatables.net/fixedheader/3.2.4/js/dataTables.fixedHeader.min.js"></script>
+    <script type="text/javascript" src="https://cdn.datatables.net/responsive/2.3.0/js/dataTables.responsive.min.js"></script>
+    <script type="text/javascript" src="https://cdn.datatables.net/responsive/2.3.0/js/responsive.bootstrap.min.js"></script>
+    <!-- CORE JS FRAMEWORK END -->
+
+    <!-- TABLE STYLE  -->
+    <link href="%LWeb_dirMenu%/assets/press/tablestyle.css" type="text/css" rel="stylesheet" media="screen" />
+    <!-- TABLE STYLE -->
+
+    <!-- TABLE SCRIPT -->
+    <script type="text/javascript" src="%LWeb_dirMenu%/assets/press/tablescript.js"></script>
+    <!-- TABLE SCRIPT -->
+
+    <!-- /* Tb_print color function */ -->
+    <style>
+      body {
+        dir: ltr !important;
+        align: left !important;
+      }
+      /* Header Table  */
+      .display > thead > tr > th {
+        background-color: %LW_color_CH_bg% !important;
+        color: %LW_color_re_tx%;
+      }
+
+      /* Background Body  */
+      .bodylw,
+      .tabs .tab a.active,
+      .tabs .indicator,
+      .input-field.col:read-only,
+      .input-field:read-only {
+        background: %LW_color_bg% !important;
+        color: %LW_color_tx% !important;
+      }
+
+      /* Background Header  */
+      .headerlw,
+      .pagehead-bg {
+        background: %LW_color_hd_bg% !important;
+        color: %LW_color_hd_tx% !important;
+        border-color: #6ealcc !important;
+      }
+
+      /* Button Color  */
+      .buttonlw {
+        background: %LW_color_hd_bg% !important;
+        color: %LW_color_hd_tx% !important;
+      }
+
+      /* ==============================TABLE============================ */
+
+      /* Header Table  */
+      .display > thead > tr > th {
+        background: %LW_color_ch_bg% !important;
+        color: %LW_color_ch_tx%;
+      }
+
+      tr.odd {
+        background: %LW_color_ro_bg% !important;
+        color: %LW_color_ro_tx% !important;
+      }
+
+      tr.even {
+        background: %LW_color_re_bg% !important;
+        color: %LW_color_re_tx% !important;
+      }
+
+      html {
+        background: %LW_color_bg% !important;
+        color: %LW_color_bg% !important;
+      }
+
+      .pagination > .active > a {
+        background: %LW_color_ch_bg% !important;
+        color: %LW_color_ch_tx% !important;
+      }
+
+      .pagination > li > a {
+        color: %LW_color_ch_bg% !important;
+      }
+    </style>
+    <!-- /* Tb_print color function */ -->
+  </head>
+  <!-- HEAD END-->
+
+  <table onClick="det_upload()" selected="det_upload()" id="example" class="ui celled table display nowrap" style="width: 100%; margin-top: 0px !important">
+    <thead>
+      <tr class="reset-style">
+        <th>*</th>
+        <th title="et_noind">Emp.No</th>
+        <th title="em_name">Emp. Name</th>
+        <th title="em_badgeId">BadgeId</th>
+        <th title="et_date">Date</th>
+        <th title="et_dayTp">D</th>
+        <th title="et_shf">S</th>
+        <th title="et_shfday">d</th>
+        <th title="et_abc">A</th>
+        <th title="et_xTin" align="right">xIn</th>
+        <th title="et_xTou" align="right">xOut</th>
+        <th title="et_tin" align="right">tm.In</th>
+        <th title="et_tou" align="right">tm.Out</th>
+        <th title="et_hour" align="right">Hrs</th>
+        <th title="et_nHour" align="right">nHrs</th>
+        <th title="et_ovt_brk" align="right">ot.break</th>
+        <th title="et_ovtA" align="right">Ovt.A</th>
+        <th title="et_ovt1" align="right">ovt.1</th>
+        <th title="et_ovt2" align="right">ovt.2</th>
+        <th title="et_ovt3" align="right">ovt.3</th>
+        <th title="et_ovt4" align="right">ovt.4</th>
+        <th title="et_ovt_Da" align="right">drop.A</th>
+        <th title="et_ovt_Db" align="right">drop.B</th>
+        <th title="et_ovt_Dc" align="right">drop.C</th>
+        <th title="et_Wdays" align="right">Days</th>
+        <th title="et_wday1" align="right">Ext.1</th>
+        <th title="et_wday2" align="right">Ext.2</th>
+        <th title="et_wday3" align="right">Ext.3</th>
+        <th title="et_wday4" align="right">Ext.4</th>
+        <th title="et_wday5" align="right">Ext.5</th>
+        <th title="et_wday6" align="right">Ext.6</th>
+        <th title="et_xLate" align="right">xLate</th>
+        <th title="et_xLate2" align="right">xLate2</th>
+        <th title="et_xEarly" align="right">xEarly</th>
+        <th title="et_xEarly2" align="right">xEarly2</th>
+        <th title="et_late" align="right">late</th>
+        <th title="et_late2" align="right">late2</th>
+        <th title="et_early" align="right">early</th>
+        <th title="et_early2" align="right">early2</th>
+        <th title="et_jobno">Job.no</th>
+        <th title="et_Remark">Remark</th>
+        <th title="et_year+et_per">period</th>
+        <th title="et_hwuserA+' '+et_hwdateA+'-'+et_hwtimeA+' '+et_hwprogrA">Web Addition</th>
+        <th title="et_hwuser+' '+et_hwdate+'-'+et_hwtime+' '+et_hwprogr">Web Updation</th>
+      </tr>
+    </thead>

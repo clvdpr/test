@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no" name="viewport">
+  <title>Payroll Slip</title>
+
+  <!-- General CSS Files -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+  <link rel="stylesheet" href="..%LWeb_dirMenu%//assets/bootstrap-4.3.1/dist/css/bootstrap.min.css">
+  <!-- CSS Libraries -->
+
+  <!-- Template CSS -->
+  <link rel="stylesheet" href="..%LWeb_dirMenu%//assets/css/style.css">
+  <link rel="stylesheet" href="..%LWeb_dirMenu%//assets/css/components.css">
+
+  <style>
+.dropdown-menu {
+  top: 58px;
+}
+.form-group .control-label, .form-group > label { 
+  font-size: 14px;
+}
+
+.form-group, .row {
+  margin-bottom: 0px;
+}
+  
+.lrn {
+  color:#34395e;
+  font-weight:600;
+  }
+  </style>
+
+
+
+</head>
+
+<body onload="body_onload()">
+
+<form name="PSW406" action="lnweb" method="post">
+
+  <table>
+    <tr>
+     <td><input TYPE=hidden name=LW_PrgNo value="PSW406">
+     <td><input TYPE=hidden  name=LW_rmid value="%LWeb_rmid%"></td>
+     <td><input TYPE=hidden  name=LW_key value="%LW_key%"></td>
+    </tr>
+  </table>
+
+              <nav aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                  <li class="breadcrumb-item">Home</a></li>
+				  <li class="breadcrumb-item active" aria-current="page"><b>PSW510 Personal Data</b></li>
+                </ol>
+              </nav>
+
+                <div class="card">
+                  
+                  <div class="card-body">
+                  
+                   
+                  
+                    <div class="form-group row">
+                      <label class="col-sm-1 col-form-label">Emp.No</label>
+                      <div class="col-sm-9 row" style="margin-left: 0px;">
+                        <%@LW_HField_em_noind@@class="form-control form-control-sm w-25" style="padding-left: 8px;"@%>
+                        <label class="col-sm-1 col-form-label lrn">PIN</label>
+                        <%@LW_HField_em_PIN@@class="form-control form-control-sm" style="width:200px;"@%>
+                      </div>
+                    </div>
+
+                    <div class="form-group row">
+                      <label class="col-sm-1 col-form-label">Title, Nama</label>
+                      <div class="col-sm-9 row" style="margin-left: 0px;">
+                        <%@LW_HField_em_title@@class="form-control form-control-sm" style="width: 85px;" @%>
+                        <%@LW_HField_em_name@@class="form-control form-control-sm" style="margin-left: 5px; width: 428px;"@%>
+                      </div>
+                    </div>
+
+                    <div class="form-group row">
+                      <label class="col-sm-1 col-form-label">Address</label>
+                      <div class="col-sm-5">
+                        <%@LW_HField_em_adr1@@class="form-control form-control-sm" @%>
+                      </div>
+                    </div>
+
+                    <div class="form-group row">
+                      <label class="col-sm-1 col-form-label">&nbsp;</label>
+                      <div class="col-sm-5">
+                        <%@LW_HField_em_adr2@@class="form-control form-control-sm" @%>
+                      </div>
+                    </div>
+
+                    <div class="form-group row">
+                      <label class="col-sm-1 col-form-label">&nbsp;</label>
+                      <div class="col-sm-5">
+                        <%@LW_HField_em_adr3@@class="form-control form-control-sm" @%>
+                      </div>
+                    </div>
+
+                    <div class="form-group row">
+                      <label class="col-sm-1 col-form-label">Zip Code</label>
+                      <div class="col-sm-9 row" style="margin-left: 0px;">
+                        <input class="form-control form-control-sm w-25" readonly="" disabled="" title="em_adr4" value="" size="12" style="padding-left: 8px;">
+                        <label class="col-sm-1 col-form-label lrn">Phone</label>
+                        <input class="form-control form-control-sm" readonly="" disabled="" title="em_phone" value="" size="15" style="width:200px;">
+                      </div>
+                    </div>
+
+                    <div class="form-group row">
+                      <label class="col-sm-1 col-form-label">Email</label>
+                      <div class="col-sm-5">
+                        <%@LW_HField_em_email@@class="form-control form-control-sm" @%>
+                      </div>
+                    </div>
+
+                    <div class="form-group row">
+                      <label class="col-sm-1 col-form-label">Nationality</label>
+                      <div class="col-sm-5">
+                        <%@LW_HField_em_nation@@class="form-control form-control-sm" @%>
+                      </div>
+                    </div>
+
+                    <div class="form-group row">
+                      <label class="col-sm-1 col-form-label">Location</label>
+                      <div class="col-sm-5">
+                        <%@LW_HField_em_Loc@@class="form-control form-control-sm" @%>
+                      </div>
+                    </div>
+
+                    <div class="form-group row">
+                      <label class="col-sm-1 col-form-label">Department</label>
+                      <div class="col-sm-5">
+                        <%@LW_HField_em_dept@@class="form-control form-control-sm" @%>
+                      </div>
+                    </div>
+
+                    </div>
+                  </div>
+
+                  <form>
+  <div class="form-group row">
+    <div class="col">
+      <label class="col-sm-1 col-form-label">Department</label>
+      <input type="text" class="form-control" placeholder="First name">
+    </div>
+    <div class="col">
+      <label class="col-sm-1 col-form-label">Department</label>
+      <input type="text" class="form-control" placeholder="Last name">
+    </div>
+  </div>
+</form>
+
+                  <div class="card">
+					<div class="card-body">
+                    <div class="form-group row">
+                      <label for="inputPassword3" class="col-sm-1 col-form-label">Emp No.</label>
+                      <div class="col-sm-5">
+                        <%@LW_HField_s_noind@@class="form-control form-control-sm" @%>
+                      </div>
+                    </div>
+
+<!--                     <div class="form-group row">
+                      <label class="col-sm-1 col-form-label">Period</label>
+                      <div class="col-sm-3">
+                        <%@LW_HField_s_per@@class="form-control form-control-sm w-50" @%>
+                      </div>
+                        <label class="col-sm-1 col-form-label">Slip</label>
+                    <div class="col-sm-2">
+                        <%@LW_HField_s_slip@@class="form-control form-control-sm w-25" @%>
+                      </div>
+                    </div> -->
+
+                  <div class="form-group row">
+                    <label class="col-sm-1 col-form-label">Lpx Option</label>
+                    <div class="col-sm-5">
+                    <%@LW_HField_lpx_option@@class="form-control form-control-sm p-0 h-75" @%>
+                    </div>
+                  </div>
+
+                    <div class="form-group row">
+                      <label class="col-sm-1 col-form-label">Printers File</label>
+                      <div class="col-sm-5">
+                        <%@LW_HField_s_prnfile@@class="form-control form-control-sm" @%>
+                      </div>
+                    </div>
+                    
+                  </div>
+                  <div class="card-footer">
+                    <button name="LW_fun" type="submit" class="btn btn-primary" value="print">Print</button>
+                  </div>
+                </div>
+              </form>
+
+<div>
+  <iframe width=800 height=400 frameborder=yes src="../%LWeb_dir%/%@s_prnfile@%"></iframe>
+</div>
+ %@LW_onload@%
+
+
+<!-- General JS Scripts -->
+  <script src="..%LWeb_dirMenu%//assets/js/jquery-3.3.1.min.js"></script>
+  <script src="..%LWeb_dirMenu%//assets/bootstrap-4.3.1/dist/js/bootstrap.min.js"></script>
+  <script src="..%LWeb_dirMenu%//assets/popper.min.js"></script>
+  <script src="..%LWeb_dirMenu%//assets/jquery.nicescroll.min.js"></script>
+  <script src="..%LWeb_dirMenu%//assets/moment.min.js"></script>
+  <script src="..%LWeb_dirMenu%//assets/js/stisla.js"></script>
+
+  <!-- JS Libraies -->
+
+  <!-- Page Specific JS File -->
+
+  <!-- Template JS File -->
+  <script src="..%LWeb_dirMenu%//assets/js/scripts.js"></script>
+  <script src="..%LWeb_dirMenu%//assets/js/custom.js"></script>
+</body>
+</html>

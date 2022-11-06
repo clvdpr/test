@@ -1,0 +1,172 @@
+@charset "utf-8"; *
+{padding:0px; margin:0px}
+body{
+    background: #999;
+    text-decoration:none;
+     font-family:"Lucida Sans Unicode","Lucida Sans",Tahoma,"Trebuchet MS",Arial,Helvetica,sans-serif; 
+     font-size:12px;
+     color:#666; 
+    padding:0px;    
+}
+#page{
+    background:#FFF;
+    width: 960px;
+    margin: auto;
+}
+
+.dirinfo{
+    float: right;
+    margin-right:20px;
+    font-size:12px;
+    padding-left:1px;
+}
+
+a{text-decoration:none; color:#333}
+
+a:hover{text-decoration:underline}
+
+img{border-top-style:none; 
+    border-right-style:none; 
+    border-bottom-style:none; 
+    border-left-style:none}
+
+h2{font-size:20px; color:#333; font-weight:normal}
+h3{font-size:14px; color:#333}
+h4{font-size:12px; color:#333}
+img{border-top-style:none; 
+    border-right-style:none; 
+    border-bottom-style:none; 
+    border-left-style:none}
+
+p{line-height:15px; color:#666}
+.ml5{margin-left:5px}
+.ml10{margin-left:10px}
+.mid{vertical-align:middle}
+.lft{float:left}
+.rgt{float:right}
+.btnmulti{background-color:#dedede; padding:5px; border:1px solid #ccc; text-transform:uppercase; clear:both}
+
+a:hover.btnmulti{background-color:#f0f0f0; text-decoration:none}
+.w5{float:left; width:5%}
+.w10{float:left; width:10%}
+.w15{float:left; width:15%}
+.w20{float:left; width:20%}
+.w25{float:left; width:25%}
+.w30{float:left; width:30%}
+.w35{float:left; width:35%}
+.w40{float:left; width:40%}
+.w45{float:left; width:45%}
+.w50{float:left; width:50%}
+.w55{float:left; width:55%}
+.w60{float:left; width:60%}
+.w65{float:left; width:65%}
+.w70{float:left; width:70%}
+.w75{float:left; width:75%}
+.w80{float:left; width:80%}
+.w85{float:left; width:85%}
+.w90{float:left; width:90%}
+.w95{float:left; width:95%}
+
+.clearb{clear:both}
+.border{border:1px solid #000}
+.col-a{float:left; width:315px; padding-right:15px}
+.col-b, .col-c{float:left; width:300px; padding-right:12px; padding-left:13px}
+.col-d{float:left; width:650px}
+.logocol {float: left;	width: 150px;}
+.pranala {clear: both;}
+
+.rowtop{background-image:url(../images/bgtop.gif); 
+        background-repeat:repeat-x; 
+        background-color:#999; width:100%; float:left}
+
+.rowtop .hdr{ width:980px}
+.rowtop .hdr #logo{float:left; width:980px}
+.rowtop .hdr .boxtopmenu{ width:980px; 
+                         clear:both; background-image:url(../images/bg_menu_top.gif); 
+                         background-repeat:no-repeat; height:20px; 
+                         font-family:Geneva,Arial,Helvetica,sans-serif; font-size:11px; 
+                         text-transform:uppercase; margin-bottom:1px}
+
+.rowtop .hdr .boxtopmenu a{color:#f30; padding-right:10px; padding-left:10px; text-transform:uppercase}
+.rowtop .hdr .boxtopmenu a:hover{color:#f90}
+.rowtop .hdr .boxtopmenu .topmenu{float:left; width:415px; height:10px; padding-top:7px; padding-left:100px }
+.rowtop .hdr .boxtopmenu .toplogin{float:left; width:175px; height:22px; text-align:center;  padding-top:10px}
+.rowtop .hdr .boxtopmenu .boxsearch{float:left; width:380px; height:22px; background-image:url(../images/bg_searchbox.gif); 
+                                    background-repeat:no-repeat; background-position:left top}
+
+.menu------------------{}
+.boxmidmenu{padding-top:0px; padding-bottom:0px; 
+            background-image:url(../images/bg_menu_larona.gif); 
+            background-repeat:no-repeat; 
+            background-color:#008C9E; float:left; width:983px; padding-right:10px; padding-left:px; /* Warna Background Menu */
+            background-position:center top}
+
+.boxmidmenu .jqueryslidemenu{font-size:12px }
+.boxmidmenu .jqueryslidemenu ul{ padding:0; list-style-type:none}
+.boxmidmenu .jqueryslidemenu ul li{position:relative; display:inline; float:left}
+.boxmidmenu .jqueryslidemenu ul li a{display:block;  color:#999; text-decoration:none; 
+                                     padding-top:6px; padding-right:6px; padding-bottom:6px; padding-left:6px; 
+                                     background:transparent}
+
+.boxmidmenu * html .jqueryslidemenu ul li a{display:inline-block}
+.boxmidmenu .jqueryslidemenu ul li a:link, .jqueryslidemenu ul li a:visited{color:#fff}
+.boxmidmenu .jqueryslidemenu ul li ul a:link, .jqueryslidemenu ul li ul a:visited{color:#fff}
+.boxmidmenu .jqueryslidemenu ul li a:hover{background:#00B4CC; color:#000}
+.boxmidmenu .jqueryslidemenu ul li ul{position:absolute; left:0; display:block; visibility:hidden; font-size:11px}
+.boxmidmenu .jqueryslidemenu ul li ul li{display:list-item; float:none}
+.boxmidmenu .jqueryslidemenu ul li ul li ul{top:0}
+.boxmidmenu .jqueryslidemenu ul li ul li a{width:170px;  padding:5px; background-color:#3D9949; border-bottom:1px solid #f30} /*Warna Background Menu Dropdown*/
+.boxmidmenu .jqueryslidemenuz ul li ul li a:hover{ color:#999}
+.boxmidmenu .jqueryslidemenu ul li ul li ul li a{width:180px; padding:5px; background-color:#933; border-bottom:1px solid #c30}
+.boxmidmenu .jqueryslidemenuz ul li ul li ul li a:hover{color:#000}
+.boxmidmenu .downarrowclass{position:absolute; top:9px; right:2000px}
+.boxmidmenu .rightarrowclass{position:absolute; top:9px; right:2000px}
+
+.boxmain{background-image:url(../images/o.jpg); 
+         background-repeat:no-repeat; float:left; height:1050px; width:920px; padding-bottom:1px; padding-top:35px; padding-left:-10px;}
+.boxmain .holder{float:left; width:980px; height:50px}
+.boxmain .holder .separator{display:none}
+.boxmain .holder .leftbox{float:left; height:250px; width:330px}
+.boxmain .holder .tgl{float:left; height:23px; width:640px; padding-top:7px; text-align:right; color:#666}
+.boxmain .holder .boxbotmenu{float:left; height:63px; width:470px; padding-top:15px; 
+                             font-family:Geneva,Arial,Helvetica,sans-serif; 
+                             font-size:13px; font-weight:bold; padding-left:10px}
+
+.boxmain .holder .boxbotmenu a{color:#fc0; text-decoration:none; padding-right:10px; line-height:18px}
+.boxmain .holder .boxbotmenu a:hover{color:#ffc}.boxmain .holder .topbanner{float:left; padding-left:10px}
+.boxmain .holder .rightbox{float:left; height:82px; width:650px; color:#bbb}
+.boxmain .holder .rightbox .miscbanners{float:left; height:60px; padding-top:10px; padding-bottom:10px; 
+                                        padding-left:10px; width:82px}
+.boxmain .holder .rightbox .miscbanners img{border:1px solid #000}
+.boxmain .holder .rightbox .video{float:left; height:72px; width:249px; padding-top:10px; 
+                                  background-image:url(../images/bg_videocarousel.gif); 
+                                  background-repeat:no-repeat; background-position:left top; 
+                                  padding-left:125px}
+
+.boxmain .holder .rightbox .video  ul{list-style-image:none; list-style-type:none}
+.boxmain .holder .rightbox .video .vid{float:left; width:295px; height:60px; padding-top:10px}
+.boxmain .holder .rightbox .video .vid img{height:60px; width:80px; padding-left:1px}
+
+.rowbot{background-image:url(../images/bgbot.gif); 
+        background-repeat:repeat-x; float:left; width:1360px; 
+        background-color:#fafafb}
+.rowbot .bodycontent{margin:auto; width:1200px}
+.rowbot .bodycontent .bgcenter{background-position:330px 0px; 
+                               background-image:url(../images/bg_block_center.gif); 
+                               background-repeat:repeat-y; float:left; width:400px; margin-top:0px}
+.rowbot .bodycontent .bgcenter .blockmain, 
+.rowbot .bodycontent .bgcenter2 .blockmain{float:left; height:0px; width:1200px}
+.rowbot .bodycontent .bgcenter2{float:left; width:1050px; margin-top:5px}
+
+.modulespace{width:300px; margin:auto}
+.modulebanner{margin:auto; width:300px}
+.bodycontent .banneritem{margin:auto; width:300px}
+
+#toplogin{
+    float:right;
+    font-size:14px;
+    font-family:"Lucida Sans Unicode","Lucida Sans",Tahoma,"Trebuchet MS",Arial,Helvetica,sans-serif;
+    text-decoration: none; 
+    font-color:#666;
+    width:400px;
+}

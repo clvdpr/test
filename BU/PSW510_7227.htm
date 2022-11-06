@@ -1,0 +1,406 @@
+<html>
+<BODY onload="body_onload() " BGCOLOR="#DDFeFF" TEXT="#0000FF" style="margin-top:0; margin-left:0; position:absolute;font-size:8pt">
+<TITLE>PR510 on Larona Web page</TITLE>
+
+<style>
+hr {color:sienna;}
+p {
+font-size: 12px;
+font-family: "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+}
+body {background-image:url("images/back40.gif");}
+
+input.button_save {
+    background-image: url(..%LWeb_dirMenu%/PRwin_Menu_files/save-icon.png); /* 16px x 16px */
+	/* background-color: transparent;  make the button transparent */
+    background-repeat: no-repeat;  /* make the background image appear only once */
+    background-position: 0px 0px;  /* equivalent to 'top left' */
+	 /* background-position: left/right/center; */
+    /*border: none;            assuming we don't want any borders */
+    /*cursor: pointer;        /* make the cursor like hovering over an <a> element */
+    height: 20px;           /* make this the size of your image */
+    padding-left: 16px;     /* make text start to the right of the image */
+    vertical-align: middle; /* align the text vertically centered */
+}
+input.button_reset {
+    background-image: url(..%LWeb_dirMenu%/PRwin_Menu_files/reset-icon.png); /* 16px x 16px */
+	/* background-color: transparent;  make the button transparent */
+    background-repeat: no-repeat;  /* make the background image appear only once */
+    background-position: 0px 0px;  /* equivalent to 'top left' */
+	 /* background-position: left/right/center; */
+    /*border: none;            assuming we don't want any borders */
+    /*cursor: pointer;        /* make the cursor like hovering over an <a> element */
+    height: 20px;           /* make this the size of your image */
+    padding-left: 5px;     /* make text start to the right of the image */
+    vertical-align: middle; /* align the text vertically centered */
+}
+.fixed-size  {
+  width: 200px;
+  font-size:9pt; 
+  font-family: Sans Serif;
+}
+
+.fixed-size1  {
+  width: 105px;
+  font-size:9pt; 
+  font-family: Sans Serif;
+}
+.fixed-size2  {
+  width: 174px;
+  font-size:9pt; 
+  font-family: Sans Serif;
+}
+.fixed-size3  {
+  width: 130px;
+}
+.fixed-size4  {
+  width: 70px;
+}
+.fixed-size5  {
+  width: 230px;
+  font-size:9pt; 
+  font-family: Sans Serif;
+}
+.fixed-size6  {
+  width: 238px;
+  font-size:9pt; 
+  font-family: Sans Serif;
+}
+.fixed-size7  {
+  width: 190px;
+  font-size:9pt; 
+  font-family: Sans Serif;
+}
+.fixed-size7b  {
+  width: 35px;
+  font-size:9pt; 
+  font-family: Sans Serif;
+}
+
+.fixed-size8  {
+  width: 92px;
+  font-size:9pt; 
+  font-family: Sans Serif;
+}
+.fixed-size8b  {
+  width: 140px;
+  font-size:9pt; 
+  font-family: Sans Serif;
+}
+.fixed-size9  {
+  width: 300px;
+  font-size:9pt; 
+  font-family: Sans Serif;
+}
+.button-table {
+	background-color:#4dbce9;
+}
+.form-title {
+font-size: 15px;
+font-family: "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+}
+
+
+@-moz-document url-prefix() {
+    .fixed-size  {
+		width: 150px;
+	}
+}
+</style>
+<SCRIPT><!--
+function confirm_del(msg){iret = confirm("confirm for deletion...\n"+msg);if (iret) {document.all.LW_fun.value="delete";PR510.submit();} }
+//--></script>
+
+<script type="text/javascript">
+
+
+  function checkForm(form)
+  {
+    if(form.em_pin.value == "") {
+      alert("Error: PIN cannot be blank!");
+      form.em_pin.focus();
+      return false;
+    }
+
+    if(form.em_pin.value != "") {
+      if(form.em_pin.value.length < 8) {
+        alert("Error: PIN must contain at least 8 characters!");
+        form.em_pin.focus();
+        return false;
+      }
+      re = /[0-9]/;
+      if(!re.test(form.em_pin.value)) {
+        alert("Error: PIN must contain at least one number (0-9)!");
+        form.em_pin.focus();
+        return false;
+      }
+
+    } else {
+      alert("Error: Please check that you've entered and confirmed your password!");
+      form.em_pin.focus();
+      return false;
+    }
+
+    return true;
+  }
+
+function stripspaces(input)
+{
+  input.value = input.value.replace(/\s/gi,"");
+  return true;
+}
+
+</script>
+
+
+<form name="PR510" action="lnweb" method="post" onsubmit="return checkForm(this);">
+ <fieldset>
+ <legend>
+ <TABLE>
+  <tr>
+   <td><INPUT readonly TYPE=text name=LW_PrgNo value="PSW510" size=8>Detail of Employee Personal Data</td>
+   <td><INPUT TYPE=hidden  name=LW_rmid value="%LWeb_rmid%"></td>
+   <td><INPUT TYPE=hidden  name=LW_key value="%LW_key%"></td>
+  </tr>
+ </TABLE>
+ </legend>
+ <TABLE cellpadding=0 cellspacing=0 style="table-layout:fixed; font-size:9pt; height:8; border-collapse:collapse" >
+ <tr><td><input type="submit" name="LW_prgfun" value="Prn_Print" title="Print"></td>
+ <td><input type="submit" name="LW_fun" value="Modify" title="Modify"> <a href="lnweb?PSW510_F5B%rmid%">List of Relatives</a></td>
+ 
+   
+ </tr> 
+ <tr height=14pt>
+   <TD class="fixed-size4"><p>Emp.No</p></TD>
+   <TD colspan="3" width="199"><%@LW_HField_em_noind@@class="fixed-size8" style="font-size:9pt; font-family: Sans Serif"@%>&nbsp;&nbsp;PIN &nbsp;<input onkeydown="javascript:stripspaces(this)" class="fixed-size8b" type=TEXT style="font-size:9pt; font-family: Sans Serif" value="%@em_pin@%" name="em_pin">
+   <TD width="100"><p>Badge Id.</p></TD>
+   <TD width="60"><%@LW_HField_em_badgeid@RO@@style="font-size:9pt; font-family: Sans Serif"@%>
+   <td></td>
+   <td></td>
+   <td></td>
+   <td rowspan="10" width="200">
+     <table border="1">
+      <tr><td><img src="..%LWeb_dirImg%/%@em_noind@%.jpg" height="200" width="180"></td></tr>
+     </table>
+  </td>
+ </tr>
+  <tr height=14pt>
+   <TD><p>Title, Nama</p></TD>
+   <TD colspan="3" width="199"><%@LW_HField_em_title@RO@@class="fixed-size7b" style="font-size:9pt; font-family: Sans Serif"@%>&nbsp; <%@LW_HField_em_name@RO@@class="fixed-size6" type=TEXT style="font-size:9pt; font-family: Sans Serif"@%>
+   <TD><p>Gender Code</p></TD>
+   <TD><%@LW_HField_em_sex@RO@@class="fixed-size7"@%></td>
+  </tr>
+  <tr height=14pt>
+   <TD width="100"><p>Address</p></TD>
+   <TD colspan="3" width="199"><%@LW_HField_em_adr1@@class="fixed-size9"@%>
+   <TD><p>Marital Sts</p></TD>
+   <TD><%@LW_HField_em_msts@RO@@class="fixed-size7" style="font-size:9pt; font-family: Sans Serif"@%>
+  
+  &nbsp;&nbsp;Children &nbsp;<%@LW_HField_em_anak@RO@@class="fixed-size7b" style="font-size:9pt; font-family: Sans Serif"@%></td>
+  </tr>
+  <tr height=14pt>
+   <TD></TD>
+   <TD colspan="3" width="199"><%@LW_HField_em_adr2@@class="fixed-size9" style="font-size:9pt; font-family: Sans Serif"@%>
+   <TD><p>PR.sts</TD>
+   <TD><%@LW_HField_em_psts@RO@@class="fixed-size7" style="font-size:9pt; font-family: Sans Serif"@%>
+  
+  &nbsp;&nbsp;Children &nbsp;<%@LW_HField_em_panak@RO@@class="fixed-size7b" style="font-size:9pt; font-family: Sans Serif"@%></td>
+  </tr>
+  <tr height=14pt>
+   <TD></TD>
+   <TD colspan="3" width="100"><%@LW_HField_em_adr3@@class="fixed-size9" style="font-size:9pt; font-family: Sans Serif"@%></td>
+   <TD><p>Date of birth</p></TD>
+   <TD><%@LW_HField_em_dob@RO@@class="fixed-size7" style="font-size:9pt; font-family: Sans Serif"@%></td>
+  </tr>
+  <tr height=14pt>
+   <TD><p>Zip code</p></TD>
+   <TD colspan="2"><%@LW_HField_em_adr4@@class="fixed-size1" type=TEXT style="font-size:9pt; font-family: Sans Serif"@%>&nbsp;&nbsp;Phone <input type=TEXT style="font-size:9pt; font-family: Sans Serif" class="fixed-size" value="%@em_phone@%">
+   <td></td>
+   <TD><font face='Arial' size="2">Place of birth</font></TD>
+   <TD><%@LW_HField_em_pob@RO@@class="fixed-size7" type=TEXT style="font-size:9pt; font-family: Sans Serif"@%>
+  </tr>
+  <tr height=14pt>
+   <TD weidth="200"><p>Email address</p></TD>
+   <TD colspan="3" width="199"><%@LW_HField_em_email@@class="fixed-size9" type=TEXT style="font-size:9pt; font-family: Sans Serif" @% >
+   <TD><font face='Arial' size="2"> dt.of join</font></TD>
+   <TD width="51"><%@LW_HField_em_doj@RO@@class="fixed-size7" style="font-size:9pt; font-family: Sans Serif"@%>
+  </tr>
+
+  <tr height=14pt> 
+   <TD><p>Nationality</p></TD>
+   <TD colspan="3" width="150"><%@LW_HField_em_nation@RO@@class="fixed-size9" style="font-size:9pt; font-family: Sans Serif"@%></td>
+  
+  <td><p>Date of hire</p></td>
+  <td><%@LW_HField_em_doh@RO@@class="fixed-size7" style="font-size:9pt; font-family: Sans Serif"@%></td>
+  </tr>
+
+  <tr>
+  <td>KTP</td>
+  <td colspan="2"><%@LW_HField_em_ktpno@@class="fixed-size9" disabled="disabled"@%></td>
+   <td>&nbsp;</td>   
+   <td><p>Date of resign</p></td>
+   <td><%@LW_HField_em_dor@RO@@class="fixed-size7" style="font-size:9pt; font-family: Sans Serif"@%></td>
+  </tr>
+
+  <tr>
+  <td>Passport</td>
+  <td colspan="2"><%@LW_HField_em_passport@@disabled="disabled" class="fixed-size9" style="font-size:9pt; font-family: Sans Serif"@%></td>
+   <td>&nbsp;</td>
+   </tr>
+
+  <tr height=14pt> 
+   <TD><p>Location</p></TD>
+   <TD colspan="3" width="199"><%@LW_HField_em_loc@RO@@class="fixed-size9" style="font-size:9pt; font-family: Sans Serif"@%></td>
+  
+
+   <TD><p>Work Location</p></TD>
+   <TD><%@LW_HField_em_wloc@RO@@class="fixed-size9" style="font-size:9pt; font-family: Sans Serif"@%></td>
+  </tr>
+
+  <tr height=14pt>
+   <TD><p>Department</p></TD>
+   <TD><%@LW_HField_em_dept@RO@@class="fixed-size9" style="font-size:9pt; font-family: Sans Serif"@%></td>
+   <td></td><td></td>
+   <TD><p>Cost code</p></TD>
+   <TD><%@LW_HField_em_costcd@RO@@class="fixed-size9" style="font-size:9pt; font-family: Sans Serif"@%></td>
+   </tr>
+
+  <tr height=14pt>
+   <TD><p>Position</p></TD>
+   <TD><%@LW_HField_em_jabat@RO@@class="fixed-size9" style="font-size:9pt; font-family: Sans Serif"@%></td>
+   <td></td><td></td>
+   <TD><p>Job code</p></TD>
+   <TD><%@LW_HField_em_jobcd@RO@@class="fixed-size9" style="font-size:9pt; font-family: Sans Serif"@%></td>
+  </tr>
+
+  <tr height=14pt>
+   <TD><p>Level</p></TD>
+   <TD><%@LW_HField_em_level@RO@@class="fixed-size9" style="font-size:9pt; font-family: Sans Serif"@%></td>
+  <td></td><td></td>
+  </tr>
+  <tr height=14pt>
+   <TD><p>Status</p></TD>
+   <TD colspan="3" width="199"><%@LW_HField_em_status@RO@@class="fixed-size9"@%></td>
+   <TD><p>N.P.W.P</p></TD>
+   <TD colspan="3" width="355"><%@LW_HField_em_npwp@RO@%>&nbsp;<font face='Arial' size="2"></tr>
+  <tr height=14pt>
+   <TD width="70"><p>Gol.Karyawan</p></TD>
+   <TD><%@LW_HField_em_golkar@RO@@class="fixed-size9" style="font-size:9pt; font-family: Sans Serif"@%></td>
+   <td></td><td></td>
+   <TD><p>Jamsostek</p></TD>
+   <TD colspan="3" width="262">
+   <%@LW_HField_em_astek@RO@%>&nbsp;&nbsp;<font face='Arial' size="2">date</font>&nbsp;<%@LW_HField_em_astekDt@RO@%>
+   </tr>
+
+  <tr height=14pt>   
+   <TD><p>Pay period</p></TD>
+   <TD><%@LW_HField_em_perTyp@RO@@class="fixed-size9" style="font-size:9pt; font-family: Sans Serif"@%></td>
+   <td></td><td></td>
+   <TD><p>Education</p></TD>
+   <TD colspan="3" width="253"><%@LW_HField_em_educ@RO@%></td>
+   </tr>
+
+  <tr height=14pt>
+   <TD><p>Payment</p></TD>
+   <TD><%@LW_HField_em_pmtTyp@RO@@class="fixed-size9" style="font-size:9pt; font-family: Sans Serif"@%></td>
+   <td></td><td></td>
+     <TD><p>Remark</p></TD>
+   <TD colspan="3" width="200"><%@LW_HField_em_remark@RO@@class="fixed-size9"@%></td>
+  </tr>
+   
+
+  <tr height=14pt>
+   <TD><p>Fund type</p></TD>
+   <TD><%@LW_HField_em_fundtyp@RO@@class="fixed-size9" style="font-size:9pt; font-family: Sans Serif"@%></td>
+   <td></td><td></td>
+   <TD><p>Emergency Contact Name</p></TD>
+   <TD  colspan="3"><%@LW_HField_emer_c_name@@style="font-size:8pt; font-family: Sans Serif" disabled="disabled"@%></td>
+  </tr>
+     
+  <tr>
+   <TD><p>Lpx.option</p></TD>
+   <TD colspan="2" width="199"><%@LW_HField_lpx_option@%></td>
+  <td></td>
+   <TD><p>Emergency Contact Phone</p></TD>
+   <TD  colspan="3"><%@LW_HField_emer_c_phone@@style="font-size:8pt; font-family: Sans Serif" disabled="disabled"@%>
+  </tr>
+     
+  <tr>
+   <TD><p>Printer's File</p></TD>
+   <TD  colspan="3"><%@LW_HField_s_prnfile@@class="fixed-size9" style="font-size:9pt; font-family: Sans Serif"@%>
+  </tr>
+  <tr><td><input type="submit" name="LW_prgfun" value="Prn_Print" title="Print"></input></td>
+  <td><input type="submit" name="LW_fun" value="Modify" title="Modify"></input></td></tr>
+  </TABLE>
+  <br>
+  <table TABLE cellpadding=0 cellspacing=0 style="table-layout:fixed;  border-collapse:collapse">
+      <tr class="button-table" align="center">
+	<td>No</td>
+	<td>BankCd</td>
+        <td>Bank Description</td>
+	<td>Account No.</td>
+        <td>Account Name</td>
+	<td>Description a</td>
+        <td>Description b</td>
+      </tr>
+      <tr>
+	<td>1</td>
+	<td><input class="fixed-size1" type=TEXT disabled="disabled" %@LW_HField_em_bankcd1@%></td>
+        <td><input class="fixed-size2" type=TEXT disabled="disabled" %@LW_HField_em_bankds1@%></td>
+	<td><input class="fixed-size2" type=TEXT disabled="disabled" %@LW_HField_em_bankac1@%></td>
+        <td><input class="fixed-size" type=TEXT disabled="disabled" %@LW_HField_em_bankna1@%></td>
+	<td><input class="fixed-size5" type=TEXT disabled="disabled" %@LW_HField_em_bankda1@%></td>
+        <td><input class="fixed-size" type=TEXT disabled="disabled" %@LW_HField_em_bankdb1@%></td>
+      </tr>
+      <tr>
+	<td>2</td>
+	<td><input class="fixed-size1" type=TEXT disabled="disabled" %@LW_HField_em_bankcd2@%></td>
+        <td><input class="fixed-size2" type=TEXT disabled="disabled" %@LW_HField_em_bankds2@%></td>
+	<td><input class="fixed-size2" type=TEXT disabled="disabled" %@LW_HField_em_bankac2@%></td>
+        <td><input class="fixed-size" type=TEXT disabled="disabled" %@LW_HField_em_bankna2@%></td>
+	<td><input class="fixed-size5" type=TEXT disabled="disabled" %@LW_HField_em_bankda2@%></td>
+        <td><input class="fixed-size" type=TEXT disabled="disabled" %@LW_HField_em_bankdb2@%></td>
+      </tr>
+      <tr>
+	<td>3</td>
+	<td><input class="fixed-size1" type=TEXT disabled="disabled" %@LW_HField_em_bankcd3@%></td>
+        <td><input class="fixed-size2" type=TEXT disabled="disabled" %@LW_HField_em_bankds3@%></td>
+	<td><input class="fixed-size2" type=TEXT disabled="disabled" %@LW_HField_em_bankac3@%></td>
+        <td><input class="fixed-size" type=TEXT disabled="disabled" %@LW_HField_em_bankna3@%></td>
+	<td><input class="fixed-size5" type=TEXT disabled="disabled" %@LW_HField_em_bankda3@%></td>
+        <td><input class="fixed-size" type=TEXT disabled="disabled" %@LW_HField_em_bankdb3@%></td>
+      </tr>
+      <tr>
+	<td>4</td>
+	<td><input class="fixed-size1" type=TEXT disabled="disabled" %@LW_HField_em_bankcd4@%></td>
+        <td><input class="fixed-size2" type=TEXT disabled="disabled" %@LW_HField_em_bankds4@%></td>
+	<td><input class="fixed-size2" type=TEXT disabled="disabled" %@LW_HField_em_bankac4@%></td>
+        <td><input class="fixed-size" type=TEXT disabled="disabled" %@LW_HField_em_bankna4@%></td>
+	<td><input class="fixed-size5" type=TEXT disabled="disabled" %@LW_HField_em_bankda4@%></td>
+        <td><input class="fixed-size" type=TEXT disabled="disabled" %@LW_HField_em_bankdb4@%></td>
+      </tr>
+      <tr>
+	<td>5</td>
+	<td><input class="fixed-size1" type=TEXT disabled="disabled" %@LW_HField_em_bankcd5@%></td>
+        <td><input class="fixed-size2" type=TEXT disabled="disabled" %@LW_HField_em_bankds5@%></td>
+	<td><input class="fixed-size2" type=TEXT disabled="disabled" %@LW_HField_em_bankac5@%></td>
+        <td><input class="fixed-size" type=TEXT disabled="disabled" %@LW_HField_em_bankna5@%></td>
+	<td><input class="fixed-size5" type=TEXT disabled="disabled" %@LW_HField_em_bankda5@%></td>
+        <td><input class="fixed-size" type=TEXT disabled="disabled" %@LW_HField_em_bankdb5@%></td>
+      </tr>
+     <tr>
+	<td>6</td>
+	<td><input class="fixed-size1" type=TEXT disabled="disabled" %@LW_HField_em_bankcd6@%></td>
+        <td><input class="fixed-size2" type=TEXT disabled="disabled" %@LW_HField_em_bankds6@%></td>
+	<td><input class="fixed-size2" type=TEXT disabled="disabled" %@LW_HField_em_bankac6@%></td>
+        <td><input class="fixed-size" type=TEXT disabled="disabled" %@LW_HField_em_bankna6@%></td>
+	<td><input class="fixed-size5" type=TEXT disabled="disabled" %@LW_HField_em_bankda6@%></td>
+        <td><input class="fixed-size" type=TEXT disabled="disabled" %@LW_HField_em_bankdb6@%></td>
+      </tr>
+     
+  </table>
+
+  <hr>
+%@LW_onload@%
+%@LW_output@1000,500@%
+  </form>

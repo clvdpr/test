@@ -1,0 +1,609 @@
+<!DOCTYPE html>
+<html lang="en" class=" ">
+
+<head>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>ORW520_F5 Detail Time Record</title>
+    <meta content="Larona Employee Self Service" name="description" />
+    <meta content="Larona" name="Larona" />
+
+
+    <!-- App Icons -->
+    <link rel="apple-touch-icon" sizes="57x57"
+        href="..%LWeb_dirMenu%//assets/odis/assets/images/icons/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60"
+        href="..%LWeb_dirMenu%//assets/odis/assets/images/icons/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72"
+        href="..%LWeb_dirMenu%//assets/odis/assets/images/icons/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76"
+        href="..%LWeb_dirMenu%//assets/odis/assets/images/icons/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114"
+        href="..%LWeb_dirMenu%//assets/odis/assets/images/icons/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120"
+        href="..%LWeb_dirMenu%//assets/odis/assets/images/icons/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144"
+        href="..%LWeb_dirMenu%//assets/odis/assets/images/icons/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152"
+        href="..%LWeb_dirMenu%//assets/odis/assets/images/icons/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180"
+        href="..%LWeb_dirMenu%//assets/odis/assets/images/icons/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"
+        href="..%LWeb_dirMenu%//assets/odis/assets/images/icons/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="512x512"
+        href="..%LWeb_dirMenu%//assets/odis/assets/images/icons/android-icon-512x512.png">
+    <link rel="icon" type="image/png" sizes="32x32"
+        href="..%LWeb_dirMenu%//assets/odis/assets/images/icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96"
+        href="..%LWeb_dirMenu%//assets/odis/assets/images/icons/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16"
+        href="..%LWeb_dirMenu%//assets/odis/assets/images/icons/favicon-16x16.png">
+    <link rel="manifest" href="..%LWeb_dirMenu%//assets/odis/assets/images/icons/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage"
+        content="..%LWeb_dirMenu%//assets/odis/assets/images/icons/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+
+
+
+
+
+
+    <!-- CORE CSS FRAMEWORK - START -->
+    <link href="..%LWeb_dirMenu%//assets/odis/assets/css/preloader.css" type="text/css" rel="stylesheet"
+        media="screen" />
+
+    <link href="..%LWeb_dirMenu%//assets/odis/modules/materialize/materialize.min.css" type="text/css" rel="stylesheet"
+        media="screen" />
+    <link href="..%LWeb_dirMenu%//assets/odis/modules/fonts/mdi/appicon/appicon.css" type="text/css" rel="stylesheet"
+        media="screen" />
+    <link href="..%LWeb_dirMenu%//assets/odis/modules/fonts/mdi/materialdesignicons.min.css" type="text/css"
+        rel="stylesheet" media="screen" />
+    <link href="..%LWeb_dirMenu%//assets/odis/modules/perfect-scrollbar/perfect-scrollbar.css" type="text/css"
+        rel="stylesheet" media="screen" />
+
+    <!-- CORE CSS TEMPLATE - START -->
+    <link href="..%LWeb_dirMenu%//assets/odis/assets/css/style.css" type="text/css" rel="stylesheet" media="screen"
+        id="main-style" />
+    <!-- CORE CSS TEMPLATE - END -->
+
+    <!-- <style>
+
+body{
+  background-color:%LW_color_bg%;
+  color: %LW_color_tx%;
+}
+
+/* Background Header  */
+.primary-bg {
+  background-color:%LW_color_ch_bg%;
+  color:%LW_color_ch_tx%;
+  border-color: #6ealcc !important;
+  text-transform: uppercase;
+}
+
+/* Header Table  */
+.display>thead>tr>th {
+  background-color:%LW_color_re_bg%;
+  color:%LW_color_re_tx%;
+}
+
+.fixed_headers tr:nth-child(odd) {
+  background-color:%LW_color_ro_bg%;
+  color:%LW_color_ro_tx%;
+}
+
+ </style> -->
+
+    <style>
+        input {
+            direction: ltr !important;
+            text-align: left !important;
+        }
+
+        .dropdown-content {
+            height: 195px;
+        }
+
+        body {
+            font-family: "Lucida Bright", monospace !important;
+        }
+
+        .mb-5 {
+            margin-bottom: 5px;
+        }
+    </style>
+
+</head>
+<!-- END HEAD -->
+
+<!-- BEGIN BODY -->
+
+
+<body onload="body_onload()" class=" menu-full header-image html" data-header="light" data-footer="light"
+    data-header_align="app" data-menu_type="left" data-menu="light" data-menu_icons="on" data-footer_type="left"
+    data-site_mode="light" data-footer_menu="show" data-footer_menu_style="light">
+    <form name="ORW520" action="lnweb" method="post">
+        <div class="preloader-background">
+            <div class="preloader-wrapper">
+                <div class="loader">
+                </div>
+            </div>
+        </div>
+
+
+        <!-- Hidden for Endpoint -->
+        <td><input type=hidden name=LW_PrgNo value="ORW520_F5"></td>
+        <td><input type=hidden name=LW_rmid value="%LWeb_rmid%"></td>
+        <td><input type=hidden name=LW_trxno value="%LW_trxno%"></td>
+        <td><input type=hidden name=LW_key value="%LW_key%"></td>
+        <td><input type=hidden name=LW_prgAdd value="A"></td>
+        <td><input type=hidden name=LW_PrgBos value="ORW520"></td>
+        <!-- %LWeb_prgfun% -->
+
+        <!-- Hidden for Endpoint -->
+
+        <!-- START CONTENT AREA  -->
+        <div class="content-area" style="margin-top:-50px;">
+            <div class="pagehead-bg   primary-bg" style="min-height: 200px;">
+            </div>
+
+            <div class="container has-pagehead is-pagetitle">
+                <div class="section">
+                    <h5 class="pagetitle">ORW520_F5 Detail Time Record</h5>
+                </div>
+            </div>
+
+            <div class="container over">
+                <div class="section ">
+                    <div class="row mt0">
+                        <div class="col s12 pad-0">
+
+                            <h5 class="bot-20  ">Detail Time Record</h5>
+
+                            <div class="row" style="margin-top: 20px; margin-left:0px;">
+                                <button class="waves-effect waves-light btn-small red lighten-2 mb-5" type="button"
+                                    onclick="location.href='lnweb?ORW520%rmid%';"><i
+                                        class="mdi mdi-account-circle"></i>ORW520</button>
+
+                                <button class="waves-effect waves-light btn-small blue lighten-2 mb-5" type="submit"
+                                    name="LW_prgfun" value="ORW520_Post"><i
+                                        class="mdi mdi-account-check"></i>POST</button>
+
+                                <button class="waves-effect waves-light btn-small amber lighten-2 mb-5" type="submit"
+                                    name="LW_fun" value="Unpost"><i class="mdi mdi-account-remove"></i>UNPOST</button>
+
+                                <button class="waves-effect waves-light btn-small indigo lighten-2 mb-5" type="submit"
+                                    name="LW_prgfun" value="OR120_F7"><i class="mdi mdi-printer"></i>PRINT</button>
+                            </div>
+
+                            
+
+                                <div class="col s12 ">
+                                    <ul id="tabs-swipe-demo" class="tabs tabs-swipable-ul  ">
+                                        <li class="tab col s6 "><a class="active " href="#section1">Section 1</a>
+                                        </li>
+                                        <li class="tab col s6 "><a class=" " href="#section2">Section 2</a>
+                                        </li>
+                                    </ul>
+                                </div>
+
+                               
+                                    <div class="col s12 tabs-swipable">
+
+                                        <div id="section1">
+                                            <!-- Section 1 -->
+                                            <div class="section">
+
+                                                <div class="row ">
+                                                    <div class="col s12 pad-0">
+                                                        <div class="pad-15">
+                                                            <div class="input-field col s9">
+                                                                <%@LW_HField_tr_trxno@@  disabled @%>
+                                                                    <label class="active">Trx.
+                                                                        No.</label>
+                                                            </div>
+
+                                                            <div class="input-field col s3">
+                                                                <%@LW_HField_tr_statux +tr_status +tr_endsts +tr_print@@
+                                                                    id="sts"  @%>
+                                                                    <label class="active"></label>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="row ">
+                                                    <div class="col s12 pad-0">
+                                                        <div class="pad-15">
+                                                            <div class="input-field col s6">
+                                                                <%@LW_HField_tr_empno@@  disabled @%>
+                                                                    <label class="active">Emp.
+                                                                        No.</label>
+                                                            </div>
+
+                                                            <div class="input-field col s6">
+                                                                <%@LW_HField_tr_jobno@@ @%>
+                                                                    <label class="active">Job No.
+                                                                    </label>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="row ">
+                                                    <div class="col s12 pad-0">
+                                                        <div class="pad-15">
+                                                            <div class="input-field col s6">
+                                                                <%@LW_HField_tr_date@@  id="tanggal" @%>
+                                                                    <label class="active">Date</label>
+                                                            </div>
+
+                                                            <div class="input-field col s6">
+                                                                <%@LW_HField_tr_visit@@  @%>
+                                                                    <label class="active">Visit</label>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="row demo-masked-input">
+                                                    <div class="col s12 pad-0">
+                                                        <div class="pad-15">
+                                                            <div class="input-field col s6">
+                                                                <%@LW_HField_tr_time@@ id="jam" type="tel" @%>
+                                                                    <label class="active">Time</label>
+                                                            </div>
+
+                                                            <div class="input-field col s6">
+                                                                <%@LW_HField_tr_timeEnd@@ id="jam" type="tel" @%>
+                                                                    <label class="active">End</label>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="row demo-masked-input">
+                                                    <div class="col s12 pad-0">
+                                                        <div class="pad-15">
+                                                            <div class="input-field col s6">
+                                                                <%@LW_HField_tr_timeStart@@ id="jam2" type="tel" @%>
+                                                                    <label class="active">Start</label>
+                                                            </div>
+
+                                                            <div class="input-field col s6">
+                                                                <%@LW_HField_tr_timeEnd2@@ id="jam2" type="tel" @%>
+                                                                    <label class="active">End2</label>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="row ">
+                                                    <div class="col s12 pad-0">
+                                                        <div class="pad-15">
+                                                            <div class="input-field col s12">
+                                                                <%@LW_HField_tr_Expense@@  @%>
+                                                                    <label class="active">Expense</label>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+
+                                            </div>
+                                        </div>
+
+                                        <div id="section2">
+                                            <!-- Section 2 -->
+                                            <div class="section">
+
+                                                <div class="row">
+                                                    <div class="col s12 pad-0">
+                                                        <div class="pad-15">
+                                                            <div class="input-field col s12">
+                                                                <%@LW_HField_tr_Cust@%>
+                                                                    <label class="active">Client</label>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="row">
+                                                    <div class="col s12 pad-0">
+                                                        <div class="pad-15">
+                                                            <div class="input-field col s12">
+                                                                <%@LW_HField_tr_jobCd@@@%>
+                                                                    <label class="active">Job Cd.
+                                                                        1</label>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="row ">
+                                                    <div class="col s12 pad-0">
+                                                        <div class="pad-15">
+                                                            <div class="input-field col s6">
+                                                                <%@LW_HField_tr_prgNo@@  @%>
+                                                                    <label class="active">Prog. No.
+                                                                        1</label>
+                                                            </div>
+
+                                                            <div class="input-field col s6">
+                                                                <%@LW_HField_tr_minute@@ type="tel" @%>
+                                                                    <label class="active">Min. 1</label>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="row ">
+                                                    <div class="col s12 pad-0">
+                                                        <div class="pad-15">
+                                                            <div class="input-field col s12">
+                                                                <%@LW_HField_tr_descr@@  @%>
+                                                                    <label class="active">Descr.
+                                                                        1</label>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="progress  ">
+                                                    <div class="determinate " style="width: 100%"></div>
+                                                </div>
+
+                                                <div class="row ">
+                                                    <div class="col s12 pad-0">
+                                                        <div class="pad-15">
+                                                            <div class="input-field col s12">
+                                                                <%@LW_HField_tr_jobCd2@@ class="jobcode"  @%>
+                                                                    <label class="active">Job Cd.
+                                                                        2</label>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="row ">
+                                                    <div class="col s12 pad-0">
+                                                        <div class="pad-15">
+                                                            <div class="input-field col s6">
+                                                                <%@LW_HField_tr_prgNo2@@  @%>
+                                                                    <label class="active">Prog. No.
+                                                                        2</label>
+                                                            </div>
+
+                                                            <div class="input-field col s6">
+                                                                <%@LW_HField_tr_minute2@@ type="tel" @%>
+                                                                    <label class="active">Min. 2</label>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="row ">
+                                                    <div class="col s12 pad-0">
+                                                        <div class="pad-15">
+                                                            <div class="input-field col s12">
+                                                                <%@LW_HField_tr_descr2@@  @%>
+                                                                    <label class="active">Descr.
+                                                                        2</label>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="progress  ">
+                                                    <div class="determinate " style="width: 100%"></div>
+                                                </div>
+
+                                                <div class="row ">
+                                                    <div class="col s12 pad-0">
+                                                        <div class="pad-15">
+                                                            <div class="input-field col s12">
+                                                                <%@LW_HField_tr_jobCd3@@ class="jobcode"  @%>
+                                                                    <label class="active">Job Cd.
+                                                                        3</label>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="row ">
+                                                    <div class="col s12 pad-0">
+                                                        <div class="pad-15">
+                                                            <div class="input-field col s6">
+                                                                <%@LW_HField_tr_prgNo3@@  @%>
+                                                                    <label class="active">Prog. No.
+                                                                        3</label>
+                                                            </div>
+
+                                                            <div class="input-field col s6">
+                                                                <%@LW_HField_tr_minute3@@ type="tel" @%>
+                                                                    <label class="active">Min. 3</label>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="row ">
+                                                    <div class="col s12 pad-0">
+                                                        <div class="pad-15">
+                                                            <div class="input-field col s12">
+                                                                <%@LW_HField_tr_descr3@@  @%>
+                                                                    <label class="active">Descr.
+                                                                        3</label>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="progress  ">
+                                                    <div class="determinate " style="width: 100%"></div>
+                                                </div>
+
+                                                <div class="row ">
+                                                    <div class="col s12 pad-0">
+                                                        <div class="pad-15">
+                                                            <div class="input-field col s12">
+                                                                <%@LW_HField_tr_jobCd4@@ class="jobcode"  @%>
+                                                                    <label class="active">Job Cd.
+                                                                        4</label>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="row ">
+                                                    <div class="col s12 pad-0">
+                                                        <div class="pad-15">
+                                                            <div class="input-field col s6">
+                                                                <%@LW_HField_tr_prgNo@@  @%>
+                                                                    <label class="active">Prog. No.
+                                                                        4</label>
+                                                            </div>
+
+                                                            <div class="input-field col s6">
+                                                                <%@LW_HField_tr_minute4@@ type="tel" @%>
+                                                                    <label class="active">Min. 4</label>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="row ">
+                                                    <div class="col s12 pad-0">
+                                                        <div class="pad-15">
+                                                            <div class="input-field col s12">
+                                                                <%@LW_HField_tr_descr4@@  @%>
+                                                                    <label class="active">Descr.
+                                                                        4</label>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="progress  ">
+                                                    <div class="determinate " style="width: 100%"></div>
+                                                </div>
+
+                                                <div class="row ">
+                                                    <div class="col s12 pad-0">
+                                                        <div class="pad-15">
+                                                            <div class="input-field col s12">
+                                                                <%@LW_HField_tr_jobCd5@@ class="jobcode"  @%>
+                                                                    <label class="active">Job Cd.
+                                                                        5</label>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="row ">
+                                                    <div class="col s12 pad-0">
+                                                        <div class="pad-15">
+                                                            <div class="input-field col s6">
+                                                                <%@LW_HField_tr_prgNo5@@  @%>
+                                                                    <label class="active">Prog. No.
+                                                                        5</label>
+                                                            </div>
+
+                                                            <div class="input-field col s6">
+                                                                <%@LW_HField_tr_minute5@@ type="tel" @%>
+                                                                    <label class="active">Min. 5</label>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="row ">
+                                                    <div class="col s12 pad-0">
+                                                        <div class="pad-15">
+                                                            <div class="input-field col s12">
+                                                                <%@LW_HField_tr_descr5@@  @%>
+                                                                    <label class="active">Descr.
+                                                                        5</label>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                
+
+                           
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="backtotop">
+                <a class="btn-floating btn primary-bg">
+                    <i class="mdi mdi-chevron-up"></i>
+                </a>
+            </div>
+
+        </div>
+        <!-- END CONTENT AREA  -->
+
+    </form>
+    %@LW_onload@%
+
+    <!-- TEMPLATE JS  -->
+    <!-- LOAD FILES AT PAGE END FOR FASTER LOADING START-->
+    <script src="..%LWeb_dirMenu%//assets/odis/assets/js/pwa.js"></script>
+    <script src="..%LWeb_dirMenu%//assets/odis/modules/jquery/jquery-2.2.4.min.js"></script>
+    <script src="..%LWeb_dirMenu%//assets/odis/modules/materialize/materialize.js"></script>
+    <script src="..%LWeb_dirMenu%//assets/odis/modules/perfect-scrollbar/perfect-scrollbar.min.js"></script>
+    <script src="..%LWeb_dirMenu%//assets/odis/assets/js/variables.js"></script>
+    <script src="..%LWeb_dirMenu%//assets/odis/assets/js/common.js"></script>
+    <script src="..%LWeb_dirMenu%//assets/odis/assets/js/preloader.js"></script>
+    <script src="..%LWeb_dirMenu%//assets/odis/modules/app/init.js"></script>
+    <script src="..%LWeb_dirMenu%//assets/odis/modules/app/settings.js"></script>
+    <script src="..%LWeb_dirMenu%//assets/odis/modules/app/scripts.js"></script>
+    <!-- TEMPLATE JS  -->
+
+    <!-- INPUT MASK JS  -->
+    <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/3/jquery.inputmask.bundle.js"></script>
+    <!-- <script src="..%LWeb_dirMenu%//assets/inputmask/inputmask.date.extensions.js"></script> -->
+    <!-- <script src="..%LWeb_dirMenu%/assets/inputmask/advanced-form-elements.js"></script> -->
+    <!-- INPUT MASK JS  -->
+
+    <script>
+        $(document).ready(function () {
+            if ($(' #status').val() == '@') {
+                $('#post1').attr('disabled', 'disabled');
+                $('#post2').attr('disabled', 'disabled');
+            }
+        });
+    </script>
+
+    <!-- INPUT MASK SCRIPT  -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            $(":input").inputmask();
+            or
+            Inputmask().mask(document.querySelectorAll("input"));
+        });
+        // $(":input").inputmask();
+        //   $("#tanggal").inputmask({"mask": "99/99/99"});
+        $("#time").inputmask({ "mask": "(999) 999-9999" });
+        Inputmask({ "mask": "99/99/99" }).mask(document.querySelectorAll("#tanggal"));
+        Inputmask({ mask: "99.99", rightAlign: "false"}).mask(document.querySelectorAll("#jam"));
+    	Inputmask("99-99").mask(document.querySelectorAll("#jam2"));
+    </script>{  }
+    <!-- INPUT MASK SCRIPT  -->
+
+</body>
+
+</html>

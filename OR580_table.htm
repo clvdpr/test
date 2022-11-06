@@ -1,0 +1,106 @@
+<!-- OR580_table.htm -->
+<html>
+
+    <!-- HEAD START -->
+    <head>
+        <!-- CORE CSS FRAMEWORK START -->
+        <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/themes/base/jquery-ui.min.css" />
+        <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/ju/jq-3.6.0/dt-1.12.1/fh-3.2.4/r-2.3.0/rr-1.2.8/datatables.min.css" />
+        <!-- CORE CSS FRAMEWORK END -->
+
+        <!-- CORE JS FRAMEWORK START -->
+        <script type="text/javascript" src="https://cdn.datatables.net/v/ju/jq-3.6.0/dt-1.12.1/fh-3.2.4/r-2.3.0/rr-1.2.8/datatables.min.js"></script>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+        <!-- CORE JS FRAMEWORK END -->
+
+        <!-- OTHER SCRIPTS INCLUDED ON THIS PAGE START -->
+        <script>
+            $(document).ready(function () {
+                var table = $('#example').DataTable({
+                    rowReorder: {
+                        selector: 'td:nth-child()'
+                    },
+                    responsive: true,
+                    fixedHeader: true,
+                });
+            });
+        </script>
+        <!-- OTHER SCRIPTS INCLUDED ON THIS PAGE END -->
+
+        <!-- OTHER STYLE INCLUDED ON THIS PAGE START -->
+        <style>
+            div.dataTables_wrapper {
+                width: 800px;
+                margin: 0 auto;
+            }
+            .display>thead>tr>th {
+                background: #64b5f6;
+                color: #fff;
+            }
+            /* Lebar table */
+            #example_wrapper {
+                width: 100%;
+            }
+            .ui-widget-header {
+                border: none !important;
+                background: #ffffff;
+            }
+        </style>
+        <!-- OTHER STYLE INCLUDED ON THIS PAGE END -->
+        
+        <!-- OTHER SCRIPTS INCLUDED ON THIS PAGE START -->
+        <script>
+            function openF5() {
+                $('#table tbody').on({
+                    "click": function () {
+                        parent.document.all.LW_key.value = document.all.LW_key[this.rowIndex].value;
+                    },
+                    "dblclick": function () {
+                        parent.document.all.LW_key.value = document.all.LW_key[this.rowIndex].value;
+                        parent.document.getElementById("OR580_F5").click();
+                    }
+                }, 'tr', function () { } );
+            }
+
+            $(document).ready(function () {
+                var table = $('#example').DataTable();
+                $('#example tbody').on('click', 'tr', function () {
+                    if ($(this).hasClass('selected')) {
+                        $(this).removeClass('selected');
+                        $(this).children('td').children('input').prop('checked', true);
+                    } else {
+                        table.$('tr.selected').removeClass('selected');
+                        $(this).addClass('selected');
+                    }
+                });
+            });
+        </script>
+        <!-- OTHER SCRIPTS INCLUDED ON THIS PAGE END -->
+    </head>
+    <!-- HEAD END-->
+
+    <table onClick="det_upload()" selected="det_upload()" id="example" class="ui celled table display nowrap" style="width:100%;">
+        <thead>
+            <tr>
+                <th>*</th>
+                <th title="td_trxno">trx.no.</th>
+                <th title="td_date">date</th>
+                <th title="td_dtdue">due date</th>
+                <th title="td_dsdue">due descr</th>
+                <th title="td_statux +td_status +td_ARsts +td_print">s</th>
+                <th title="td_PIC">PIC</th>
+                <th title="td_empno">Emp.no</th>
+                <th title="td_empno2">emp.2</th>
+                <th title="td_Cust">Client</th>
+                <th title="td_Program">Program</th>
+                <th title="td_jobcd">JobCd</th>
+                <th title="td_jobdet">JobDet</th>
+                <th title="td_jobperi">JobPeri</th>
+                <th title="td_descr">Descr</th>
+                <th title="td_descrD">Det.descr</th>
+                <th title="td_hwuserA+'-'+td_hwdateA+'.'+td_hwtimeA+&quot; &quot;+td_hwprogrA+'-'+td_hwIPA">Web Addition</th>
+                <th title="td_hwuser+'-'+td_hwdate+'.'+td_hwtime+&quot; &quot;+td_hwprogr+'-'+td_hwIP">Web Updation</th>
+                <th title="td_endsts">endsts</th>
+                <th title="td_hdtdone+' '+td_htmdone">done</th>
+            </tr>
+        </thead>

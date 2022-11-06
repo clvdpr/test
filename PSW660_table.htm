@@ -1,0 +1,129 @@
+<html>
+  <head>
+    <!-- CORE CSS FRAMEWORK START -->
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.12.1/css/dataTables.bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/fixedheader/3.2.4/css/fixedHeader.bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/responsive/2.3.0/css/responsive.bootstrap.min.css" />
+    <!-- CORE CSS FRAMEWORK END -->
+
+    <!-- CORE JS FRAMEWORK START -->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script type="text/javascript" src="https://cdn.datatables.net/1.12.1/js/jquery.dataTables.min.js"></script>
+    <script type="text/javascript" src="https://cdn.datatables.net/1.12.1/js/dataTables.bootstrap.min.js"></script>
+    <script type="text/javascript" src="https://cdn.datatables.net/fixedheader/3.2.4/js/dataTables.fixedHeader.min.js"></script>
+    <script type="text/javascript" src="https://cdn.datatables.net/responsive/2.3.0/js/dataTables.responsive.min.js"></script>
+    <script type="text/javascript" src="https://cdn.datatables.net/responsive/2.3.0/js/responsive.bootstrap.min.js"></script>
+    <!-- CORE JS FRAMEWORK END -->
+
+    <!-- TABLE STYLE  -->
+    <link href="%LWeb_dirMenu%/assets/press/tablestyle.css" type="text/css" rel="stylesheet" media="screen" />
+    <!-- TABLE STYLE -->
+
+    <!-- TABLE SCRIPT -->
+    <script type="text/javascript" src="%LWeb_dirMenu%/assets/press/tablescript.js"></script>
+    <!-- TABLE SCRIPT -->
+
+    <!-- /* Tb_print color function */ -->
+    <style>
+      body {
+        dir: ltr !important;
+        align: left !important;
+      }
+      /* Header Table  */
+      .display > thead > tr > th {
+        background-color: %LW_color_CH_bg% !important;
+        color: %LW_color_re_tx%;
+      }
+
+      /* Background Body  */
+      .bodylw,
+      .tabs .tab a.active,
+      .tabs .indicator,
+      .input-field.col:read-only,
+      .input-field:read-only {
+        background: %LW_color_bg% !important;
+        color: %LW_color_tx% !important;
+      }
+
+      /* Background Header  */
+      .headerlw,
+      .pagehead-bg {
+        background: %LW_color_hd_bg% !important;
+        color: %LW_color_hd_tx% !important;
+        border-color: #6ealcc !important;
+      }
+
+      /* Button Color  */
+      .buttonlw {
+        background: %LW_color_hd_bg% !important;
+        color: %LW_color_hd_tx% !important;
+      }
+
+      /* ==============================TABLE============================ */
+
+      /* Header Table  */
+      .display > thead > tr > th {
+        background: %LW_color_ch_bg% !important;
+        color: %LW_color_ch_tx%;
+      }
+
+      tr.odd {
+        background: %LW_color_ro_bg% !important;
+        color: %LW_color_ro_tx% !important;
+      }
+
+      tr.even {
+        background: %LW_color_re_bg% !important;
+        color: %LW_color_re_tx% !important;
+      }
+
+      html {
+        background: %LW_color_bg% !important;
+        color: %LW_color_bg% !important;
+      }
+
+      .pagination > .active > a {
+        background: %LW_color_ch_bg% !important;
+        color: %LW_color_ch_tx% !important;
+      }
+
+      .pagination > li > a {
+        color: %LW_color_ch_bg% !important;
+      }
+    </style>
+    <!-- /* Tb_print color function */ -->
+  </head>
+  <!-- HEAD END-->
+
+  <table onClick="det_upload()" selected="det_upload()" id="example" class="ui celled table display nowrap" style="width: 100%; margin-top: 0px !important">
+    <thead>
+      <tr class="reset-style">
+        <th title="ep_year">year</th>
+        <th title="ep_pertyp+ep_per+ep_slip">peri</th>
+        <th title="ep_paycd">Paycd</th>
+        <th title="ep_seqno">sno</th>
+        <th title="ep_paydes">Description</th>
+        <th title="ep_qty">Qty.</th>
+        <th title="ep_qDiv">Q/Div</th>
+        <th title="ep_unit">Unit</th>
+        <th title="ep_rate">rate</th>
+        <th title="ep_amt">Amount.</th>
+        <th title="ep_GrossUp">*</th>
+        <th title="ep_amtx">Curn.Amt</th>
+        <th title="ep_curncd">Curn.</th>
+        <th title="ep_curate">Curn.Rate</th>
+        <th title="ep_curdiv">Curn.Div</th>
+        <th title="ep_paytyp">F</th>
+        <th title="ep_taxcd">x</th>
+        <th title="ep_system +ep_sysext">s</th>
+        <th title="ep_ratecd">r</th>
+        <th title="ep_pcntgp">%bs</th>
+        <th title="ep_year +ep_pertyp +ep_per +ep_slip">period</th>
+        <th title="ep_noPinj">LoanNo</th>
+        <th title="ep_loc">Loc</th>
+        <th title="ep_dept">Dept</th>
+        <th title="ep_noind">emp.no.</th>
+        <th title="ep_huser +'-' +ep_hdate +'-' +ep_htime">Updation</th>
+      </tr>
+    </thead>

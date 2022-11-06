@@ -1,0 +1,124 @@
+<!-- PSW210_table.htm -->
+<html>
+
+    <!-- HEAD START -->
+    <head>
+        <!-- CORE CSS FRAMEWORK START -->
+        <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/themes/base/jquery-ui.min.css" />
+        <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/ju/jq-3.6.0/dt-1.12.1/fh-3.2.4/r-2.3.0/rr-1.2.8/datatables.min.css" />
+        <!-- CORE CSS FRAMEWORK END -->
+
+        <!-- CORE JS FRAMEWORK START -->
+        <script type="text/javascript" src="https://cdn.datatables.net/v/ju/jq-3.6.0/dt-1.12.1/fh-3.2.4/r-2.3.0/rr-1.2.8/datatables.min.js"></script>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+        <!-- CORE JS FRAMEWORK END -->
+
+        <!-- OTHER SCRIPTS INCLUDED ON THIS PAGE START -->
+        <script>
+            $(document).ready(function () {
+                var table = $('#example').DataTable({
+                    rowReorder: {
+                        selector: 'td:nth-child()'
+                    },
+                    responsive: true,
+                    fixedHeader: true,
+                });
+            });
+        </script>
+        <!-- OTHER SCRIPTS INCLUDED ON THIS PAGE END -->
+
+        <!-- OTHER STYLE INCLUDED ON THIS PAGE START -->
+        <style>
+            div.dataTables_wrapper {
+                width: 800px;
+                margin: 0 auto;
+            }
+            .display>thead>tr>th {
+                background: #64b5f6;
+                color: #fff;
+            }
+            /* Lebar table */
+            #example_wrapper {
+                width: 100%;
+            }
+            .ui-widget-header {
+                border: none !important;
+                background: #ffffff;
+            }
+        </style>
+        <!-- OTHER STYLE INCLUDED ON THIS PAGE END -->
+        
+        <!-- OTHER SCRIPTS INCLUDED ON THIS PAGE START -->
+        <script>
+            function openF5() {
+                $('#table tbody').on({
+                    "click": function () {
+                        parent.document.all.LW_key.value = document.all.LW_key[this.rowIndex].value;
+                    },
+                    "dblclick": function () {
+                        parent.document.all.LW_key.value = document.all.LW_key[this.rowIndex].value;
+                        parent.document.getElementById("PSW210_F5").click();
+                    }
+                }, 'tr', function () { } );
+            }
+
+            $(document).ready(function () {
+                var table = $('#example').DataTable();
+                $('#example tbody').on('click', 'tr', function () {
+                    if ($(this).hasClass('selected')) {
+                        $(this).removeClass('selected');
+                        $(this).children('td').children('input').prop('checked', true);
+                    } else {
+                        table.$('tr.selected').removeClass('selected');
+                        $(this).addClass('selected');
+                    }
+                });
+            });
+        </script>
+        <!-- OTHER SCRIPTS INCLUDED ON THIS PAGE END -->
+    </head>
+    <!-- HEAD END-->
+
+    <table onClick="det_upload()" selected="det_upload()" id="example" class="ui celled table display nowrap" style="width:100%;">
+        <thead>
+            <tr>
+                <th>*
+                <th title="tr_trxno">trx.no.
+                <th title="tr_empno">emp.no.
+                <th title="tr_date">date
+                <th title="tr_statux +tr_status +tr_endsts +tr_print">*
+                <th title="tr_time" align=right>Time
+                <th title="tr_timeEnd" align=right>End
+                <th title="tr_Client">Client
+                <th title="tr_jobCd">Job cd
+                <th title="tr_jobNo">Job No
+                <th title="tr_prgNo">prg.no.
+                <th title="tr_minute">Min
+                <th title="tr_descr">Desc.
+                <th title="tr_Client2">Client2
+                <th title="tr_jobCd2">Job cd2
+                <th title="tr_prgNo2">prg.no.2
+                <th title="tr_minute2">Min.2
+                <th title="tr_descr2">Desc.2
+                <th title="tr_Client3">Client3
+                <th title="tr_jobCd3">Job cd3 <!-- 20 -->
+                <th title="tr_prgNo3">prg.no.3
+                <th title="tr_minute3">Min.3
+                <th title="tr_descr3">Desc.3
+                <th title="tr_Client4">Client4
+                <th title="tr_jobCd4">Job cd4
+                <th title="tr_prgNo4">prg.no.4
+                <th title="tr_minute4">Min.4
+                <th title="tr_descr4">Desc.4
+                <th title="tr_jobCd5">Job cd5
+                <th title="tr_prgNo5">Min.5
+                <th title="tr_minute5">prg.no.5
+                <th title="tr_descr5">Desc.5
+                <th title="tr_visit">v
+                <th title="tr_Expense" align=right>Expense <!-- 10 -->
+                <th title="tr_Cust">Cust
+                <th title="tr_jobno">Job.no
+                <th title="tr_jobdet">Job det
+                <th title="tr_hwuser+'-'+tr_hwdate+'.'+tr_hwtime+' '+tr_hwprogr+'-'+tr_hwIP">Web Updation
+            </tr>
+        </thead>

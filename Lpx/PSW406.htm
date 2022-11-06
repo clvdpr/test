@@ -1,0 +1,209 @@
+<html>
+  <head>
+    <title>PAYSLIP</title>
+    <link href="../../%LWeb_dirMenu%/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="..%LWeb_dirMenu%/bootstrap/css/bootstrap.css" rel="stylesheet">
+    <!--<style>
+      p{page-break-after: always}
+    </style>-->
+    <style>
+      .kanan{text-align:right;padding-right:6.00pt;}
+    
+    @media print
+    {    
+        .no-print, .no-print *
+        {
+          display: none !important;
+        }
+    }
+    </style>
+  </head>
+  <body bgcolor="#ffffff" text="#000" style="font-family:arial;">
+    <div id="print-area">
+      <table cellpadding=0 cellspacing=0 style="font-size:10pt; border-collapse:collapse" border=0>
+        <p>
+          <col width="10px"><col width="400px"><col width="400px">
+          <tr>
+            <td rowspan="3">
+              <div>
+                <img src="%LWeb_dirLpx%/press500x500.png" height=70px width=100px alt="press.jpg"/>
+                <!--10.152.16.155-->
+              </div>
+            </td>
+            <td></td>
+            <td style="text-align: right"><b><h2>EMPLOYEE PAYSLIP</h2></b></td>
+          </tr>
+      </table>
+      <script>
+        var today = new Date();
+
+        //Isolate the day, the month and the year from the date
+        var dd = today.getDate();
+        var mm = today.getMonth()+1; //January is 0!
+        var yy = today.getFullYear().toString().substr(-2);
+
+        //combine the date elements as mm/dd/yy
+        //start by creating a leading zero for single digit days and months
+        if(dd<10) {
+          dd='0'+dd;
+        }
+
+        if(mm<10) {
+          mm='0'+mm;
+        }
+
+        document.getElementById("date").innerHTML = [dd,mm,yy].join('/');
+      </script>
+      <br/>
+        <table cellpadding=0 cellspacing=0 style="font-size:10pt; border-collapse:collapse" border=0>
+          <col width="155px">
+          <col width="10px">
+          <col width="200px">
+          <col width="155px">
+          <col width="10px">
+          <col width="200px">
+          <tr height="12pt"></tr>
+          %@LW_prowno_100@@
+          <tr>
+            <td>Employee ID </td> 
+            <td>:</td>
+            <td>
+              %@LW_PField_s_noind@%
+            </td>
+            <td>Name Of Employee </td>
+            <td>:</td>
+            <td>
+              %@LW_PField_pr010a->em_name@%
+            </td>
+          </tr>
+          <tr>
+            <td>Period of </td>
+            <td>:</td>
+            <td>
+              %@LW_PField_s_perdescr@%
+            </td>
+            <td>Department </td>
+            <td>:</td>
+            <td>
+              %@LW_PField_TableDS(pr810a,tb_descr,em_dept)@%
+            </td>
+          </tr>
+          <tr>
+            <td>Date of Hire </td>
+            <td>:</td>
+            <td>
+              %@LW_PField_DtoStr(em_doh,dd-mm-yy)@%
+            </td>
+            <td>Family Status </td>
+            <td>:</td>
+            <td>
+              %@LW_PField_s_Psts@%
+            </td>
+          </tr>
+          <tr>
+            <td>Continuous Service Date </td>
+            <td>:</td>
+            <td>
+              %@LW_PField_DtoStr(em_doj,dd-mm-yy)@%
+            </td>
+            <td>BPJS Employment No. </td>
+            <td>:</td>
+            <td>%@LW_PField_pr010a->em_astek@%</td>
+          </tr>
+        </table>
+        <table cellpadding=0 cellspacing=0 style="font-size:10pt; border-collapse:collapse" border=0>
+          <tr height=20></tr>
+          <tr height=1></tr>
+          <tr>
+            <td width=800px colspan=6 style="height:2; border-top:.5pt solid black"></td>
+          </tr>
+          <tr>
+            <td><b>Description</b></td>
+            <td style="text-align:right"><b>Amount</b></td>
+            <td style="padding-left:40px"><b>Description</b></td>
+            <td style="text-align:right"><b>Amount</b></td>
+          </tr>
+          <tr>
+            <td width=800px colspan=6 style="height:2; border-top:.5pt solid black"></td>
+          </tr>
+
+          LW_prowno_100@% 
+
+          <tr></tr>
+          <tr>
+            %@LW_prowno_10@@
+            <td style="width:400px; font-size:12px">%@LW_PField_s_paydes@% </td>
+            <td style="text-align:right; width:150px; font-size:12px"> %@LW_PField_s_amt@N14/2,N@% </td>
+
+            LW_prowno_10@%
+
+            %@LW_prowno_11@@ 
+            <td style="width:400px; padding-left:40px; font-size:12px">%@LW_PField_s_paydes2@% </td>
+            <td style="width:200px; text-align:right; font-size:12px">
+              %@LW_PField_s_amt2@N14/2,N@%
+            </td>
+          </tr>
+          LW_prowno_11@%
+          <tr>
+            %@LW_prowno_12@@
+            <td style="width:100px; padding-left:40px; padding-top: 10px; font-size:12px">Account Name : <span style="padding-left:10px">%@LW_PField_s_paydes2@%</span> </td>
+          </tr>
+          LW_prowno_12@%      
+          <tr>
+            %@LW_prowno_13@@
+            <td style="width:100px; padding-left:40px; font-size:12px">Bank Account   <span style="padding-left:6px">:</span> <span style="padding-left:10px">%@LW_PField_s_paydes2@%</span></td>
+          </tr>
+          LW_prowno_13@%
+          <tr>
+            %@LW_prowno_14@@
+            <td style="width:100px; padding-left:138px;font-size:12px">%@LW_PField_s_paydes2@%</td>
+          </tr>
+          LW_prowno_14@%
+          <tr>
+            %@LW_prowno_15@@
+            <td style="width:200px; padding-left:40px;font-size:12px">Account No.  <span style="padding-left:14px">:</span> <span style="padding-left:8px">%@LW_PField_s_paydes2@%</span> </td>
+            <td style="font-size:12px"></td>
+          </tr>
+          LW_prowno_15@%        
+          <!--</table>-->
+          %@LW_prowno_555@@
+          <!--<table>-->
+          <tr height="14px"></tr>
+          <tr>
+            <td colspan=6 style="height:2; border-top:.5pt solid black"></td>
+          </tr>
+          <tr>
+            <td colspan="2" style="text-align:right">TAKE HOME PAY :</td>
+            <td style="text-align:right">
+              %@LW_PField_s_THP@N14/2,N@%
+            </td>
+          </tr>
+          <tr>
+            <td colspan=6 style="height:2; border-top:.5pt solid black"></td>
+          </tr>
+          <tr>
+            <td style="width:300px"></td>
+            <td style="width:200px"></td>
+            <td style="width:250px"></td>
+            <td style="width:240px"></td>
+          </tr>
+        </table>
+        </div>
+      <table>
+        <tr>
+          <td><button class="btn btn-primary btn-sm glyphicon glyphicon-print no-print" onclick="printContent('print-area')"><span class="font_fam"> Print Payslip</span></button></td>
+        </tr>
+      </table>
+
+      </body>
+    <script>
+        function printContent(el){
+        var restorepage = document.body.innerHTML;
+        var printcontent = document.getElementById(el).innerHTML;
+        document.body.innerHTML = printcontent;
+        window.print();
+        document.body.innerHTML = restorepage;
+      }
+    </script>
+  LW_prowno_555@%
+</html>

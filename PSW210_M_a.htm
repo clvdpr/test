@@ -1,0 +1,82 @@
+<html>
+<head>
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+  <meta http-equiv="Pragma" content="no-cache" />
+  <meta http-equiv="Expires" content="0" />
+</head>
+ <BODY BGCOLOR="#DDFeFF" TEXT="#0000FF" style="margin-top:0; margin-left:0; position:absolute;font-size:8pt">
+  <TITLE>PSW210 on Larona Web page</TITLE>
+  <SCRIPT><!--
+   function confirm_del(msg){iret = confirm("confirm for deletion...\n"+msg);if (iret) {document.all.LW_delrec.value="delete";PSW210.submit();} }//-->
+  </script>
+   
+   <form name="PSW210" action="lnweb" method="post">
+    <fieldset>
+     <legend>
+      <TABLE>
+       <tr>
+        <td><INPUT readonly TYPE=text value="PSW210" size=6 onclick="body_onload()">Medical Allowance Balance</td>
+        <td><INPUT TYPE=hidden name=LW_PrgNo value="PSW210">
+        <td><INPUT TYPE=hidden  name=LW_rmid value="%LWeb_rmid%"></td>
+        <td><INPUT TYPE=hidden  name=LW_trxno value="%LW_trxno%"></td>
+       </tr>
+      </TABLE>
+     </legend>
+     <!--<TABLE cellpadding=0 cellspacing=0 style="table-layout:fixed; font-size:10pt; height:8; border-collapse:collapse">
+      <td><button type="submit" name="LW_prgfun" value="PSW210_F5" title="Detail">Create/View Request</button></td>-->
+     </table>
+     <table cellpadding=0 cellspacing=0 style="table-layout:fixed; font-size:10pt; height:8; border-collapse:collapse">
+      <tr><col width=100><col width=257></tr>
+      <tr>
+      <tr height=14pt>
+       <td>Period</td>
+       <td width="204"><%@LW_HField_PR_perDescr@@style="font-size:10pt;"@%>
+      </tr>
+      <tr height=14pt>
+       <td>Emp.No</td>
+        <td width="257"><%@LW_HField_er_noind@@style="font-size:10pt;"@%><%@LW_HField_em_name@@style="font-size:10pt;"@%>
+      </tr>
+      <tr height=14pt>
+       <td>Dept.</td>
+       <td colspan="3" width="261"><%@LW_HField_em_dept@@style="font-size:10pt;"@%>
+      </tr>
+      <tr height=14pt>
+       <td>Record type</td>
+       <td width="169"><%@LW_HField_er_rtype@@style="font-size:10pt;"@%>
+      </tr>
+      <!--<tr height=14pt>
+       <td>Starting date</td>
+       <td width="156"><%@LW_HField_er_DtStart@@style="font-size:10pt;"@%>End date<%@LW_HField_er_DtEnd@@style="font-size:10pt;"@%>
+      </tr>
+      <tr height=14pt>
+       <td>Quota</td>
+       <td width="150"><%@LW_HField_er_qty_q@@style="font-size:10pt;"@%><%@LW_HField_er_amt_q@@style="font-size:10pt;"@%>
+      </tr>
+      <tr height=14pt>
+       <td>Addition (In)</td>
+       <td width="150"><%@LW_HField_er_qty_i@@style="font-size:10pt;"@%><%@LW_HField_er_amt_i@@style="font-size:10pt;"@%>
+      </tr>
+      <tr height=14pt>
+       <td>Deduction (Out)</td>
+       <td width="150"><%@LW_HField_er_qty_o@@style="font-size:10pt;"@%><%@LW_HField_er_amt_o@@style="font-size:10pt;"@%>
+      </tr>-->
+      <tr height=14pt>
+       <td>Balance</td>
+       <td width="150"><!--<%@LW_HField_er_qty_q +er_qty_i -er_qty_o@@style="font-size:10pt;"@%>--><%@LW_HField_er_amt_q +er_amt_i -er_amt_o@@style="font-size:10pt;"@%>
+      </tr>
+     </TABLE>
+
+     <table>
+      <td><input type=text name=LW_key size=33></td>
+      <td><input type=text name=LW_keySort size=33></td>
+     </table>
+     <table><td></td></table>
+
+     <iframe width=1000 height=300 frameborder=yes src="../%LWeb_ifi%" id="form_head"></iframe>
+     <TABLE cellpadding=0 cellspacing=0 style="table-layout:fixed; font-size:10pt; height:8; border-collapse:collapse">
+      <td><button type="submit" name="LW_prgfun" value="PSW210_F5" title="Detail">Create/View Request</button></td>
+     </table>
+  %@LW_onload@%
+  </form>
+ </body>
+</html>

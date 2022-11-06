@@ -1,0 +1,98 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <meta name="robots" content="index, follow">
+  <meta name="keywords" content="larona, solusi akunting dan administrasi perusahaan">
+  <meta name="title" content="Larona Accounting & Administration System on WEB">
+  <meta name="author" content="Administrator">
+  <meta name="description" content="Solution That You Can Rely On">
+  <meta name="generator" content="Joomla! 1.5 - Open Source Content Management">
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+  <meta http-equiv="Pragma" content="no-cache" />
+  <meta http-equiv="Expires" content="0" />
+
+
+
+<title>Larona Employee Self Service</title>
+
+<link rel="stylesheet" href="..%LWeb_dirMenu%/PRslip_Menu_files/sany.css" type="text/css">
+
+<link rel="stylesheet" type="text/css" href="..%LWeb_dirMenu%/PRslip_Menu_files/swimbi.css"/>
+<SCRIPT>
+function setcookie() 
+{
+document.cookie="%rmid%"+(";");
+}
+</SCRIPT>
+
+
+</head>
+
+<script type="text/javascript">
+        window.history.forward();
+        function noBack()
+        {
+            window.history.forward();
+        }
+</script>
+<body onLoad="noBack();" onpageshow="if (event.persisted) noBack();" onUnload="">
+
+
+<body onLoad="setcookie()" bgcolor="#999">
+<div id="page">
+<div class="rowtop">
+ <div class="hdr">
+  <div class="boxtopmenu">
+   <table width="1200"  cellpadding=0 cellspacing=0 style="table-layout:fixed;  border-collapse:collapse">
+    <tr>     
+     <td width="1000"><iframe bgcolor="#ffb36d" name=aabb width=557 height=16 frameborder=no src="..%LWeb_dir%/login_head.htm" ></iframe></td>
+     <td width=100><a href="..%LWeb_dir%/login_info_dir.htm" target="bidang">Dir Info</a></td>
+     <!--<td> <a href="lnweb?manual%rmid%"><b>Manual</b></a></td>-->
+      <td> <a href="/index.html"><b>logout</b></a></td>
+    </tr> 
+   </table>  
+  </div>
+
+<div id="swimbi">
+    <ul>
+        <li><a data-icon="&#xf003" href="lnweb?PSW406%rmid%" target="bidang">Payroll Slip</a></li>
+        <li><a data-icon="&#xf007" href="lnweb?PSW510%rmid%" target="bidang">Personal Data</a></li>
+        <!--<li><a data-icon="&#xf0d6" href="lnweb?PSW590%rmid%" target="bidang">Payroll Master</a></li>-->
+        <li><a data-icon="&#xf03b" href="#">History</a>
+            <ul>
+                <li><a data-icon="&#xf19c" href="lnweb?PXW570%rmid%" target="bidang">Annual Tax (SPT)</a></li>
+                <li><a data-icon="&#xf00b" href="lnweb?PSW660%rmid%" target="bidang">Payroll History</a></li>
+                <li><a data-icon="&#xf003" href="lnweb?PSW406,px%rmid%" target="bidang">Last Year Payroll Slip</a></li>
+            </ul>
+        </li>
+        <li><a data-icon="&#xf00a" href="#">Personal Record</a>
+            <ul>
+                <li><a data-icon="&#xf044" href="lnweb?PSW530%rmid%" target="bidang">Personal Quotas</a></li>
+                <li><a data-icon="&#xf022" href="lnweb?PSW210%rmid%&s_Rtype=L" target="bidang">Annual Leave Request</a></li>
+                <li><a data-icon="&#xf022" href="lnweb?PSW210%rmid%&s_Rtype=K" target="bidang">Special Leave</a></li>
+                <li><a data-icon="&#xf022" href="lnweb?PSW210%rmid%&s_Rtype=M" target="bidang">Medical Balance</a></li>
+            </ul>
+        </li>
+    </ul>
+</div>
+  </div>
+ </div>
+<script src="..%LWeb_dirMenu%/PRslip_Menu_files/swimbi.js"></script>   
+
+<div class="boxmain">
+<table>
+ <tr>
+   <td align="center" width="1195" bgcolor=#999 width=1200 background="..%LWeb_dirMenu%/PRslip_Menu_files/images/o.jpg" style="background-repeat:no-repeat;">
+<iframe name=bidang width=1195 height=800 frameborder=yes></iframe></td>
+ </tr>
+</div>
+ <tr>
+   <td align="center">
+    <div id="footer"><br>
+      Larona Solution<br>2015
+    </div>
+   </td>
+  </tr>
+</table>
+</body></html>

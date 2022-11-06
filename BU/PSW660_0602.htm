@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no" name="viewport">
+  <title>Payroll History</title>
+
+  <!-- General CSS Files -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+  <link rel="stylesheet" href="..%LWeb_dirMenu%//assets/bootstrap-4.3.1/dist/css/bootstrap.min.css">
+  <!-- CSS Libraries -->
+
+  <!-- Template CSS -->
+  <link rel="stylesheet" href="..%LWeb_dirMenu%//assets/css/style.css">
+  <link rel="stylesheet" href="..%LWeb_dirMenu%//assets/css/components.css">
+
+  <style>
+.dropdown-menu {
+  top: 58px;
+}
+.form-group .control-label, .form-group > label { 
+  font-size: 14px;
+}
+
+.form-group, .row {
+  margin-bottom: 0px;
+}
+  </style>
+
+
+
+</head>
+
+<body onload="body_onload()">
+
+<form name="PSW660" action="lnweb" method="post">
+
+  <table>
+    <tr>
+     <td><input TYPE=hidden name=LW_PrgNo value="PSW660">
+     <td><input TYPE=hidden  name=LW_rmid value="%LWeb_rmid%"></td>
+<!--      <td><input TYPE=hidden  name=LW_key value="%LW_key%"></td> -->
+     <td><input TYPE=hidden  name=LW_trxno value="%LW_trxno%"></td>
+    </tr>
+  </table>
+
+              <nav aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                  <li class="breadcrumb-item">Home</a></li>
+				  <li class="breadcrumb-item">History</li>
+                  <li class="breadcrumb-item active" aria-current="page"><b>PSW660 Payroll History</b></li>
+                </ol>
+
+              </nav>
+			<button name="LW_prgfun" type="submit" class="btn btn-primary" value="PSW660_F7" style="margin-left: 15px;">Print</button><br>
+
+                <div class="form-row" style="margin-left: 10px;">
+                  <div class="col">
+                    <div class="form-group row">
+                      <label class="col-lg-2 col-form-label">Ytd.Salary</label>
+                      <div class="col-lg-5">
+                        <%@LW_HField_em_y_Nsal+em_y_xAll+em_y_Gsal@@class="form-control form-control-sm" @%>
+                      </div>
+                    </div>
+
+                    <div class="form-group row">
+                      <label class="col-lg-2 col-form-label">Ytd.Bonus.</label>
+                      <div class="col-lg-5">
+                        <%@LW_HField_em_y_Nbon +em_y_xAllB +em_y_Gbon@@class="form-control form-control-sm" @%>
+                      </div>
+                    </div>
+
+                    <div class="form-group row">
+                      <label class="col-lg-2 col-form-label">Ytd.Tax.</label>
+                      <div class="col-lg-5">
+                        <%@LW_HField_em_y_tax +em_y_taxb@@class="form-control form-control-sm" @%>
+                      </div>
+                    </div>
+
+                    <div class="form-group row">
+                      <label class="col-lg-2 col-form-label">Ytd.Final.</label>
+                      <div class="col-lg-5">
+                        <%@LW_HField_em_y_Nfin +em_y_xAllF +em_y_Gfin@@class="form-control form-control-sm" @%>
+                      </div>
+                    </div>
+
+                    <div class="form-group row">
+                      <label class="col-lg-2 col-form-label">Ytd.Tax Final.</label>
+                      <div class="col-lg-5">
+                        <%@LW_HField_em_y_taxf@@class="form-control form-control-sm" @%>
+                      </div>
+                    </div>
+
+                  </div>
+
+                  <div class="col">
+
+                    <div class="form-group row">
+                      <label class="col-lg-2 col-form-label">Cur :</label>
+                      <div class="col-lg-5">
+                        <%@LW_HField_em_c_Nsal +em_c_xAll +em_c_Gsal@@class="form-control form-control-sm" @%>
+                      </div>
+                    </div>
+
+                    <div class="form-group row">
+                      <label class="col-lg-2 col-form-label">Cur :</label>
+                      <div class="col-lg-5">
+                        <%@LW_HField_em_c_Nbon +em_c_xAllB +em_c_Gbon@@class="form-control form-control-sm" @%>
+                      </div>
+                    </div>
+
+                    <div class="form-group row">
+                      <label class="col-lg-2 col-form-label">Cur :</label>
+                      <div class="col-lg-5">
+                        <%@LW_HField_em_c_tax +em_c_taxb@@class="form-control form-control-sm" @%>
+                      </div>
+                    </div>
+
+                    <div class="form-group row">
+                      <label class="col-lg-2 col-form-label">Cur :</label>
+                      <div class="col-lg-5">
+                        <%@LW_HField_em_c_Nfin+em_c_xAllF+em_c_Gfin@@class="form-control form-control-sm" @%>
+                      </div>
+                    </div>
+
+                    <div class="form-group row">
+                      <label class="col-lg-2 col-form-label">Cur :</label>
+                      <div class="col-lg-5">
+                        <%@LW_HField_em_c_taxf@@class="form-control form-control-sm" @%>
+                      </div>
+                    </div>
+
+                  </div>
+
+
+                  <div class="col">
+
+                    <div class="form-group row">
+                      <label class="col-lg-3 col-form-label">Departement</label>
+                      <div class="col-lg-6">
+                        <%@LW_HField_em_dept@@class="form-control form-control-sm" @%>
+                      </div>
+                    </div>
+
+                    <div class="form-group row">
+                      <label class="col-lg-3 col-form-label">Position</label>
+                      <div class="col-lg-6">
+                        <%@LW_HField_em_jabat@@class="form-control form-control-sm" @%>
+                      </div>
+                    </div>
+
+                    <div class="form-group row">
+                      <label class="col-lg-3 col-form-label">Level</label>
+                      <div class="col-lg-6">
+                        <%@LW_HField_em_level@@class="form-control form-control-sm" @%>
+                      </div>
+                    </div>
+
+                    <div class="form-group row">
+                      <label class="col-lg-3 col-form-label">Date of Hire</label>
+                      <div class="col-lg-3"style="padding-right: 0px;">
+                        <%@LW_HField_em_doh@@class="form-control form-control-sm" @%>
+                      </div>
+                      <label class="col-lg-1 col-form-label" style="padding-left: 0px;">Resign</label>
+                      <div class="col-lg-3">
+                        <%@LW_HField_em_dor@@class="form-control form-control-sm" @%>
+                      </div>
+                    </div>
+
+                    <div class="form-group row">
+                      <label class="col-lg-3 col-form-label">Family Sts</label>
+                      <div class="col-lg-6">
+                        <%@LW_HField_em_pSts+'/'+em_Panak@@class="form-control form-control-sm" @%>
+                      </div>
+                    </div>
+
+                    <div class="form-group row">
+                      <label class="col-lg-3 col-form-label">Base Salary</label>
+                      <div class="col-lg-4" style="padding-right: 0px;">
+                        <%@LW_HField_em_gpokok@@class="form-control form-control-sm" @%>
+                      </div>
+                      <label class="col-lg-1 col-form-label" style="padding-left: 0px;padding-right: 0px;">Cur :</label>
+                      <div class="col-lg-3" style="padding-left: 0px;">
+                        <%@LW_HField_em_curncd@@class="form-control form-control-sm" @%>
+                      </div>
+                    </div>
+                    
+                  </div>
+                  
+                </div>
+            
+                  
+
+                <div class="table-responsive" id="iframe">
+<!--           <script>$('#iframe').load(('..%LWeb_ifi%').replace(/\s/g,'%20'));</script> -->
+          <iframe style="border:0" width="100%" height="85%" src="..%LWeb_ifi%" id="form_head"></iframe>
+        </div>
+
+              </form>
+
+
+ %@LW_onload@%
+
+
+<!-- General JS Scripts -->
+  <script src="..%LWeb_dirMenu%//assets/js/jquery-3.3.1.min.js"></script>
+  <script src="..%LWeb_dirMenu%//assets/bootstrap-4.3.1/dist/js/bootstrap.min.js"></script>
+  <script src="..%LWeb_dirMenu%//assets/popper.min.js"></script>
+  <script src="..%LWeb_dirMenu%//assets/jquery.nicescroll.min.js"></script>
+  <script src="..%LWeb_dirMenu%//assets/moment.min.js"></script>
+  <script src="..%LWeb_dirMenu%//assets/js/stisla.js"></script>
+
+  <!-- JS Libraies -->
+
+  <!-- Page Specific JS File -->
+
+  <!-- Template JS File -->
+  <script src="..%LWeb_dirMenu%//assets/js/scripts.js"></script>
+  <script src="..%LWeb_dirMenu%//assets/js/custom.js"></script>
+</body>
+</html>

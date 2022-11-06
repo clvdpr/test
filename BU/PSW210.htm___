@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="en" class=" ">
+
+<head>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>PSW210 Leave Request Record</title>
+    <meta content="Odis Mobile App" name="description" />
+    <meta content="themepassion" name="author" />
+
+
+    <!-- App Icons -->
+    <link rel="apple-touch-icon" sizes="57x57"
+        href="..%LWeb_dirMenu%//assets/odis/assets/images/icons/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60"
+        href="..%LWeb_dirMenu%//assets/odis/assets/images/icons/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72"
+        href="..%LWeb_dirMenu%//assets/odis/assets/images/icons/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76"
+        href="..%LWeb_dirMenu%//assets/odis/assets/images/icons/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114"
+        href="..%LWeb_dirMenu%//assets/odis/assets/images/icons/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120"
+        href="..%LWeb_dirMenu%//assets/odis/assets/images/icons/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144"
+        href="..%LWeb_dirMenu%//assets/odis/assets/images/icons/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152"
+        href="..%LWeb_dirMenu%//assets/odis/assets/images/icons/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180"
+        href="..%LWeb_dirMenu%//assets/odis/assets/images/icons/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"
+        href="..%LWeb_dirMenu%//assets/odis/assets/images/icons/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="512x512"
+        href="..%LWeb_dirMenu%//assets/odis/assets/images/icons/android-icon-512x512.png">
+    <link rel="icon" type="image/png" sizes="32x32"
+        href="..%LWeb_dirMenu%//assets/odis/assets/images/icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96"
+        href="..%LWeb_dirMenu%//assets/odis/assets/images/icons/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16"
+        href="..%LWeb_dirMenu%//assets/odis/assets/images/icons/favicon-16x16.png">
+    <link rel="manifest" href="..%LWeb_dirMenu%//assets/odis/assets/images/icons/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage"
+        content="..%LWeb_dirMenu%//assets/odis/assets/images/icons/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+
+
+
+
+
+
+    <!-- CORE CSS FRAMEWORK - START -->
+    <link href="..%LWeb_dirMenu%//assets/odis/assets/css/preloader.css" type="text/css" rel="stylesheet"
+        media="screen" />
+
+    <link href="..%LWeb_dirMenu%//assets/odis/modules/materialize/materialize.min.css" type="text/css" rel="stylesheet"
+        media="screen" />
+    <link href="..%LWeb_dirMenu%//assets/odis/modules/fonts/mdi/appicon/appicon.css" type="text/css" rel="stylesheet"
+        media="screen" />
+    <link href="..%LWeb_dirMenu%//assets/odis/modules/fonts/mdi/materialdesignicons.min.css" type="text/css"
+        rel="stylesheet" media="screen" />
+    <link href="..%LWeb_dirMenu%//assets/odis/modules/perfect-scrollbar/perfect-scrollbar.css" type="text/css"
+        rel="stylesheet" media="screen" />
+
+
+    <!-- CORE CSS FRAMEWORK - END -->
+
+    <!-- OTHER SCRIPTS INCLUDED ON THIS PAGE - START -->
+    <!-- OTHER SCRIPTS INCLUDED ON THIS PAGE - END -->
+
+    <!-- CORE CSS TEMPLATE - START -->
+    <link href="..%LWeb_dirMenu%//assets/odis/assets/css/style.css" type="text/css" rel="stylesheet" media="screen"
+        id="main-style" />
+    <!-- CORE CSS TEMPLATE - END -->
+
+<style>
+input[type=text] {
+  direction: ltr;
+}
+</style>
+
+
+
+</head>
+<!-- END HEAD -->
+
+<!-- BEGIN BODY -->
+
+
+<body onload="body_onload()" class=" menu-full header-image html" data-header="light" data-footer="light"
+    data-header_align="app" data-menu_type="left" data-menu="light" data-menu_icons="on" data-footer_type="left"
+    data-site_mode="light" data-footer_menu="show" data-footer_menu_style="light">
+    <form name="PSW210" action="lnweb" method="post">
+        <div class="preloader-background">
+            <div class="preloader-wrapper">
+                <div class="loader">
+                </div>
+            </div>
+        </div>
+
+
+        <!-- Hidden for Endpoint -->
+        <!-- <div class="row my-3"> -->
+        <input class="form-control" type="hidden" name="LW_PrgNo" value="PSW210" />
+        <!-- </div> -->
+        <!-- <div class="row my-3"> -->
+        <input class="form-control" type="hidden" name="LW_rmid" value="%LWeb_rmid%" />
+        <!-- </div> -->
+        <!-- <div class="row my-3"> -->
+        <input class="form-control" type="hidden" name="LW_trxno" value="%LW_trxno%" />
+        <!-- </div> -->
+        <!-- <div class="row my-3"> -->
+        <input class="form-control" type="hidden" name="LW_key" value="%LW_key%" />
+        <!-- </div> -->
+        <!-- Hidden for Endpoint -->
+
+        <!-- START navigation -->
+        <nav class="topbar navigation">
+            <div class="nav-wrapper container" style="margin-top: 27px;">
+
+
+                <!-- <a href="#" data-target=""
+                    class="waves-effect waves-circle navicon back-button htmlmode show-on-large "><i
+                        class="mdi mdi-chevron-left" data-page=""></i></a> -->
+
+
+                <a href="#" data-target="slide-settings"
+                    class="waves-effect waves-circle navicon right sidenav-trigger show-on-large"><i
+                        class="app-icon-equalizer2"></i></a>
+
+                <a href="#" data-target=""
+                    class="waves-effect waves-circle navicon right nav-site-mode show-on-large"><i
+                        class="app-icon-brightness-contrast"></i></a>
+                <!-- <a href="#" data-target="nav-mobile" class="sidenav-trigger"><i class="material-icons">menu</i></a> -->
+            </div>
+        </nav>
+        <!-- END navigation -->
+
+        <!-- START THEME SETTING MENU -->
+        <ul id="slide-settings" class="sidenav sidesettings ">
+            <li class="menulinks">
+                <ul class="collapsible">
+                    <!-- Menu Settings Start-->
+                    <li class="sh-wrap">
+                        <div class="subheader">Themes</div>
+                    </li>
+                    <li class="lvl1  theme">
+                        <div class="waves-effect appsettings " data-type="theme" data-value="red">
+                            <a href="#!">
+                                <i class="mdi mdi-checkbox-intermediate red-text text-lighten-2"></i>
+                                <span class="title">Red</span> </a>
+                        </div>
+                    </li>
+                    <li class="lvl1  theme">
+                        <div class="waves-effect appsettings " data-type="theme" data-value="orange">
+                            <a href="#!">
+                                <i class="mdi mdi-checkbox-blank-outline deep-orange-text text-lighten-2"></i>
+                                <span class="title">Orange</span> </a>
+                        </div>
+                    </li>
+                    <li class="lvl1  theme">
+                        <div class="waves-effect appsettings " data-type="theme" data-value="blue">
+                            <a href="#!">
+                                <i class="mdi mdi-checkbox-blank-outline blue-text text-lighten-2"></i>
+                                <span class="title">Blue</span> </a>
+                        </div>
+                    </li>
+                    <li class="lvl1  theme">
+                        <div class="waves-effect appsettings " data-type="theme" data-value="teal">
+                            <a href="#!">
+                                <i class="mdi mdi-checkbox-blank-outline teal-text text-lighten-2"></i>
+                                <span class="title">Teal</span> </a>
+                        </div>
+                    </li>
+                    <li class="lvl1  theme">
+                        <div class="waves-effect appsettings " data-type="theme" data-value="pink">
+                            <a href="#!">
+                                <i class="mdi mdi-checkbox-blank-outline pink-text text-lighten-2"></i>
+                                <span class="title">Pink</span> </a>
+                        </div>
+                    </li>
+                    <li class="lvl1  theme">
+                        <div class="waves-effect appsettings " data-type="theme" data-value="light-green">
+                            <a href="#!">
+                                <i class="mdi mdi-checkbox-blank-outline light-green-text text-lighten-2"></i>
+                                <span class="title">Light Green</span> </a>
+                        </div>
+                    </li>
+                    <li class="lvl1  theme">
+                        <div class="waves-effect appsettings " data-type="theme" data-value="purple">
+                            <a href="#!">
+                                <i class="mdi mdi-checkbox-blank-outline purple-text text-lighten-2"></i>
+                                <span class="title">Violet</span> </a>
+                        </div>
+                    </li>
+                    <li class="lvl1  theme">
+                        <div class="waves-effect appsettings " data-type="theme" data-value="green">
+                            <a href="#!">
+                                <i class="mdi mdi-checkbox-blank-outline green-text text-lighten-2"></i>
+                                <span class="title">Green</span> </a>
+                        </div>
+                    </li>
+                    <li class="lvl1  theme">
+                        <div class="waves-effect appsettings active" data-type="theme" data-value="deep-purple">
+                            <a href="#!">
+                                <i class="mdi mdi-checkbox-blank-outline deep-purple-text text-lighten-2"></i>
+                                <span class="title">Purple</span> </a>
+                        </div>
+                    </li>
+                    <li class="lvl1  theme">
+                        <div class="waves-effect appsettings " data-type="theme" data-value="amber">
+                            <a href="#!">
+                                <i class="mdi mdi-checkbox-blank-outline amber-text"></i>
+                                <span class="title">Yellow</span> </a>
+                        </div>
+                    </li>
+                    <li class="lvl1  theme">
+                        <div class="waves-effect appsettings " data-type="theme" data-value="indigo">
+                            <a href="#!">
+                                <i class="mdi mdi-checkbox-blank-outline indigo-text text-lighten-2"></i>
+                                <span class="title">Indigo</span> </a>
+                        </div>
+                    </li>
+                    <li class="lvl1  theme">
+                        <div class="waves-effect appsettings " data-type="theme" data-value="blue-grey">
+                            <a href="#!">
+                                <i class="mdi mdi-checkbox-blank-outline blue-grey-text text-lighten-2"></i>
+                                <span class="title">Blue Grey</span> </a>
+                        </div>
+                    </li>
+                    <li class="lvl1  theme">
+                        <div class="waves-effect appsettings " data-type="theme" data-value="brown">
+                            <a href="#!">
+                                <i class="mdi mdi-checkbox-blank-outline brown-text text-lighten-2"></i>
+                                <span class="title">Brown</span> </a>
+                        </div>
+                    </li>
+                    <li class="lvl1  theme">
+                        <div class="waves-effect appsettings " data-type="theme" data-value="cyan">
+                            <a href="#!">
+                                <i class="mdi mdi-checkbox-blank-outline cyan-text text-lighten-2"></i>
+                                <span class="title">Cyan</span> </a>
+                        </div>
+                    </li>
+                    <li class="lvl1  theme">
+                        <div class="waves-effect appsettings " data-type="theme" data-value="grey">
+                            <a href="#!">
+                                <i class="mdi mdi-checkbox-blank-outline grey-text text-darken-2"></i>
+                                <span class="title">Black</span> </a>
+                        </div>
+                    </li>
+                    <li class="sep-wrap">
+                        <div class="divider"></div>
+                    </li>
+                    <li class="sh-wrap">
+                        <div class="subheader">Site Mode</div>
+                    </li>
+                    <li class="lvl1  site_mode">
+                        <div class="waves-effect appsettings active" data-type="site_mode" data-value="light">
+                            <a href="#!">
+                                <i class="mdi mdi-checkbox-intermediate"></i>
+                                <span class="title">Light Mode</span> </a>
+                        </div>
+                    </li>
+                    <li class="lvl1  site_mode">
+                        <div class="waves-effect appsettings " data-type="site_mode" data-value="dark">
+                            <a href="#!">
+                                <i class="mdi mdi-checkbox-blank-outline"></i>
+                                <span class="title">Dark Mode</span> </a>
+                        </div>
+                    </li>
+                    <li class="sep-wrap">
+                        <div class="divider"></div>
+                    </li>
+                    <!-- Menu Settings End-->
+                </ul>
+            </li>
+        </ul>
+        <!-- END THEME SETTING MENU -->
+
+        <div class="menu-close"><i class="mdi mdi-close"></i></div>
+
+
+        <!-- START CONTENT AREA  -->
+        <div class="content-area" style="margin-top:-30px;">
+
+            <div class="pagehead-bg   primary-bg">
+            </div>
+
+            <div class="container has-pagehead is-pagetitle">
+                <div class="section">
+                    <h5 class="pagetitle">PSW210 Leave Request Record</h5>
+                </div>
+            </div>
+
+            <div class="container over">
+                <div class="section ">
+
+
+
+                    <div class="row mt0">
+                        <div class="col s12 pad-0">
+                            <h5 class="bot-20 sec-tit  ">Leave Request Record</h5>
+                            <ul class="collapsible expandable">
+
+                                <!-- Section 1 -->
+                                <li class="active">
+                                    <div class="collapsible-header primary-bg white-text "><i
+                                            class="mdi mdi-square-edit-outline"></i>Section 1
+                                    </div>
+                                    <div class="collapsible-body ">
+                                        <span>
+                                            <div class="section">
+
+                                                <div class="row ">
+                                                    <div class="col s12 pad-0">
+                                                        <h5 class="bot-20 sec-tit  ">Section 1</h5>
+                                                        <div class="pad-15"><input type="submit" name="LW_prgfun" value="PSW210_F5" title="Detail">
+
+                                                            <div class="row" style="margin-top: 20px;">
+                                                                <a
+                                                                    class="waves-effect waves-light btn-large bg-primary col s12">Create
+                                                                    / View Request</a>
+                                                            </div>
+
+                                                            <div class="row">
+                                                                <div class="input-field col s12">
+                                                                    <%@LW_HField_PR_perDescr@@type="text"  @%>
+                                                                    <label>Period</label>
+                                                                </div>
+                                                            </div>
+
+                                                            <div class="row">
+                                                                <div class="input-field col s3">
+                                                                    <%@LW_HField_em_noind@@type="text"  @%>
+                                                                    <label>Emp No.</label>
+                                                                </div>
+
+                                                                <div class="input-field col s9">
+                                                                    <%@LW_HField_em_name@@type="text"  @%>
+                                                                    <label></label>
+                                                                </div>
+                                                            </div>
+
+                                                            <div class="row">
+                                                                <div class="input-field col s12">
+                                                                    <%@LW_HField_em_dept@@type="text"  @%>
+                                                                    <label>Dept</label>
+                                                                </div>
+                                                            </div>
+
+                                                            <div class="row">
+                                                                <div class="input-field col s12">
+                                                                    <%@LW_HField_er_rtype@@type="text"  @%>
+                                                                    <label>Record Type</label>
+                                                                </div>
+                                                            </div>
+
+                                                            <div class="row">
+                                                                <div class="input-field col s6">
+                                                                    <%@LW_HField_er_dtStart@@type="text"  @%>
+                                                                    <label>Starting Date</label>
+                                                                </div>
+
+                                                                <div class="input-field col s6">
+                                                                    <%@LW_HField_er_dtEnd@@type="text"  @%>
+                                                                    <label>End Date</label>
+                                                                </div>
+                                                            </div>
+
+                                                            <div class="row">
+                                                                <div class="input-field col s6">
+                                                                    <%@LW_HField_er_qty_q@@type="text"  @%>
+                                                                    <label>Quota</label>
+                                                                </div>
+
+                                                                <div class="input-field col s6">
+                                                                    <%@LW_HField_er_amt_q@@type="text"  @%>
+                                                                    <label></label>
+                                                                </div>
+                                                            </div>
+
+                                                            <div class="row">
+                                                                <div class="input-field col s6">
+                                                                    <%@LW_HField_er_qty_i@@type="text"  @%>
+                                                                    <label>Addition (IN)</label>
+                                                                </div>
+
+                                                                <div class="input-field col s6">
+                                                                    <%@LW_HField_er_amt_i@@type="text"  @%>
+                                                                    <label></label>
+                                                                </div>
+                                                            </div>
+
+                                                            <div class="row">
+                                                                <div class="input-field col s6">
+                                                                    <%@LW_HField_er_qty_o@@type="text"  @%>
+                                                                    <label>Deduction (OUT)</label>
+                                                                </div>
+
+                                                                <div class="input-field col s6">
+                                                                    <%@LW_HField_er_amt_o@@type="text"  @%>
+                                                                    <label></label>
+                                                                </div>
+                                                            </div>
+
+                                                            <div class="row">
+                                                                <div class="input-field col s6">
+                                                                    <%@LW_HField_er_qty_q +er_qty_i -er_qty_o@@type="text"  @%>
+                                                                    <label>Balance</label>
+                                                                </div>
+
+                                                                <div class="input-field col s6">
+                                                                    <%@LW_HField_er_amt_q +er_amt_i -er_amt_o@@type="text"  @%>
+                                                                    <label></label>
+                                                                </div>
+                                                            </div>
+
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                            </div>
+                                        </span>
+                                    </div>
+                                </li>
+
+                            </ul>
+
+                        </div>
+                    </div>
+
+                    <div class="row ">
+                        <div class="col s12 pad-0">
+                            <h5 class="bot-20 sec-tit  ">Table</h5>
+                            <iframe width="100%" height="290px" frameborder="0" src="..%LWeb_ifi%"></iframe>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="backtotop">
+                <a class="btn-floating btn primary-bg">
+                    <i class="mdi mdi-chevron-up"></i>
+                </a>
+            </div>
+
+
+
+        </div>
+        <!-- END CONTENT AREA  -->
+
+    </form>
+
+    <!-- START IFRAME HASIL PRINT -->
+    <div class="container over" style="background-color:#ffffff; margin-top:-90px;">
+        <iframe width="100%" height="485px" frameborder="0" src="../%LWeb_dir%/%@s_prnfile@%"></iframe>
+    </div>
+    <!-- END IFRAME HASIL PRINT  -->
+
+    %@LW_onload@%
+
+
+
+
+
+    <script src="..%LWeb_dirMenu%//assets/odis/assets/js/pwa.js"></script>
+
+    <!-- LOAD FILES AT PAGE END FOR FASTER LOADING -->
+
+    <!-- CORE JS FRAMEWORK - START -->
+    <script src="..%LWeb_dirMenu%//assets/odis/modules/jquery/jquery-2.2.4.min.js"></script>
+    <script src="..%LWeb_dirMenu%//assets/odis/modules/materialize/materialize.js"></script>
+    <script src="..%LWeb_dirMenu%//assets/odis/modules/perfect-scrollbar/perfect-scrollbar.min.js"></script>
+    <script src="..%LWeb_dirMenu%//assets/odis/assets/js/variables.js"></script>
+    <!-- CORE JS FRAMEWORK - END -->
+
+
+    <!-- OTHER SCRIPTS INCLUDED ON THIS PAGE - START -->
+    <script src="..%LWeb_dirMenu%//assets/odis/assets/js/common.js"></script>
+    <!-- OTHER SCRIPTS INCLUDED ON THIS PAGE - END -->
+
+
+    <!-- CORE TEMPLATE JS - START -->
+    <script src="..%LWeb_dirMenu%//assets/odis/modules/app/init.js"></script>
+    <script src="..%LWeb_dirMenu%//assets/odis/modules/app/settings.js"></script>
+
+    <script src="..%LWeb_dirMenu%//assets/odis/modules/app/scripts.js"></script>
+
+    <!-- END CORE TEMPLATE JS - END -->
+
+
+    <script src="..%LWeb_dirMenu%//assets/odis/assets/js/preloader.js"></script>
+
+
+
+</body>
+
+</html>

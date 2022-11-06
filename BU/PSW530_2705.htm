@@ -1,0 +1,40 @@
+<html>
+ <BODY onload="body_onload()" BGCOLOR="#DDFeFF" TEXT="#0000FF" style="margin-top:0; margin-left:0; position:absolute;font-size:8pt">
+ <TITLE>PSW530 on Larona Web page</TITLE>
+ <SCRIPT><!--
+  function confirm_del(msg){iret = confirm("confirm for deletion...\n"+msg);if (iret) {document.all.LW_delrec.value="delete";PSW530.submit();} }//-->
+ </script>
+
+ <form name="PSW530" action="lnweb" method="post">
+  <fieldset>
+   <legend>
+    <TABLE>
+     <tr>
+      <td><INPUT readonly TYPE=text value="PSW530" size=6 onclick="body_onload()">Personal Quota Record</td>
+      <td><INPUT TYPE=hidden name=LW_PrgNo value="%LWeb_prgno%">
+      <td><INPUT TYPE=hidden  name=LW_rmid value="%LWeb_rmid%"></td>
+      <td><INPUT TYPE=hidden  name=LW_trxno value="%LW_trxno%"></td>
+     </tr>
+    </TABLE>
+   </legend>
+   <TABLE cellpadding=0 cellspacing=0 style="table-layout:fixed; font-size:10pt; height:8; border-collapse:collapse">
+    <td><button type="submit" name="LW_prgfun" value="PSW530_F5" title="Detail personal trx.">Detail personal trx.</button></td>
+   </table>
+   <table cellpadding=0 cellspacing=0 style="table-layout:fixed; font-size:10pt; height:8; border-collapse:collapse">
+    <tr><col width=50><col width=277></tr>
+    <tr height=3pt></tr>
+    <tr height=14pt><td width="20">  Emp.no.</td><td colspan="3" width="297"><%@LW_HField_s_noind@@style="font-size:10pt;" size="50"@%></tr>
+   </TABLE>
+
+   <table>
+    <td><input type=text name=LW_key size=33></td>
+    <td><input type=text name=LW_keySort size=33></td>
+   </table>
+   <iframe width=800 height=300 frameborder=yes src="../%LWeb_ifi%" id="form_head"></iframe>
+   <TABLE cellpadding=0 cellspacing=0 style="table-layout:fixed; font-size:10pt; height:8; border-collapse:collapse">
+    <td><button type="submit" name="LW_prgfun" value="PSW530_F5" title="Detail personal trx.">Detail personal trx.</button></td>
+   </table>
+   %@LW_onload@%
+  </form>
+ </body>
+</html>

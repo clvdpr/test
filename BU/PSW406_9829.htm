@@ -1,0 +1,74 @@
+<html>
+<BODY onload="body_onload()" background="..%LWeb_dirMenu%/PRslip_Menu_files/back-1.jpg" style="background-repeat:repeat; TEXT="#0000ff" style="margin-top:0; margin-left:0; position:absolute;font-size:8pt"><TITLE>PSW406 on Larona Web page</TITLE><SCRIPT><!--
+function confirm_del(msg){iret = confirm("confirm for deletion...\n"+msg);if (iret) {document.all.LW_delrec.value="delete";PSW406.submit();} }//-->
+</script>
+<script><!--
+function body_onload()
+//--></script>
+<style>
+.button{
+background-image=url("..%LWeb_dirMenu%/PRslip_Menu_files/print.png");
+}
+</style>
+
+<form name="PSW406" action="lnweb" method="post">
+
+<fieldset>
+  <legend>
+   <TABLE>
+    <tr>
+     <td><INPUT readonly TYPE=text style="font-size:11px;" value="PSW406" size=6 onclick="body_onload()"> <text style="font-size:11px;">Payroll Slip</text></td>
+     <td><INPUT TYPE=hidden name=LW_PrgNo value="PSW406">
+     <td><INPUT TYPE=hidden  name=LW_rmid value="%LWeb_rmid%"></td>
+     <td><INPUT TYPE=hidden  name=LW_key value="%LW_key%"></td>
+    </tr>
+   </TABLE>
+  </legend>
+  <table>
+   <tr>
+    <td><a href="lnweb?&LW_rmid=%rmid%"></a></td>
+    <td><input name="LW_fun" type="submit" class="button"   value="Print"></td>
+   </tr>
+  </table>
+
+<table cellpadding=0 cellspacing=0 style="table-layout:fixed; font-size:8pt; height:8; border-collapse:collapse">
+<tr><col width=6><col width=92><col width=204></tr>
+
+<tr height=14pt><td></td>
+    <td>Current Year</td><td width="30"><%@LW_HField_s_Year@%>
+</tr>
+
+<tr height=14pt><td></td>
+    <td>Emp.No</td><td colspan="3" width="284"><%@LW_HField_s_noind@%>
+</tr>
+
+<tr height=14pt><td></td>
+    <td>Period</td>
+    <td width="89"><%@LW_HField_s_per@%> 
+    &nbsp;Slip&nbsp;<%@LW_HField_s_slip@%>
+</tr>
+
+<tr height=14pt><td></td>
+    <td>Lpx. option</td><td width="201"><%@LW_HField_lpx_option@%>
+</tr>
+
+<tr height=14pt><td></td>
+    <td>Printer's File</td>
+    <td width="204"><%@LW_HField_s_prnfile@%>
+</tr>
+</table>
+  
+ <table>
+   <tr>
+    <td><a href="lnweb?&LW_rmid=%rmid%"></a></td>
+    <td><input name="LW_fun" type="submit" class="button"   value="Print"></td>
+   </tr>
+  </table>
+
+
+</fieldset>
+</form>
+<div><iframe width=800 height=400 frameborder=yes src="../%LWeb_dir%/%@s_prnfile@%"></iframe></div>
+ %@LW_onload@%
+</body>
+</html>

@@ -1,0 +1,92 @@
+<html>
+ <BODY BGCOLOR="#DDFeFF" TEXT="#0000FF" style="margin-top:0; margin-left:0; position:absolute;font-size:8pt">
+ <TITLE>PSW660 on Larona Web page</TITLE>
+ <SCRIPT><!--
+ function confirm_del(msg){iret = confirm("confirm for deletion...\n"+msg);if (iret) {document.all.LW_delrec.value="delete";PSW660.submit();} }//--></script>
+
+ <form name="PSW660" action="lnweb" method="post">
+  <fieldset>
+   <legend>
+    <TABLE>
+     <tr>
+      <td><INPUT readonly TYPE=text value="PSW660" size=6 onclick="body_onload()">Payroll History</td>
+      <td><INPUT TYPE=hidden name=LW_PrgNo value="PSW660">
+      <td><INPUT TYPE=hidden  name=LW_rmid value="%LWeb_rmid%"></td>
+      <td><INPUT TYPE=hidden  name=LW_trxno value="%LW_trxno%"></td>
+     </tr>
+    </TABLE>
+   </legend>
+   
+   <TABLE cellpadding=0 cellspacing=0 style="table-layout:fixed; font-size:8pt; height:8; border-collapse:collapse">
+    <td><button type="submit" name="LW_prgfun" value="PSW660_F7" title="Print employee payroll by period">Print</button></td>
+   </table>
+   <table cellpadding=0 cellspacing=0 style="table-layout:fixed; font-size:8pt; height:8; border-collapse:collapse">
+    <tr><col width=57><col width=278><col width=49><col width=343></tr>
+    <tr>
+    <tr height=14pt>
+     <td>Emp.No</td>
+     <td><input value="%@s_noind@%" disabled="disabled" size="7"></td>
+     <td colspan="4"><input value="%@em_name@%" disabled="disabled" size="30"></td>
+    </tr>
+    <tr height=14pt>
+     <td></td><td width="5%"></td><td></td><td width=5%></td><td width=20%></td>
+     <td width=5%>Department</td>
+     <td width=7%><input value="%@em_dept@%" disabled="disabled" size="8"></td>
+     <td width=5%></td><td width=3%></td>
+    </tr>
+    <tr height=14pt>
+     <td>Ytd.Salary</td>
+     <td colspan="2"><input size="16" value="%@em_y_Nsal+em_y_xAll+em_y_Gsal@%" disabled="disabled" dir="rtl">
+     <td width=5%>Cur :</td>
+     <td width=20%><input value="%@em_c_Nsal +em_c_xAll +em_c_Gsal@%" disabled="disabled" size="16" dir="rtl"></td>
+     <td>Position</td>
+     <td width=7%><input value="%@em_jabat@%" disabled="disabled" size="8"></td>
+    </tr>
+    <tr height=14pt>
+     <td>Ytd.Bonus</td>
+     <td colspan="2"><input value="%@em_y_Nbon +em_y_xAllB +em_y_Gbon@%" size="16" disabled="disabled" dir="rtl">
+     <td width=5%>Cur :</td>
+     <td width=20%><input value="%@em_c_Nbon +em_c_xAllB +em_c_Gbon@%" disabled="disabled" size="16" dir="rtl"></td>
+     <td>Level</td>
+     <td width=7%><input value="%@em_level@%" disabled="disabled" size="8"></td>
+    </tr>
+    <tr height=14pt>
+     <td>Ytd.Tax</td>
+     <td colspan="2"><input value="%@em_y_tax +em_y_taxb@%" disabled="disabled" size="16" dir="rtl"></td>
+     <td width=5%>Cur :</td>
+     <td width=20%><input value="%@em_c_tax +em_c_taxb@%" disabled="disabled" size="16" dir="rtl">
+     <td>Date of hire</td>
+     <td width=7%><input value="%@em_doh@%" disabled="disabled" size="8"></td>
+     <td width=5%>Resign</td>
+     <td colspan="3"><input value="%@em_dor@%" disabled="disabled" size="8"></td>
+    </tr>
+    <tr height=14pt>
+     <td>Ytd.Final</td>
+     <td colspan="2"><input value="%@em_y_Nfin +em_y_xAllF +em_y_Gfin@%" disabled="disabled" size="16" dir="rtl">
+     <td width=5%>Cur :</td>
+     <td width=20%><input value="%@em_c_Nfin+em_c_xAllF+em_c_Gfin@%" disabled="disabled" size="16" dir="rtl"></td>
+     <td>Family Sts.</td>
+     <td width=7%><input value="%@em_pSts+'/'+em_Panak@%" disabled="disabled" size="8">
+    </tr>
+    <tr height=14pt>
+     <td>Ytd.Tax final</td>
+     <td colspan="2"><input value="%@em_y_taxf@%" disabled="disabled" size="16" dir="rtl">
+     <td width=5%>Cur :</td>
+     <td width=20%><input value="%@em_c_taxf@%" disabled="disabled" size="16" dir="rtl"></td>
+     <td>Base Salary</td>
+     <td colspan="3" width=12%><input value="%@em_gpokok@%" disabled="disabled" size="16" dir="rtl"></td>
+     <td width=5%>Cur:</td>
+     <td width=5%><input value="%@em_curncd@%"disabled="disabled" size="5"></td>
+     <td><input value="%@em_grossup@%" disabled="disabled" size="2"></td>
+    </tr>
+   </TABLE>
+
+   <iframe width=850 height=325 frameborder=yes src="../%LWeb_ifi%" id="form_head"></iframe>
+
+   <TABLE cellpadding=0 cellspacing=0 style="table-layout:fixed; font-size:8pt; height:8; border-collapse:collapse">
+    <td><button type="submit" name="LW_prgfun" value="PSW660_F7" title="Print employee payroll by period">Print</button></td>
+   </table>
+ %@LW_onload@%
+</form>
+</body>
+</html>

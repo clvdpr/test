@@ -1,0 +1,199 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="Content-Type" content="application/xhtml+xml; charset=utf-8" />
+
+	<!-- link calendar resources -->
+	<link rel="stylesheet" type="text/css" href="..%LWeb_dirMenu%/PRslip_Menu_files/tcal.css" />
+	<script type="text/javascript" src="..%LWeb_dirMenu%/PRslip_Menu_files/tcal.js"></script> 
+	<link rel="stylesheet" type="text/css" href="..%LWeb_dirMenu%/PRslip_Menu_files/ionicons.css" />
+  <script
+  src="https://code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous"></script>
+</head>
+
+
+ <BODY onload="body_onload()" BGCOLOR="#DDFeFF" TEXT="#0000FF" style="margin-top:0; margin-left:0; position:absolute;font-size:8pt">
+  <TITLE>PSW210 on Larona Web page</TITLE>
+
+  <script> <!--
+  function confirm_del(msg){iret = confirm("confirm for deletion...\n"+msg);if (iret) {document.all.LW_delrec.value="delete";PSW210.submit();} }
+  //--></script>
+   <!--<script>
+  function confirm_send(msg){iret = confirm("Permintaan cuti telah di dikirimkan ke line manager anda\n"+msg);if (iret) {document.all.LW_sendreq.value="Approval_Send";PSW210.submit();} }
+  function confirm_tgl(msg){iret = confirm("Tanggal cuti pernah digunakan, silahkan periksa tanggal pengajuan cuti anda\n"+msg);if (iret) {document.all.LW_tglrec.value="PSW210_F5_Post";PSW210.submit();} }
+  </script>-->
+  <form name="PSW210" action="lnweb" method="post">
+  <fieldset>
+   <legend>
+    <TABLE>
+     <tr>
+      <td><INPUT readonly TYPE=text value="PSW210_F5" size=9 onclick="body_onload()">Detail Personal Trx. Request</td>
+      <td><INPUT TYPE=hidden name=LW_PrgNo value="PSW210_F5"></td>
+      <td><INPUT TYPE=hidden  name=LW_rmid value="%LWeb_rmid%"></td>
+      <td><INPUT TYPE=hidden  name=LW_key value="%LW_key%"></td>
+      <td><INPUT TYPE=hidden  name=LW_PrgBos value="%LWeb_prgbos%"></td>
+      <td><INPUT TYPE=hidden  name=LW_trxno value="%LW_trxno%"></td>
+      %LWeb_prgfun%
+     </tr>
+    </TABLE>
+   </legend>
+
+  <table cellpadding=0 cellspacing=0 style="table-layout:fixed; font-size:8pt; height:8; border-collapse:collapse">
+   <td><a href="lnweb?PSW210%rmid%&LW_trxno=%LW_trxno%">Back</a></td>
+   <td><button class="btn" type="submit" name="LW_prgfun" value="PSW210_F5_Post" title="Post" id='post1'>Add/Post</button></td>
+    <td><button class="btn" type="submit" name="LW_prgfun" value="Prn_Print" title="Print">Print</button></td>
+    <td>
+      <input name="LW_sendreq" value="Approval_Send" type="hidden">
+    </td>
+    <td></td><td>
+    <!--<button type="submit" class="btn btn-danger btn-sm glyphicon glyphicon-trash"name="LW_prgfun" value="Approval_Send" title="Approval Request Send" onclick="confirm_send(document.all.LW_key.value)"> Send Request </button>-->
+   <button type="submit" class="btn btn-danger btn-sm glyphicon glyphicon-trash"name="LW_prgfun" value="Approval_Send" title="Approval Request Send"> Send Request </button>
+    </td>
+  </table>
+  <table cellpadding=0 cellspacing=0 style="table-layout:fixed; font-size:8pt; height:8; border-collapse:collapse">
+   <tr height="2pt"><col width=75><col width=225><col width=75><col width=663></tr>
+   <tr>
+   <tr height=14pt>
+    <td>Period</td>
+    <td colspan="2" width="256"><%@LW_HField_PR_perDescr@%><%@LW_HField_er_noind@%>
+   </tr>
+   <tr height=14pt>
+    <td>Emp.No</td>
+    <td width="225"><%@LW_HField_er_noind@%><%@LW_HField_em_title+' '+em_name@%>
+    <td>Dept</td><td width="271"><%@LW_HField_em_dept@%>
+   </tr>
+   <tr height=14pt>
+    <td>Record type</td>
+    <td width="225"><%@LW_HField_er_rtype@%>
+    <td>Shift Grp</td>
+    <td width="169"><%@LW_HField_em_shftGrp@%>
+   </tr>
+   <tr height=14pt>
+    <td>Description</td>
+    <td width="225"><%@LW_HField_er_descr@%>
+    <td>LeaveMedi</td>
+    <td width="39"><%@LW_HField_em_leavemedi@%>
+   </tr>
+   <tr height=14pt>
+    <td></td><td></td>
+    <td>U.Approval</td>
+    <td width="240"><%@LW_HField_em_userApprv@%>
+   </tr>
+
+   <tr height=14pt>
+    <td>Addition (In)</td>
+    <td width="150"><%@LW_HField_er_qty_i@%><%@LW_HField_er_amt_i@%>
+   </tr>
+   <tr height=14pt>
+    <td>Deduction (Out)</td>
+    <td width="150"><%@LW_HField_er_qty_o@%><%@LW_HField_er_amt_o@%>
+   </tr>
+   <tr height=14pt>
+    <td>Balance</td>
+    <td width="150"><%@LW_HField_er_qty_q+er_qty_i-er_qty_o@%><%@LW_HField_er_qty_q+er_amt_i-er_amt_o@%>
+   </tr>
+   <tr height=14pt>
+    <td>Reqst.no.</td>
+    <td width="225"><%@LW_HField_rq_noind +rq_rtype +rq_seqno@%><%@LW_HField_rq_statux +rq_status@@id='status'@%>
+    <td>Approval no.</td>
+    <td width="129"><%@LW_HField_tb_trxno@%>sts<%@LW_HField_tb_statux@%><%@LW_HField_tb_status@%>
+   </tr>
+   <tr height=14pt>
+    <td>start</td>
+    <td size="10">
+    <input size="10" type="text" name="rq_DtStart" class="tcal" value="%@rq_DtStart@%">
+    days<%@LW_HField_rq_qday@%></td>
+    <td>User</td>
+    <td width="54"><%@LW_HField_tb_uid@%><%@LW_HField_tb_step@%>
+   </tr>
+   <tr height=14pt>
+    <td>end</td>
+    <td><input size="10" type="text" name="rq_DtEnd" class="tcal" value="%@rq_DtEnd@%" >work day<%@LW_HField_rq_wday@%>
+    <td>User 1</td>
+    <td width="663"><%@LW_HField_tb_uid1@%><%@LW_HField_tb_step1@%><%@LW_HField_tb_send1@%><%@LW_HField_tb_approval->tb_sendDt1@%><%@LW_HField_tb_approval->tb_sendTm1@%><%@LW_HField_tb_approk1@%><%@LW_HField_tb_apprDt1 +tb_apprTm1@%><%@LW_HField_tb_remark1@%>
+   </tr>
+   <tr height=14pt>
+    <td>unit</td>
+    <td width="225"><%@LW_HField_rq_uom@%>
+    <td>User 2</td><td width="663"><%@LW_HField_tb_uid2@%><%@LW_HField_tb_step2@%><%@LW_HField_tb_send2@%><%@LW_HField_tb_approk2@%><%@LW_HField_tb_approval->tb_sendDt2@%><%@LW_HField_tb_approval->tb_sendTm2@%><%@LW_HField_tb_apprDt2 +tb_apprTm2@%><%@LW_HField_tb_remark2@%>
+   </tr>
+   <tr height=14pt>
+    <td></td>
+    <td width="225">
+    <td>User 3</td><td width="663"><%@LW_HField_tb_uid3@%><%@LW_HField_tb_step3@%><%@LW_HField_tb_send3@%><%@LW_HField_tb_approk3@%><%@LW_HField_tb_approval->tb_sendDt3@%><%@LW_HField_tb_approval->tb_sendTm3@%><%@LW_HField_tb_apprDt3 +tb_apprTm3@%><%@LW_HField_tb_remark3@%>
+   </tr>
+   <tr height=14pt>
+    <td>Claim amt</td>
+    <td width="225"><%@LW_HField_rq_amt@%>curncy<%@LW_HField_rq_curncd@%>
+    <td>Attch.Dir</td>
+    <td width="402"><%@LW_HField_tb_attachdir@%>
+   </tr>
+   <tr height=14pt>
+    <td>Rqst.descr</td>
+    <td width="225"><%@LW_HField_rq_descr@%>
+    <td>Attached</td><td width="204"><%@LW_HField_tb_attachfile@%>
+   </tr>
+   <tr height=14pt>
+    <td>Rqst.descr 2</td>
+    <td width="225"><%@LW_HField_rq_descr2@%>
+    <td>Subject</td>
+    <td width="336"><%@LW_HField_tb_subject@%>
+   </tr>
+   <tr height=14pt>
+    <td>On Off days</td>
+    <td width="225"><%@LW_HField_rq_OnOffDays@%>
+    <td>Note</td>
+    <td width="600"><%@LW_HField_tb_note@%>
+   </tr>
+   <tr height=14pt>
+    <td></td><td></td>
+    <td>Descr</td>
+    <td width="402"><%@LW_HField_tb_descr@%>
+   </tr>
+       <tr height=14pt>
+    <td>LPX Option</td>
+    <td width="204"><%@LW_HField_Lpx_Option@%>
+   </tr>
+
+   <tr height=14pt>
+    <td>Printer's file</td>
+    <td width="204"><%@LW_HField_s_prnfile@%>
+   </tr>
+  </TABLE>
+      
+      <!--<script>
+        function UrlExists(url)
+        {
+          var http = new XMLHttpRequest();
+          http.open('HEAD', url, false);
+          http.send();
+          return http.status!=404;
+        }
+        if (UrlExists('../%LWeb_dir_R%/hs_prnfile.pdf')&& %@rq_seqno@% != " "){         
+        document.write("<div><iframe width=800 height=400 frameborder=yes src='../%LWeb_dir_R%/hs_prnfile.pdf'></iframe></div>;");
+        }
+      </script>-->
+      <!--<div><iframe width=800 height=400 frameborder=yes src="../%LWeb_dirEmail%/%@tb_approval->tb_attachfile@%"></iframe></div>-->
+<!--      <iframe width=800 height=400 frameborder=yes src="data:application/pdf;base64,%@LW_HBlob_tb_approval->tb_attachfileb@%"> -->
+      <iframe width=800 height=400 frameborder=yes src="%@LW_HBlob_tb_approval->tb_attachfileb@%">
+  
+  <TABLE cellpadding=0 cellspacing=0 style="table-layout:fixed; font-size:8pt; height:8; border-collapse:collapse">
+   <td><a href="lnweb?PSW210%rmid%&LW_trxno=%LW_trxno%">Back</a></td>
+   <td><button class="btn" type="submit" name="LW_prgfun" value="PSW210_F5_Post" title="Post" id='post2'>Add/Edit</button></td>
+   <td><button class="btn" type="submit" name="LW_prgfun" value="Prn_Print" title="Print">Print</button></td>
+   <td><button class="btn" type="submit" name="LW_prgfun" value="Approval_Send" title="Approval Request Send">Send Request</button></td>
+  </table>
+ </form>
+      <script>
+        $(document).ready(function(){
+          if ($('#status').val()=='@'){
+            $('#post1').attr('disabled','disabled'); 
+            $('#post2').attr('disabled','disabled'); 
+          } 
+        });    
+    </script>
+      %@LW_onload@%
+</body>
+</html>

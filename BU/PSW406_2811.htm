@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no" name="viewport" />
+    <title>Payroll Slip</title>
+
+    <!-- General CSS Files -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous" />
+    <link rel="stylesheet" href="..%LWeb_dirMenu%//assets/bootstrap-5.2.0/dist/css/bootstrap.min.css" />
+
+    <!-- CSS Libraries -->
+
+    <!-- Template CSS -->
+    <link rel="stylesheet" href="..%LWeb_dirMenu%//assets/css/style.css" />
+    <link rel="stylesheet" href="..%LWeb_dirMenu%//assets/css/components.css" />
+
+    <style>
+        @media only screen and (min-width: 768px) {
+            body {
+                overflow-y: hidden;
+                /* Sembunyikan vertical scrollbar */
+                overflow-x: hidden;
+                /* Sembunyikan horizontal scrollbar */
+            }
+        }
+        @media only screen and (max-width: 768px) {
+            nav {
+                display: none;
+            }
+        }
+    </style>
+</head>
+
+<body onload="body_onload()" style="background-color:#ffffff;">
+    <form name="PSW406" action="lnweb" method="post">
+        <div class="container" style="background-color:#ffffff;">
+
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb mt-3" style="background-color:#ffffff;">
+                    <li class="breadcrumb-item">
+                        Home
+                    </li>
+                    <li class="breadcrumb-item active" aria-current="page">
+                        <b>PSW406 Payroll Slip</b>
+                    </li>
+                </ol>
+            </nav>
+
+            <!-- Hidden for Endpoint -->
+            <!-- <div class="row my-3"> -->
+            <input class="form-control" type="hidden" name="LW_PrgNo" value="PSW406" />
+            <!-- </div> -->
+            <!-- <div class="row my-3"> -->
+            <input class="form-control" type="hidden" name="LW_rmid" value="%LWeb_rmid%" />
+            <!-- </div> -->
+            <!-- <div class="row my-3"> -->
+            <input class="form-control" type="hidden" name="LW_key" value="%LW_key%" />
+            <!-- </div> -->
+            <!-- Hidden for Endpoint -->
+
+            <div class="my-2 row">
+                <label class="col-sm-2 col-form-label" for="inputPassword3">Emp No.</label>
+                <div class="col-sm-10">
+                    <%@LW_HField_s_noind@@ class="form-control form-control-sm" @%>
+                </div>
+            </div>
+            <div class="mb-2 row">
+                <label class="col-sm-2 col-form-label">Current Year</label>
+                <div class="col-sm-10">
+                    <%@LW_HField_s_Year@@ class="form-control form-control-sm" @%>
+                </div>
+            </div>
+            <div class="mb-2 row">
+                <label class="col-sm-2 col-form-label">Period</label>
+                <div class="col-sm-6">
+                    <%@LW_HField_s_per@@ class="form-control form-control-sm" dir="ltr" @%>
+                </div>
+                <label class="col-sm-1 col-form-label">Slip</label>
+                <div class="col-sm-3">
+                    <%@LW_HField_s_slip@@ class="form-control form-control-sm" @%>
+                </div>
+            </div>
+            <div class="mb-2 row">
+                <label class="col-sm-2 col-form-label">Lpx Option</label>
+                <div class="col-sm-10">
+                    <%@LW_HField_lpx_option@@ class="form-select form-select-sm w-100 h-auto" aria-label="Default select example" @%>
+                </div>
+            </div>
+            <div class="mb-2 row">
+                <label class="col-sm-2 col-form-label">Printers File</label>
+                <div class="col-sm-10">
+                    <%@LW_HField_s_prnfile@@ class="form-control form-control-sm" @%>
+                </div>
+            </div>
+
+            <div class="d-grid gap-2 my-4">
+                <button class="btn btn-primary" type="submit" name="LW_fun" value="print">
+                    PRINT
+                </button>
+            </div>
+
+        </div>
+    </form>
+
+    <div class="container mb-3" style="background-color:#ffffff;">
+        <iframe width="100%" height="485px" frameborder="0" src="../%LWeb_dir%/%@s_prnfile@%"></iframe>
+    </div>
+
+    %@LW_onload@%
+
+    <!-- General JS Scripts -->
+    <script src="..%LWeb_dirMenu%//assets/js/jquery-3.3.1.min.js"></script>
+    <script src="..%LWeb_dirMenu%//assets/bootstrap-5.2.0/dist/js/bootstrap.min.js"></script>
+    <script src="..%LWeb_dirMenu%//assets/popper.min.js"></script>
+    <script src="..%LWeb_dirMenu%//assets/jquery.nicescroll.min.js"></script>
+    <script src="..%LWeb_dirMenu%//assets/moment.min.js"></script>
+    <script src="..%LWeb_dirMenu%//assets/js/stisla.js"></script>
+
+    <!-- JS Libraies -->
+
+    <!-- Page Specific JS File -->
+
+    <!-- Template JS File -->
+    <script src="..%LWeb_dirMenu%//assets/js/scripts.js"></script>
+    <script src="..%LWeb_dirMenu%//assets/js/custom.js"></script>
+</body>
+
+</html>

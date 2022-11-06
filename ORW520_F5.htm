@@ -1,0 +1,974 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, viewport-fit=cover" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="theme-color" content="#000000" />
+    <title>%LWeb_title%</title>
+    <meta name="description" content="Larona Time Record" />
+    <meta name="keywords" content="Time Record, Absensi, Absen, Larona, Aplikasi Absen" />
+    <link rel=" icon" type="image/png" href="..%LWeb_dirMenu%/assets/mobile/img/icon/android-icon-36x36.png" sizes="36x36" />
+    <link rel="apple-touch-icon" sizes="180x180" href="..%LWeb_dirMenu%/assets/mobile/img/icon/android-icon-192x192.png" />
+    <link rel="stylesheet" href="..%LWeb_dirMenu%/assets/mobile/css/style.css" />
+    <link href="https://code.jquery.com/ui/1.12.1/themes/dot-luv/jquery-ui.css" rel="stylesheet" />
+
+    <!-- TB_print Color Function  -->
+    <style>
+      .appheader,
+      .headerButton {
+        background: %LW_color_hd_bg% !important;
+        color: %LW_color_hd_tx% !important;
+        border-bottom-color: %LW_color_hd_bg% !important;
+      }
+
+      .nav-tabs.lined .nav-item .nav-link.active,
+      .form-group.basic .form-control:focus {
+        color: %LW_color_hd_bg% !important;
+        border-bottom-color: %LW_color_hd_bg% !important;
+      }
+
+      .form-group .label,
+      .form-group .input-wrapper.active .label {
+        color: %LW_color_hd_bg% !important;
+      }
+
+      .buttonlw {
+        background: %LW_color_hd_bg% !important;
+        border-color: %LW_color_hd_bg% !important;
+        color: %LW_color_hd_tx% !important;
+      }
+    </style>
+    <!-- TB_print Color Function  -->
+  </head>
+
+  <body onload="body_onload()">
+    <form name="ORW520" action="lnweb" method="post">
+      <!-- LW Function  -->
+      <input type="hidden" name="LW_PrgNo" value="ORW520_F5" />
+      <input type="hidden" name="LW_rmid" value="%LWeb_rmid%" />
+      <input type="hidden" name="LW_trxno" value="%LW_trxno%" />
+      <input type="hidden" name="LW_key" value="%LW_key%" />
+      <!-- <input type=hidden name=LW_prgAdd value="A"> -->
+      <input type="hidden" name="LW_PrgBos" value="ORW520" />
+      <!--         %LWeb_prgfun% -->
+      <!-- LW Function  -->
+
+      <!-- loader -->
+      <div id="loader">
+        <img src="..%LWeb_dirMenu%/assets/mobile/img/logo-press.svg" alt="icon" class="loading-icon" />
+      </div>
+
+      <!-- * loader-->
+
+      <!-- Iconed Action Sheet -->
+      <div class="modal fade action-sheet" id="actionSheetIconed" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title">%LWeb_title%</h5>
+            </div>
+            <div class="modal-body">
+              <ul class="action-button-list">
+                <li>
+                  <button type="submit" name="LW_prgfun" value="ORW520_Post" class="btn btn-list" data-bs-dismiss="modal">
+                    <span>
+                      <ion-icon name="navigate-outline"></ion-icon>
+                      Post
+                    </span>
+                  </button>
+                </li>
+                <li>
+                  <button title="Unpost" name="LW_fun" type="submit" value="Unpost" class="btn btn-list" data-bs-dismiss="modal">
+                    <span>
+                      <ion-icon name="ban-outline"></ion-icon>
+                      Unpost
+                    </span>
+                  </button>
+                </li>
+
+                <li>
+                  <button title="Evidence Upload" name="LW_prgfun" type="submit" value="Std_Upload,tr_evidenceB" class="btn btn-list" data-bs-dismiss="modal">
+                    <span>
+                      <ion-icon name="cloud-upload-outline"></ion-icon>
+                      Evidence Upload
+                    </span>
+                  </button>
+                </li>
+
+                <li class="action-divider"></li>
+                <li>
+                  <a href="#" class="btn btn-list text-danger" data-bs-dismiss="modal">
+                    <span>
+                      <ion-icon name="close-outline"></ion-icon>
+                      Cancel
+                    </span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- * Iconed Action Sheet -->
+
+      <!-- App Header -->
+      <div class="appHeader">
+        <div class="left">
+          <a href="#" type="button" onclick="location.href='lnweb?ORW520%rmid%';" class="headerButton">
+            <ion-icon name="chevron-back-outline"></ion-icon>
+          </a>
+        </div>
+        <div class="pageTitle">Time Record</div>
+        <div class="right">
+          <a href="#" class="headerButton item" data-bs-toggle="modal" data-bs-target="#actionSheetIconed">
+            <ion-icon name="checkmark-circle-outline"></ion-icon>
+          </a>
+        </div>
+      </div>
+      <!-- * App Header -->
+
+      <!-- App Capsule -->
+      <div id="appCapsule">
+        <div class="section full mt-5">
+          <!-- CARD  -->
+          <div class="card">
+            <div class="card-body pt-0">
+              <ul class="nav nav-tabs lined" role="tablist">
+                <li class="nav-item">
+                  <a class="nav-link active" data-bs-toggle="tab" href="#date" role="tab" aria-selected="false"> Date </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" data-bs-toggle="tab" href="#job" role="tab" aria-selected="false"> Job </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" data-bs-toggle="tab" href="#job2" role="tab" aria-selected="true"> Job </a>
+                </li>
+              </ul>
+
+              <div class="tab-content mt-2">
+                <!-- Tab Content 1  -->
+                <div class="tab-pane fade active show" id="date" role="tabpanel">
+                  <div class="form-group basic">
+                    <div class="row">
+                      <div class="input-wrapper col-6">
+                        <label class="label">Trx.No</label>
+                        <%@LW_HField_tr_trxno@@class="form-control"@%>
+                        <i class="clear-input">
+                          <ion-icon name="close-circle"></ion-icon>
+                        </i>
+                      </div>
+                      <div class="input-wrapper col-6">
+                        <label class="label">Status</label>
+                        <%@LW_HField_tr_statux +tr_status +tr_endsts +tr_print@@class="form-control"@%>
+                        <i class="clear-input">
+                          <ion-icon name="close-circle"></ion-icon>
+                        </i>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="form-group basic">
+                    <div class="input-wrapper">
+                      <label class="label">Emp No.</label>
+                      <%@LW_HField_tr_empno +tr_empname@@class="form-control"@%>
+                      <i class="clear-input">
+                        <ion-icon name="close-circle"></ion-icon>
+                      </i>
+                    </div>
+                  </div>
+
+                  <div class="form-group basic">
+                    <div class="row demo-masked-input">
+                      <div class="input-wrapper col-6">
+                        <label class="label">Date</label>
+                        <%@LW_HField_tr_date@@class="form-control" data-inputmask="'alias': 'datetime' , 'inputFormat' : 'dd/mm/yy'" @%>
+                        <i class="clear-input">
+                          <ion-icon name="close-circle"></ion-icon>
+                        </i>
+                      </div>
+                      <div class="input-wrapper col-6">
+                        <label class="label">Visit</label>
+                        <%@LW_HField_tr_visit@@class="form-control"@%>
+                        <i class="clear-input">
+                          <ion-icon name="close-circle"></ion-icon>
+                        </i>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="form-group basic">
+                    <div class="row demo-masked-input">
+                      <div class="input-wrapper col-6">
+                        <label class="label">Time</label>
+                        <%@LW_HField_tr_time@@class="form-control" class="left" data-inputmask="'alias': 'datetime','inputFormat': 'HH.MM'" @%>
+                        <i class="clear-input">
+                          <ion-icon name="close-circle"></ion-icon>
+                        </i>
+                      </div>
+                      <div class="input-wrapper col-6">
+                        <label class="label">End</label>
+                        <%@LW_HField_tr_timeEnd@@class="form-control" data-inputmask="'alias': 'datetime' , 'inputFormat' : 'HH.MM'"@%>
+                        <i class="clear-input">
+                          <ion-icon name="close-circle"></ion-icon>
+                        </i>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="form-group basic">
+                    <div class="row demo-masked-input">
+                      <div class="input-wrapper col-6">
+                        <label class="label">Start</label>
+                        <%@LW_HField_tr_timeStart@@class="form-control" style="text-align : left;" data-inputmask="'alias': 'datetime','inputFormat': 'HH.MM'" @%>
+                        <i class="clear-input">
+                          <ion-icon name="close-circle"></ion-icon>
+                        </i>
+                      </div>
+                      <div class="input-wrapper col-6">
+                        <label class="label">End 2</label>
+                        <%@LW_HField_tr_timeEnd2@@class="form-control" data-inputmask="'alias': 'datetime' , 'inputFormat': 'HH.MM'" @%>
+                        <i class="clear-input">
+                          <ion-icon name="close-circle"></ion-icon>
+                        </i>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="form-group basic">
+                    <div class="row">
+                      <div class="input-wrapper col-12">
+                        <label class="label">Expense</label>
+                        <%@LW_HField_tr_Expense@@class="form-control"@%>
+                        <i class="clear-input">
+                          <ion-icon name="close-circle"></ion-icon>
+                        </i>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="form-group basic">
+                    <div class="row">
+                      <div class="input-wrapper col-12">
+                        <label class="label">NoPol</label>
+                        <%@LW_HField_htm_vehicleNo@@class="form-control htm_vehicle" @%>
+                        <i class="clear-input">
+                          <ion-icon name="close-circle"></ion-icon>
+                        </i>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="form-group basic">
+                    <div class="row">
+                      <div class="input-wrapper col-6">
+                        <label class="label">Masa STNK</label>
+                        <%@LW_HField_htm_dtstnk@@class="form-control htm_dtstnk" type="text" id="htm_dtstnk" name="stnk"readonly @%>
+                        <i class="clear-input">
+                          <ion-icon name="close-circle"></ion-icon>
+                        </i>
+                      </div>
+                      <div class="input-wrapper col-6">
+                        <label class="label">Masa Pajak</label>
+                        <%@LW_HField_htm_dtexptax@@class="form-control htm_dtexptax" type="text" id="htm_dtexptax" name="pajak" readonly @%>
+                        <i class="clear-input">
+                          <ion-icon name="close-circle"></ion-icon>
+                        </i>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="form-group basic">
+                    <div class="row">
+                      <div class="input-wrapper col-6">
+                        <label class="label">Latitude</label>
+                        <%@LW_HField_gps_lati@@class="form-control" readonly disabled @%>
+                        <i class="clear-input">
+                          <ion-icon name="close-circle"></ion-icon>
+                        </i>
+                      </div>
+                      <div class="input-wrapper col-6">
+                        <label class="label">Longitude</label>
+                        <%@LW_HField_gps_long@@class="form-control" readonly disabled @%>
+                        <i class="clear-input">
+                          <ion-icon name="close-circle"></ion-icon>
+                        </i>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- Tab Content 1  -->
+
+                <!-- Tab Content 2  -->
+                <div class="tab-pane fade" id="job" role="tabpanel">
+                  <!-- JOB 1  -->
+                  <div class="form-group basic">
+                    <div class="row">
+                      <div class="input-wrapper col-6">
+                        <label class="label">Job</label>
+                        <%@LW_HField_tr_jobCd@@class="form-control" style="width:100%"@%>
+                        <i class="clear-input">
+                          <ion-icon name="close-circle"></ion-icon>
+                        </i>
+                      </div>
+                      <div class="input-wrapper col-6">
+                        <label class="label">Minute</label>
+                        <%@LW_HField_tr_minute@@class="form-control"@%>
+                        <i class="clear-input">
+                          <ion-icon name="close-circle"></ion-icon>
+                        </i>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="form-group basic">
+                    <div class="row">
+                      <div class="input-wrapper col-6">
+                        <label class="label">KM Awal</label>
+                        <%@LW_HField_htm_kmStart@@class="form-control"@%>
+                        <i class="clear-input">
+                          <ion-icon name="close-circle"></ion-icon>
+                        </i>
+                      </div>
+                      <div class="input-wrapper col-6">
+                        <label class="label">KM Akhir</label>
+                        <%@LW_HField_htm_kmEnd@@class="form-control"@%>
+                        <i class="clear-input">
+                          <ion-icon name="close-circle"></ion-icon>
+                        </i>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="form-group basic">
+                    <div class="input-wrapper">
+                      <label class="label">Description</label>
+                      <%@LW_HField_tr_descr@@class="form-control"@%>
+                      <i class="clear-input">
+                        <ion-icon name="close-circle"></ion-icon>
+                      </i>
+                    </div>
+                  </div>
+                  <!-- JOB 1  -->
+
+                  <!-- JOB 2  -->
+                  <div class="form-group basic">
+                    <div class="row">
+                      <div class="input-wrapper col-6">
+                        <label class="label">Job 2</label>
+                        <%@LW_HField_tr_jobCd2@@class="form-control" style="width:100%"@%>
+                        <i class="clear-input">
+                          <ion-icon name="close-circle"></ion-icon>
+                        </i>
+                      </div>
+                      <div class="input-wrapper col-6">
+                        <label class="label">Minute</label>
+                        <%@LW_HField_tr_minute2@@class="form-control"@%>
+                        <i class="clear-input">
+                          <ion-icon name="close-circle"></ion-icon>
+                        </i>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="form-group basic">
+                    <div class="row">
+                      <div class="input-wrapper col-6">
+                        <label class="label">KM Awal</label>
+                        <%@LW_HField_htm_kmStart2@@class="form-control"@%>
+                        <i class="clear-input">
+                          <ion-icon name="close-circle"></ion-icon>
+                        </i>
+                      </div>
+                      <div class="input-wrapper col-6">
+                        <label class="label">KM Akhir</label>
+                        <%@LW_HField_htm_kmEnd2@@class="form-control"@%>
+                        <i class="clear-input">
+                          <ion-icon name="close-circle"></ion-icon>
+                        </i>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="form-group basic">
+                    <div class="input-wrapper">
+                      <label class="label">Description</label>
+                      <%@LW_HField_tr_descr2@@class="form-control"@%>
+                      <i class="clear-input">
+                        <ion-icon name="close-circle"></ion-icon>
+                      </i>
+                    </div>
+                  </div>
+                  <!-- JOB 2  -->
+
+                  <!-- JOB 3  -->
+                  <div class="form-group basic">
+                    <div class="row">
+                      <div class="input-wrapper col-6">
+                        <label class="label">Job 3</label>
+                        <%@LW_HField_tr_jobCd3@@class="form-control" style="width:100%"@%>
+                        <i class="clear-input">
+                          <ion-icon name="close-circle"></ion-icon>
+                        </i>
+                      </div>
+                      <div class="input-wrapper col-6">
+                        <label class="label">Minute</label>
+                        <%@LW_HField_tr_minute3@@class="form-control"@%>
+                        <i class="clear-input">
+                          <ion-icon name="close-circle"></ion-icon>
+                        </i>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="form-group basic">
+                    <div class="row">
+                      <div class="input-wrapper col-6">
+                        <label class="label">KM Awal</label>
+                        <%@LW_HField_htm_kmStart3@@class="form-control"@%>
+                        <i class="clear-input">
+                          <ion-icon name="close-circle"></ion-icon>
+                        </i>
+                      </div>
+                      <div class="input-wrapper col-6">
+                        <label class="label">KM Akhir</label>
+                        <%@LW_HField_htm_kmEnd3@@class="form-control"@%>
+                        <i class="clear-input">
+                          <ion-icon name="close-circle"></ion-icon>
+                        </i>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="form-group basic">
+                    <div class="input-wrapper">
+                      <label class="label">Description</label>
+                      <%@LW_HField_tr_descr3@@class="form-control"@%>
+                      <i class="clear-input">
+                        <ion-icon name="close-circle"></ion-icon>
+                      </i>
+                    </div>
+                  </div>
+                  <!-- JOB 3  -->
+
+                  <!-- JOB 4  -->
+                  <div class="form-group basic">
+                    <div class="row">
+                      <div class="input-wrapper col-6">
+                        <label class="label">Job 4</label>
+                        <%@LW_HField_tr_jobCd4@@class="form-control" style="width:100%"@%>
+                        <i class="clear-input">
+                          <ion-icon name="close-circle"></ion-icon>
+                        </i>
+                      </div>
+                      <div class="input-wrapper col-6">
+                        <label class="label">Minute</label>
+                        <%@LW_HField_tr_minute4@@class="form-control"@%>
+                        <i class="clear-input">
+                          <ion-icon name="close-circle"></ion-icon>
+                        </i>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="form-group basic">
+                    <div class="row">
+                      <div class="input-wrapper col-6">
+                        <label class="label">KM Awal</label>
+                        <%@LW_HField_htm_kmStart4@@class="form-control"@%>
+                        <i class="clear-input">
+                          <ion-icon name="close-circle"></ion-icon>
+                        </i>
+                      </div>
+                      <div class="input-wrapper col-6">
+                        <label class="label">KM Akhir</label>
+                        <%@LW_HField_htm_kmEnd4@@class="form-control"@%>
+                        <i class="clear-input">
+                          <ion-icon name="close-circle"></ion-icon>
+                        </i>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="form-group basic">
+                    <div class="input-wrapper">
+                      <label class="label">Description</label>
+                      <%@LW_HField_tr_descr4@@class="form-control"@%>
+                      <i class="clear-input">
+                        <ion-icon name="close-circle"></ion-icon>
+                      </i>
+                    </div>
+                  </div>
+                  <!-- JOB 4  -->
+
+                  <!-- JOB 5  -->
+                  <div class="form-group basic">
+                    <div class="row">
+                      <div class="input-wrapper col-6">
+                        <label class="label">Job 5</label>
+                        <%@LW_HField_tr_jobCd5@@class="form-control" style="width:100%"@%>
+                        <i class="clear-input">
+                          <ion-icon name="close-circle"></ion-icon>
+                        </i>
+                      </div>
+                      <div class="input-wrapper col-6">
+                        <label class="label">Minute</label>
+                        <%@LW_HField_tr_minute5@@class="form-control"@%>
+                        <i class="clear-input">
+                          <ion-icon name="close-circle"></ion-icon>
+                        </i>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="form-group basic">
+                    <div class="row">
+                      <div class="input-wrapper col-6">
+                        <label class="label">KM Awal</label>
+                        <%@LW_HField_htm_kmStart5@@class="form-control"@%>
+                        <i class="clear-input">
+                          <ion-icon name="close-circle"></ion-icon>
+                        </i>
+                      </div>
+                      <div class="input-wrapper col-6">
+                        <label class="label">KM Akhir</label>
+                        <%@LW_HField_htm_kmEnd5@@class="form-control"@%>
+                        <i class="clear-input">
+                          <ion-icon name="close-circle"></ion-icon>
+                        </i>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="form-group basic">
+                    <div class="input-wrapper">
+                      <label class="label">Description</label>
+                      <%@LW_HField_tr_descr5@@class="form-control"@%>
+                      <i class="clear-input">
+                        <ion-icon name="close-circle"></ion-icon>
+                      </i>
+                    </div>
+                  </div>
+                  <!-- JOB 5  -->
+                </div>
+                <!-- Tab Content 2  -->
+
+                <!-- Tab Content 3  -->
+                <div class="tab-pane fade" id="Job2" role="tabpanel">
+                  <!-- JOB 6  -->
+                  <div class="form-group basic">
+                    <div class="row">
+                      <div class="input-wrapper col-6">
+                        <label class="label">Job 6</label>
+                        <%@LW_HField_tr_jobCd6@@class="form-control" style="width:100%"@%>
+                        <i class="clear-input">
+                          <ion-icon name="close-circle"></ion-icon>
+                        </i>
+                      </div>
+                      <div class="input-wrapper col-6">
+                        <label class="label">Minute</label>
+                        <%@LW_HField_tr_minute6@@class="form-control"@%>
+                        <i class="clear-input">
+                          <ion-icon name="close-circle"></ion-icon>
+                        </i>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="form-group basic">
+                    <div class="row">
+                      <div class="input-wrapper col-6">
+                        <label class="label">KM Awal</label>
+                        <%@LW_HField_htm_kmStart6@@class="form-control"@%>
+                        <i class="clear-input">
+                          <ion-icon name="close-circle"></ion-icon>
+                        </i>
+                      </div>
+                      <div class="input-wrapper col-6">
+                        <label class="label">KM Akhir</label>
+                        <%@LW_HField_htm_kmEnd6@@class="form-control"@%>
+                        <i class="clear-input">
+                          <ion-icon name="close-circle"></ion-icon>
+                        </i>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="form-group basic">
+                    <div class="input-wrapper">
+                      <label class="label">Description</label>
+                      <%@LW_HField_tr_descr6@@class="form-control"@%>
+                      <i class="clear-input">
+                        <ion-icon name="close-circle"></ion-icon>
+                      </i>
+                    </div>
+                  </div>
+                  <!-- JOB 6  -->
+
+                  <!-- JOB 7  -->
+                  <div class="form-group basic">
+                    <div class="row">
+                      <div class="input-wrapper col-6">
+                        <label class="label">Job 7</label>
+                        <%@LW_HField_tr_jobCd7@@class="form-control" style="width:100%"@%>
+                        <i class="clear-input">
+                          <ion-icon name="close-circle"></ion-icon>
+                        </i>
+                      </div>
+                      <div class="input-wrapper col-6">
+                        <label class="label">Minute</label>
+                        <%@LW_HField_tr_minute7@@class="form-control"@%>
+                        <i class="clear-input">
+                          <ion-icon name="close-circle"></ion-icon>
+                        </i>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="form-group basic">
+                    <div class="row">
+                      <div class="input-wrapper col-6">
+                        <label class="label">KM Awal</label>
+                        <%@LW_HField_htm_kmStart7@@class="form-control"@%>
+                        <i class="clear-input">
+                          <ion-icon name="close-circle"></ion-icon>
+                        </i>
+                      </div>
+                      <div class="input-wrapper col-6">
+                        <label class="label">KM Akhir</label>
+                        <%@LW_HField_htm_kmEnd7@@class="form-control"@%>
+                        <i class="clear-input">
+                          <ion-icon name="close-circle"></ion-icon>
+                        </i>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="form-group basic">
+                    <div class="input-wrapper">
+                      <label class="label">Description</label>
+                      <%@LW_HField_tr_descr7@@class="form-control"@%>
+                      <i class="clear-input">
+                        <ion-icon name="close-circle"></ion-icon>
+                      </i>
+                    </div>
+                  </div>
+                  <!-- JOB 7  -->
+
+                  <!-- JOB 8  -->
+                  <div class="form-group basic">
+                    <div class="row">
+                      <div class="input-wrapper col-6">
+                        <label class="label">Job 8</label>
+                        <%@LW_HField_tr_jobCd8@@class="form-control" style="width:100%"@%>
+                        <i class="clear-input">
+                          <ion-icon name="close-circle"></ion-icon>
+                        </i>
+                      </div>
+                      <div class="input-wrapper col-6">
+                        <label class="label">Minute</label>
+                        <%@LW_HField_tr_minute8@@class="form-control"@%>
+                        <i class="clear-input">
+                          <ion-icon name="close-circle"></ion-icon>
+                        </i>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="form-group basic">
+                    <div class="row">
+                      <div class="input-wrapper col-6">
+                        <label class="label">KM Awal</label>
+                        <%@LW_HField_htm_kmStart8@@class="form-control"@%>
+                        <i class="clear-input">
+                          <ion-icon name="close-circle"></ion-icon>
+                        </i>
+                      </div>
+                      <div class="input-wrapper col-6">
+                        <label class="label">KM Akhir</label>
+                        <%@LW_HField_htm_kmEnd8@@class="form-control"@%>
+                        <i class="clear-input">
+                          <ion-icon name="close-circle"></ion-icon>
+                        </i>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="form-group basic">
+                    <div class="input-wrapper">
+                      <label class="label">Description</label>
+                      <%@LW_HField_tr_descr8@@class="form-control"@%>
+                      <i class="clear-input">
+                        <ion-icon name="close-circle"></ion-icon>
+                      </i>
+                    </div>
+                  </div>
+                  <!-- JOB 8  -->
+
+                  <!-- JOB 9  -->
+                  <div class="form-group basic">
+                    <div class="row">
+                      <div class="input-wrapper col-6">
+                        <label class="label">Job 9</label>
+                        <%@LW_HField_tr_jobCd9@@class="form-control" style="width:100%"@%>
+                        <i class="clear-input">
+                          <ion-icon name="close-circle"></ion-icon>
+                        </i>
+                      </div>
+                      <div class="input-wrapper col-6">
+                        <label class="label">Minute</label>
+                        <%@LW_HField_tr_minute9@@class="form-control"@%>
+                        <i class="clear-input">
+                          <ion-icon name="close-circle"></ion-icon>
+                        </i>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="form-group basic">
+                    <div class="row">
+                      <div class="input-wrapper col-6">
+                        <label class="label">KM Awal</label>
+                        <%@LW_HField_htm_kmStart9@@class="form-control"@%>
+                        <i class="clear-input">
+                          <ion-icon name="close-circle"></ion-icon>
+                        </i>
+                      </div>
+                      <div class="input-wrapper col-6">
+                        <label class="label">KM Akhir</label>
+                        <%@LW_HField_htm_kmEnd9@@class="form-control"@%>
+                        <i class="clear-input">
+                          <ion-icon name="close-circle"></ion-icon>
+                        </i>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="form-group basic">
+                    <div class="input-wrapper">
+                      <label class="label">Description</label>
+                      <%@LW_HField_tr_descr9@@class="form-control"@%>
+                      <i class="clear-input">
+                        <ion-icon name="close-circle"></ion-icon>
+                      </i>
+                    </div>
+                  </div>
+                  <!-- JOB 9  -->
+
+                  <div class="form-group basic">
+                    <div class="input-wrapper">
+                      <label class="label">Remark</label>
+                      <textarea id="tr_remark" rows="2" class="form-control" name="tr_remark" value="tr_remark" placeholder=""></textarea>
+                      <i class="clear-input">
+                        <ion-icon name="close-circle"></ion-icon>
+                      </i>
+                    </div>
+                  </div>
+
+                  <div class="form-group basic">
+                    <div class="input-wrapper">
+                      <label class="label">Remark 2</label>
+                      <textarea id="tr_remark2" rows="2" class="form-control" name="tr_remark2" value="tr_remark2" placeholder=""></textarea>
+                      <i class="clear-input">
+                        <ion-icon name="close-circle"></ion-icon>
+                      </i>
+                    </div>
+                  </div>
+
+                  <div class="form-group basic">
+                    <div class="input-wrapper">
+                      <label class="label">Remark 3</label>
+                      <textarea id="tr_remark3" rows="2" class="form-control" name="tr_remark3" value="tr_remark3" placeholder=""></textarea>
+                      <i class="clear-input">
+                        <ion-icon name="close-circle"></ion-icon>
+                      </i>
+                    </div>
+                  </div>
+                </div>
+                <!-- Tab Content 3  -->
+              </div>
+            </div>
+          </div>
+          <!-- CARD  -->
+        </div>
+
+        <div class="section full mt-2">
+          <div class="row" id="mapcontainer">
+            <div class="col 12 pt-2 pb-2">
+              <div class="pad-15">
+                <input id="latlng" type="text" value="%@gps_lati@%,%@gps_long@%" hidden />
+                <button class="btn buttonlw shadowed me-1 mb-1" id="submit" type="button" value="Reverse Geocode" href="#modal575875580">
+                  <i class="mdi mdi-map-marker-radius"></i>Show Location
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div id="map" style="height: 100%"></div>
+        </div>
+      </div>
+      <!-- * App Capsule -->
+    </form>
+
+    <!-- Base Js File -->
+    <script src="..%LWeb_dirMenu%/assets/mobile/js/lib/bootstrap.bundle.min.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <script src="..%LWeb_dirMenu%/assets/mobile/js/base.js"></script>
+    <script src="..%LWeb_dirMenu%/assets/press/modules/jquery/jquery-2.2.4.min.js"></script>
+    <!-- Base Js File -->
+
+    <!-- INPUT MASK JS  -->
+    <script src="..%LWeb_dirMenu%/assets/Inputmask-5.x/dist/inputmask.js"></script>
+    <script src="..%LWeb_dirMenu%/assets/Inputmask-5.x/dist/bindings/inputmask.binding.js"></script>
+    <!-- INPUT MASK JS  -->
+
+    <!-- Geolocation JS  -->
+    <script src="..%LWeb_dirMenu%/assets/press/assets/js/geolocation/location.js"></script>
+    <script src="..%LWeb_dirMenu%/assets/press/assets/js/geolocation/reversegeocoding.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD55T5yHQKRyBYYvcinZlRJ5gf78AKD_wI&callback=initMap&v=weekly" defer></script>
+    <script>
+      function initMap() {
+        var gps_long = parseFloat('%@or120a->gps_long@%');
+        var gps_lati = parseFloat('%@or120a->gps_lati@%');
+        const map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 8,
+          center: { lat: gps_lati, lng: gps_long },
+        });
+        const geocoder = new google.maps.Geocoder();
+        const infowindow = new google.maps.InfoWindow();
+
+        document.getElementById('submit').addEventListener('click', () => {
+          geocodeLatLng(geocoder, map, infowindow);
+        });
+      }
+
+      function geocodeLatLng(geocoder, map, infowindow) {
+        const input = document.getElementById('latlng').value;
+        const latlngStr = input.split(',', 2);
+        const latlng = {
+          lat: parseFloat(latlngStr[0]),
+          lng: parseFloat(latlngStr[1]),
+        };
+
+        geocoder
+          .geocode({ location: latlng })
+          .then((response) => {
+            if (response.results[0]) {
+              map.setZoom(11);
+
+              const marker = new google.maps.Marker({
+                position: latlng,
+                map: map,
+              });
+
+              infowindow.setContent(response.results[0].formatted_address);
+              infowindow.open(map, marker);
+            } else {
+              window.alert('No results found');
+            }
+          })
+          .catch((e) => window.alert('Geocoder failed due to: ' + e));
+      }
+
+      window.initMap = initMap;
+    </script>
+    <!-- Geolocation JS  -->
+
+    <!-- Auto Complete NoPol  -->
+    <script src="..%LWeb_dirMenu%/assets/press/assets/js/jquery-ui-1.12.1.js"></script>
+
+    <script type="text/javascript">
+      function formatDate(date) {
+          date = date.toString();
+          return `${date.substr(6,2)}/${date.substr(4,2)}/${date.substr(2,2)}`;
+      }
+      // document.addEventListener('DOMContentLoaded', function() {
+      $(document).ready(function(){
+          createArray();
+          $(".htm_vehicle").each(function(element){
+              $(this).autocomplete({
+                  maxShowItems: 5,
+                  minLength: 1,
+                  source: arrVehicle,
+                  focus: function(event,ui) {
+                      $(this).val(ui.item.type);
+                  },
+                  search: function(e,ui){
+                      $(this).data("ui-autocomplete").menu.bindings = $();
+                  },
+                  select: function(event,ui) {
+                      $(this).val(ui.item.label);
+                      $("#htm_dtstnk").val(formatDate(ui.item.dtstnk));
+                      $("#htm_dtexptax").val(formatDate(ui.item.dtexptax));
+                  }
+              }).autocomplete( "instance" )._renderItem = function( ul, item ) {
+                  return $( "<li>" )
+                      .append( "<div>" +
+                              item.label +
+                              "&emsp;" +
+                              item.type +
+                              "&emsp;" +
+                              item.color +
+                              "&emsp;" +
+                              item.year
+                      ).appendTo( ul );
+              };
+          });
+
+      });
+      var vehicleArray = [%@LW_array_htm_vehicle.inx@htm_key,htm_type,htm_type2,htm_color,htm_year,htm_dtstnk,htm_dtexptax@%];
+      var arrVehicle = [];
+      function createArray(){
+          for (let i = 0; i < vehicleArray.length; i++) {
+              arrVehicle.push({
+                  label : vehicleArray[i][0].concat(' '),
+                  type : vehicleArray[i][1],
+                  type2 : vehicleArray[i][2],
+                  color : vehicleArray[i][3],
+                  year : vehicleArray[i][4],
+                  dtstnk : vehicleArray[i][5],
+                  dtexptax : vehicleArray[i][6]
+              });
+          }
+      }
+    </script>
+
+    <script>
+      $(document).ready(function () {
+        function LW_F1(zhtm, zkey) {
+          var nw;
+          window.open(zhtm, zkey, 'scrollbars=yes,HEIGHT=400,WIDTH=770,alwaysRaised');
+        }
+      });
+    </script>
+
+    <!-- Script Untuk Disable Window.alert  -->
+    <script>
+      window.alert = function body_onload() {};
+    </script>
+    <!-- Script Untuk Disable Window.alert  -->
+
+    <!-- INPUT MASK SCRIPT  -->
+    <script>
+      document.addEventListener('DOMContentLoaded', function () {
+        $(':input').inputmask();
+        or;
+        Inputmask().mask(document.querySelectorAll('input'));
+      });
+    </script>
+    <!-- INPUT MASK SCRIPT  -->
+
+    <!-- <script>
+      if (document.getElementById('sts').value == '@') {
+        var btn1 = document.getElementById('mapcontainer');
+        btn1.style.display = 'block';
+      } else {
+        var elem1 = document.getElementById('mapcontainer');
+        var elem = document.getElementById('map');
+        elem1.remove();
+        elem.remove();
+      }
+    </script> -->
+  </body>
+</html>

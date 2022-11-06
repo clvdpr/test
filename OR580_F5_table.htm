@@ -1,0 +1,149 @@
+<!-- OR580_F5_table.htm -->
+<html>
+
+    <!-- HEAD START -->
+    <head>
+        <!-- CORE CSS FRAMEWORK START -->
+        <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/themes/base/jquery-ui.min.css" />
+        <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/ju/jq-3.6.0/dt-1.12.1/fh-3.2.4/r-2.3.0/rr-1.2.8/datatables.min.css" />
+        <!-- CORE CSS FRAMEWORK END -->
+
+        <!-- CORE JS FRAMEWORK START -->
+        <script type="text/javascript" src="https://cdn.datatables.net/v/ju/jq-3.6.0/dt-1.12.1/fh-3.2.4/r-2.3.0/rr-1.2.8/datatables.min.js"></script>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+        <!-- CORE JS FRAMEWORK END -->
+
+        <!-- OTHER SCRIPTS INCLUDED ON THIS PAGE START -->
+        <script>
+            $(document).ready(function () {
+                var table = $('#example').DataTable({
+                    rowReorder: {
+                        selector: 'td:nth-child()'
+                    },
+                    responsive: true,
+                    fixedHeader: true,
+                });
+            });
+        </script>
+        <!-- OTHER SCRIPTS INCLUDED ON THIS PAGE END -->
+
+        <!-- /* Tb_print color function */ -->
+    <style>
+      /* Header Table  */
+      .display > thead > tr > th {
+        background-color: %LW_color_CH_bg% !important;
+        color: %LW_color_re_tx%;
+      }
+
+      /* Background Body  */
+      .bodylw,
+      .tabs .tab a.active,
+      .tabs .indicator,
+      .input-field.col:read-only,
+      .input-field:read-only {
+        background: %LW_color_bg% !important;
+        color: %LW_color_tx% !important;
+      }
+
+      /* Background Header  */
+      .headerlw,
+      .pagehead-bg {
+        background: %LW_color_hd_bg% !important;
+        color: %LW_color_hd_tx% !important;
+        border-color: #6ealcc !important;
+      }
+
+      /* Button Color  */
+      .buttonlw {
+        background: %LW_color_hd_bg% !important;
+        color: %LW_color_hd_tx% !important;
+      }
+
+      /* ==============================TABLE============================ */
+
+      /* Header Table  */
+      .ui-widget-header,
+      select {
+        background: %LW_color_ch_bg% !important;
+        color: %LW_color_ch_tx% !important;
+      }
+
+      /* Header Table  */
+      .display > thead > tr > th,
+      .dataTables_wrapper .dataTables_filter input,
+      tr.child,
+      td.child {
+        background: %LW_color_ch_bg% !important;
+        color: %LW_color_ch_tx%;
+      }
+
+      /* Header Table  */
+      .ui-widget-header,
+      select {
+        background: %LW_color_ch_bg% !important;
+        color: %LW_color_ch_tx% !important;
+      }
+
+      tr.odd {
+        background: %LW_color_ro_bg% !important;
+        color: %LW_color_ro_tx% !important;
+      }
+
+      tr.even {
+        background: %LW_color_re_bg% !important;
+        color: %LW_color_re_tx% !important;
+      }
+
+      html {
+        background: %LW_color_bg% !important;
+        color: %LW_color_bg% !important
+      }
+    </style>
+    <!-- /* Tb_print color function */ -->
+        
+        <!-- OTHER SCRIPTS INCLUDED ON THIS PAGE START -->
+        <script>
+            function openF5() {
+                $('#table tbody').on({
+                    "click": function () {
+                        parent.document.all.LW_key.value = document.all.LW_key[this.rowIndex].value;
+                    },
+                    "dblclick": function () {
+                        parent.document.all.LW_key.value = document.all.LW_key[this.rowIndex].value;
+                        parent.document.getElementById("OR580_F5").click();
+                    }
+                }, 'tr', function () { } );
+            }
+
+            $(document).ready(function () {
+                var table = $('#example').DataTable();
+                $('#example tbody').on('click', 'tr', function () {
+                    if ($(this).hasClass('selected')) {
+                        $(this).removeClass('selected');
+                        $(this).children('td').children('input').prop('checked', true);
+                    } else {
+                        table.$('tr.selected').removeClass('selected');
+                        $(this).addClass('selected');
+                    }
+                });
+            });
+        </script>
+        <!-- OTHER SCRIPTS INCLUDED ON THIS PAGE END -->
+    </head>
+    <!-- HEAD END-->
+
+    <table onClick="det_upload()" selected="det_upload()" id="example" class="ui celled table display nowrap" style="width:100%;">
+        <thead>
+            <tr>
+                <th title="tr_trxno">trx.no.</th>
+                <th title="tr_date">date</th>
+                <th title="tr_status +tr_print">s</th>
+                <th title="tr_empno">empno</th>
+                <th title="tr_visit">v</th>
+                <th title="tr_time">time</th>
+                <th title="tr_timeEnd">time End</th>
+                <th title="tr_jobcd">Job</th>
+                <th title="tr_descr">Descr</th>
+                <th title="tr_jobno">Job no.</th>
+            </tr>
+        </thead>

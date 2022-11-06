@@ -1,0 +1,206 @@
+<html><head>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <title>PSW510_F5B on Larona Web page</title>
+  <link rel="stylesheet" href="..%LWeb_dirMenu%/PRslip_Menu_files/bootstrap/css/bootstrap.min.css">
+  <script src="..%LWeb_dirMenu%/PRslip_Menu_files/bootstrap/jquery.min.js"></script>
+  <script src="..%LWeb_dirMenu%/PRslip_Menu_files/bootstrap/js/bootstrap.min.js"></script>
+  <script>
+    $(function() {
+      $( "#datepicker" ).datepicker({ dateFormat: 'dd-mm-yy' });
+    });
+  </script>
+  <script>
+    $(function() {
+      $( "#datepicker1" ).datepicker({ dateFormat: 'dd-mm-yy' });
+    });
+  </script>
+  <script>
+    $(function() {
+      $( "#datepicker2" ).datepicker({ dateFormat: 'dd-mm-yy' });
+    });
+  </script>
+  <style>
+    body{
+      margin-top:0; 
+      margin-left:0; 
+      position:absolute;
+      font-size:8pt; 
+      background:#E9EEEC; 
+      color:#0000FF;
+    }
+    .lntext {
+      font-size: 12px;
+      font-family: "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+    }
+    .fixed-size-price  {
+      width: 80px;
+      font-size:8pt;
+      font-family: Sans Serif;	   
+    }
+    .fixed-remark {
+      width: 100px;
+      font-size:8pt;
+      font-family: Sans Serif;	   
+    }
+    .fixed-medium  {
+      width: 98px;
+      font-size:8pt;
+      font-family: Sans Serif;	   
+    }
+    .fixed-date {
+      width: 70px;
+      font-size:8pt;
+      font-family: Sans Serif;
+    }
+    .fixed-supl {
+      width: 40px;
+      font-size:8pt;
+      font-family: Sans Serif;
+    }
+    .fixed-adr {
+      width: 193px;
+      font-size:8pt;
+      font-family: Sans Serif;
+    }
+    .fixed-large {
+      width: 225px;
+      font-size:8pt;
+      font-family: Sans Serif;
+    }
+    .fixed-large-small {
+      width: 115px;
+      font-size:8pt;
+      font-family: Sans Serif;
+    }
+    .fixed-suplname {
+      width: 153px;
+      font-size:8pt;
+      font-family: Sans Serif;
+    }
+    .fixed-large2 {
+      width: 280px;
+      font-size:8pt;
+      font-family: Sans Serif;
+    }
+    .accountNo {
+      width: 35px;
+      font-size:8pt;
+      font-family: Sans Serif;
+    }
+    .descr {
+      width: 250px;
+      font-size:8pt;
+      font-family: Sans Serif;
+    }
+    .accountNoL {
+      width: 300px;
+      font-size:8pt;
+      font-family: Sans Serif;
+    }
+    .fixed-name {
+      width: 178px;
+
+    }
+    .fixed-small{
+      width: 20px;
+      font-size:8pt;
+      font-family: Sans Serif;
+    }
+    .fixed-uid{
+      width: 30px;
+      font-size:8pt;
+      font-family: Sans Serif;
+    }
+    .fixed-apr{
+      width: 20px;
+      font-size:8pt;
+      font-family: Sans Serif;
+    }
+    .fixed  {
+      width: 120px;	   
+    }
+    .styled-select select {
+      background: transparent;
+      width: 50px;
+      padding: 5px;
+      font-size: 16px;
+      line-height: 1;
+      border: 0;
+      border-radius: 0;
+      height: 34px;
+      -webkit-appearance: none;
+    }
+  </style>
+  <script>
+    <!--
+
+      function confirm_del(msg){iret = confirm("confirm for deletion...\n"+msg);if (iret) {document.all.LW_fun.value="delete";PSW510.submit();} }//--></script><script><!--
+
+  function LW_F1(zhtm, zkey){var nw;window.open(zhtm,zkey,'scrollbars=yes,HEIGHT=400,WIDTH=400,alwaysRaised');}
+//--></script>
+  </head>
+  <body onload="body_onload()">
+    <form name="PSW510_F5B" action="lnweb" method="post">
+      <table style="margin-left:10px;">
+        <tbody><tr bgcolor="#E9EEEC">
+          <td><input class="fixed" readonly="readonly" name="LW_PrgNo" value="PSW510_F5B" onclick="body_onload()" size="5"  type="text"> List Of Relatives </td>
+          <td><input  name="LW_rmid" value="%LWeb_rmid%" type="hidden"></td>
+          <td><input  name="LW_trxno" value="%LW_trxno%" type="hidden"></td>
+          <td><input  name="LW_PrgBos" value="PSW510" type="hidden"></td>
+          <td><input  name="LW_key" value="%LW_key%" type="hidden"></td>
+          %LWeb_prgfun%
+          </tr>
+        </tbody>
+      </table>
+
+      <div class="panel panel-default panel-body">
+
+        <table width="970px" style="margin-left:10">
+          <tr ><td>  
+            <div class="panel panel-primary panel-body">
+              &nbsp;
+              <a href="lnweb?PSW510%rmid%" class="btn btn-primary btn-sm glyphicon glyphicon-arrow-left" name="LW_prgfun" role="button" title="PSW510"> PSW510</a>
+              <!--%@LW_Badd_<button type="submit" class="btn btn-primary btn-sm glyphicon glyphicon-plus" name="LW_fun" value="Add" title="Add"> Add</button>@%-->
+              <button type="submit" class="btn btn-primary btn-sm glyphicon glyphicon-pencil"  name="LW_fun" value="Modify" title="Modify"> Modify</button><br><br>
+              <table border=0 cellpadding=0 cellspacing=0 style="table-layout:fixed; font-size:8pt; height:8; border-collapse:collapse"> 
+                <tr>
+                  <col width=8><col width=100><col width=150>
+                </tr>
+                <tr height=14pt>
+                  <td></td>
+                  <td><font class="lntext">Emp No</font></td>
+                  <td><%@LW_HField_em_noind@@class="form-control" style="height:16pt"@% /></td> 
+                  <td><font class="lntext">Title, Name</font></td>
+                  <td><%@LW_HField_em_title@@class="form-control" style="height:16pt"@% /></td>  
+                  <td><%@LW_HField_em_name@@class="form-control" style="height:16pt"@% /></td>  
+                </tr>
+                <tr height=14pt>
+                  <td></td>
+                  <td><font class="lntext">Gender Code</font></td>
+                  <td><%@LW_HField_em_sex@@class="form-control" style="height: 16pt; width:120px"@% /></td> 
+                </tr> 
+              </table>
+            </div>
+
+            <div class="panel panel-primary panel-body">
+              <table class="table table-responsive">
+              %@LW_edit_@
+              %@LW_htm_PSW510_F5B_detail.htm@%
+              LW_edit@%
+              </table>
+            </div>
+            <br>
+            <!--&nbsp;
+<a href="lnweb?PR510%rmid%" class="btn btn-primary btn-sm glyphicon glyphicon-arrow-left" name="LW_prgfun" role="button" title="PR510"> PR510</a>
+%@LW_Badd_<button type="submit" class="btn btn-primary btn-sm glyphicon glyphicon-plus" name="LW_fun" value="Add" title="Add"> Add</button>@%
+%@LW_Bmodify_<button type="submit" class="btn btn-primary btn-sm glyphicon glyphicon-pencil"  name="LW_fun" value="Modify" title="Modify"> Modify</button>@%-->
+
+            </td>
+          </tr>
+        </table>
+        %@LW_onload@%
+
+      </div>
+    </form>
+  </body>
+</html>

@@ -1,0 +1,645 @@
+<!DOCTYPE html>
+<html lang="en" class=" ">
+
+<head>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>PSW210 Leave Request Record</title>
+    <meta content="Employee Self Services" name="description" />
+    <meta content="larona" name="author" />
+
+
+    <!-- App Icons -->
+    
+    <link rel="manifest" href="..%LWeb_dirMenu%/assets/press/assets/images/icons/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage"
+        content="..%LWeb_dirMenu%/assets/press/assets/images/icons/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+
+    <!-- CORE CSS FRAMEWORK - START -->
+    <link href="..%LWeb_dirMenu%/assets/press/assets/css/preloader.css" type="text/css" rel="stylesheet"
+        media="screen" />
+
+    <link href="..%LWeb_dirMenu%/assets/press/modules/materialize/materialize.min.css" type="text/css" rel="stylesheet"
+        media="screen" />
+    
+    <link href="..%LWeb_dirMenu%/assets/press/modules/fonts/mdi/materialdesignicons.min.css" type="text/css"
+        rel="stylesheet" media="screen" />
+    
+
+
+    <!-- CORE CSS FRAMEWORK - END -->
+
+    <!-- OTHER SCRIPTS INCLUDED ON THIS PAGE - START -->
+    <!-- OTHER SCRIPTS INCLUDED ON THIS PAGE - END -->
+
+    <!-- CORE CSS TEMPLATE - START -->
+
+    <link href="..%LWeb_dirMenu%/assets/press/assets/css/style.css" type="text/css" rel="stylesheet" media="screen"
+        id="main-style" />
+    <!-- CORE CSS TEMPLATE - END -->
+
+    <style>
+        .mb-5 {
+            margin-bottom: 5px;
+        }
+
+        .tabs-content .carousel .carousel-slider {
+            height: 700px;
+        }
+
+        input {
+            direction: ltr;
+        }
+
+        /* #browser-default {
+            width: 100% !important;
+            height: 45px !important;
+            padding-left: 18px;
+            font-size: 12px;
+            color: #444444;
+            border: none;
+            padding-top: 18px;
+        } */
+    </style>
+
+</head>
+<!-- END HEAD -->
+
+<!-- BEGIN BODY -->
+
+
+<body onload="body_onload()" class=" menu-full header-image html" data-header="light" data-footer="light"
+    data-header_align="app" data-menu_type="left" data-menu="light" data-menu_icons="on" data-footer_type="left"
+    data-site_mode="light" data-footer_menu="show" data-footer_menu_style="light">
+
+    <form name="PSW210" action="lnweb" method="post">
+        <div class="preloader-background">
+            <div class="preloader-wrapper">
+                <div class="loader">
+                </div>
+            </div>
+        </div>
+
+        <INPUT TYPE=hidden name=LW_PrgNo value="PSW210_F5">
+        <INPUT TYPE=hidden name=LW_rmid value="%LWeb_rmid%">
+        <INPUT TYPE=hidden name=LW_key value="%LW_key%">
+        <INPUT TYPE=hidden name=LW_prgAdd value="A"></td>
+        <INPUT TYPE=hidden name=LW_PrgBos value="PSW210">
+        <INPUT TYPE=hidden name=LW_trxno value="%LW_trxno%">
+
+        %LWeb_prgfun%
+
+
+        <!-- START CONTENT AREA  -->
+        <div class="content-area" style="margin-top:-50px;">
+
+            <div class="pagehead-bg   primary-bg">
+            </div>
+
+            <div class="container has-pagehead is-pagetitle">
+                <div class="section">
+                    <h5 class="pagetitle">PSW210_F5 Detail Personal Trx. Request</h5>
+                </div>
+            </div>
+
+            <div class="container over">
+
+                <!-- START SECTION AREA  -->
+
+                <div class="section ">
+                    <div class="row mt0">
+                        <div class="col s12 pad-0">
+
+                            <div class="row" style="margin-top: 20px; margin-left:0px">
+                                <button class="waves-effect waves-light btn-small info lighten-2 mb-5" type="button"
+                                    name="LW_prgfun"
+                                    onclick="location.href='lnweb?PSW210%rmid%&s_Rtype=L';">PSW210</button>
+                                <button class="waves-effect waves-light btn-small red lighten-2 mb-5" type="submit"
+                                    name="LW_prgfun" value="PSW210_F5_Post">
+                                    <i class="mdi mdi-account-check"></i>Post</button>
+                                <button class="waves-effect waves-light btn-small indigo lighten-2 mb-5" type="submit"
+                                    name="LW_prgfun" value="Prn_Print">
+                                    <i class="mdi mdi-printer"></i>Print</button>
+                                <button class="waves-effect waves-light btn-small amber lighten-2 mb-5" type="submit"
+                                    name="LW_prgfun" value="PSW210_Upload">
+                                    <i class="mdi mdi-account-alert"></i>Upload</button>
+                                <button class="waves-effect waves-light btn-small green lighten-2 mb-5" type="submit"
+                                    name="LW_prgfun" value="Approval_Send">
+                                    <i class="mdi mdi-send"></i>Send</button>
+                            </div>
+
+                                <div class="col s12 ">
+                                    <ul id="tabs-swipe-demo" class="tabs tabs-swipable-ul  ">
+                                        <li class="tab col s4 "><a class="active " href="#section1">Section 1</a>
+                                        </li>
+                                        <li class="tab col s4 "><a class=" " href="#section2">Section 2</a>
+                                        </li>
+                                        <li class="tab col s4 "><a class=" " href="#section3">Section 3</a>
+                                        </li>
+                                    </ul>
+                                </div>
+
+                                    <div class="col s12 tabs-swipable">
+
+                                        <div id="section1" class="col s12   ">
+                                            <!-- Section 1 -->
+                                            <div class="section">
+                                                <div class="row ">
+                                                    <div class="col s12 pad-0">
+                                                        <div class="pad-15">
+
+                                                            <div class="row">
+                                                                <div class="input-field col s12">
+                                                                    <%@LW_HField_PR_perDescr@@type="text" @%>
+                                                                        <label>Period</label>
+                                                                </div>
+                                                            </div>
+
+                                                            <div class="row">
+                                                                <div class="input-field col s3">
+                                                                    <%@LW_HField_er_noind@@type="text" @%>
+                                                                        <label>Emp. No.</label>
+                                                                </div>
+                                                                <div class="input-field col s9">
+                                                                    <%@LW_HField_em_title+' '+em_name@@type="text" @%>                              
+                                                                    </div>
+                                                                </div>
+
+                                                                <div class="row">
+                                                                    <div class="input-field col s12">
+                                                                        <%@LW_HField_em_dept@@type="text" @%>
+                                                                        <label>Dept</label>
+                                                                    </div>
+                                                                </div>
+                    
+                                                                <div class="row">
+                                                                    <div class="input-field col s12">
+                                                                        <%@LW_HField_em_shftGrp@@type="text" @%>
+                                                                        <label>Shift Grp.</label>
+                                                                    </div>
+                                                                </div>
+                    
+                                                                <div class="row">
+                                                                    <div class="input-field col s12">
+                                                                        <%@LW_HField_er_rtype@@type="text" class="input-field" @%>
+                                                                        <label>Record Type</label>
+                                                                    </div>
+                                                                </div>
+                    
+                                                                <div class="row">
+                                                                    <div class="input-field col s12">
+                                                                        <%@LW_HField_er_descr@@type="text" @%>
+                                                                        <label>Description</label>
+                                                                    </div>
+                                                                </div>
+                    
+                                                                <div class="row">
+                                                                    <div class="input-field col s6">
+                                                                        <%@LW_HField_er_qty_i@@type="text" @%>
+                                                                        <label>Addition (IN)</label>
+                                                                    </div>
+                    
+                                                                    <div class="input-field col s6">
+                                                                        <%@LW_HField_er_amt_i@@type="text" @%>
+                                                                        <label></label>
+                                                                    </div>
+                                                                </div>
+                    
+                                                                <div class="row">
+                                                                    <div class="input-field col s6">
+                                                                        <%@LW_HField_er_qty_o@@type="text" @%>
+                                                                        <label>Deduction (OUT)</label>
+                                                                    </div>
+                    
+                                                                    <div class="input-field col s6">
+                                                                        <%@LW_HField_er_amt_o@@type="text" @%>
+                                                                        <label></label>
+                                                                    </div>
+                                                                </div>
+                    
+                                                                <div class="row">
+                                                                    <div class="input-field col s6">
+                                                                        <%@LW_HField_er_qty_i -er_qty_o@@type="text" @%>
+                                                                        <label>Balance</label>
+                                                                    </div>
+                    
+                                                                    <div class="input-field col s6">
+                                                                        <%@LW_HField_er_amt_i -er_amt_o@@type="text" @%>
+                                                                        <label></label>
+                                                                    </div>
+                                                                </div>
+                    
+                                                                <div class="row">
+                                                                    <div class="input-field col s9">
+                                                                        <%@LW_HField_rq_noind +rq_rtype +rq_seqno@@type="text" @%>
+                                                                        <label>Request No.</label>
+                                                                    </div>
+                    
+                                                                    <div class="input-field col s3">
+                                                                        <%@LW_HField_rq_statux +rq_status@@type="text" @%>
+                                                                        <label></label>
+                                                                    </div>
+                                                                </div>
+
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+
+                                        <div id="section2" class="col s12   ">
+                                                <!-- Section 2 -->
+                                                <div class="section">
+
+                                                    <div class="row ">
+                                                        <div class="col s12 pad-0">
+                                                            <!-- <h5 class="bot-20 pad-15" style="padding-top:0px;">Section 2</h5> -->
+                                                            <div class="pad-15">
+
+                                                                <div class="row">
+                                                                    <div class="input-field col s6">
+                                                                        <!-- <%@LW_HField_rq_DtStart@@type="text" id="datetime" data-inputmask="'alias': 'datetime`" @%> -->
+                                                                        <%@LW_HField_rq_DtStart@@type="text" class="tanggal2" id="tanggal" @%>
+                                                                        <label>Start</label>
+                                                                    </div>
+                    
+                                                                    <div class="input-field col s6">
+                                                                        <!-- <input-mask alias="datetime"  name="rq_DtEnd" inputFormat="mm/dd/yy"></input-mask> -->
+                                                                        <%@LW_HField_rq_DtEnd@@type="text" class="tanggal" id="tanggal" @%>
+                                                                        <label>End</label>
+                                                                    </div>
+                                                                    
+                                                                </div>
+                    
+                                                                <div class="row">
+                    
+                                                                    <div class="input-field col s6">
+                                                                        <%@LW_HField_rq_qday@@type="text" id="phone" @%>
+                                                                        <label>Days</label>
+                                                                    </div>
+                                                                    
+                                                                    <div class="input-field col s6">
+                                                                        <%@LW_HField_rq_wday@@type="text" @%>
+                                                                        <label>Work Day</label>
+                                                                    </div>
+                                                                </div>
+                    
+                                                                <div class="row">
+                                                                    <div class="input-field col s12">
+                                                                        <%@LW_HField_rq_descr@@type="text" @%>
+                                                                        <label>Req. Descr.</label>
+                                                                    </div>
+                                                                </div>
+                            
+                                                                <div class="row">
+                                                                    <div class="input-field col s12">
+                                                                        <%@LW_HField_rq_descr2@@type="text" @%>
+                                                                        <label>Req. Descr. 2</label>
+                                                                    </div>
+                                                                </div>
+                    
+                                                                <div class="row">
+                                                                    <div class="input-field col s12">
+                                                                        <%@LW_HField_rq_uom@@type="text" @%>
+                                                                        <label class="active">Unit</label>
+                                                                    </div>
+                                                                </div>
+                    
+                                                                <div class="row">
+                                                                    <div class="input-field col s6">
+                                                                        <%@LW_HField_rq_amt@@type="text" @%>
+                                                                        <label>Claim Amt</label>
+                                                                    </div>
+                            
+                                                                    <div class="input-field col s6">
+                                                                        <%@LW_HField_rq_curncd@@type="text" @%>
+                                                                        <label></label>
+                                                                    </div>
+                                                                </div>
+                    
+                                                                <div class="row">
+                                                                    <div class="input-field col s12">
+                                                                        <%@LW_HField_rq_trxcd@@type="text" @%>
+                                                                        <label class="active">Claim Code</label>
+                                                                    </div>
+                                                                </div>
+                    
+                                                                <div class="row">
+                                                                    <div class="input-field col s12">
+                                                                        <%@LW_HField_rq_relat_no@@type="text" @%>
+                                                                        <label>Claim Relation</label>
+                                                                    </div>
+                                                                </div>
+                    
+                                                                <div class="row">
+                                                                    <div class="input-field col s12">
+                                                                        <%@LW_HField_rq_relat_id+' '+rq_relation@@type="text" @%>
+                                                                        <label>Relation Name</label>
+                                                                    </div>
+                                                                </div>
+                    
+                                                                <div class="row">
+                                                                    <div class="input-field col s12">
+                                                                        <%@LW_HField_rq_OnOffDays@@type="text" @%>
+                                                                        <label>On Off Days</label>
+                                                                    </div>
+                                                                </div>
+                            
+                                                                <div class="row">
+                                                                    <div class="input-field col s12">
+                                                                        <%@LW_HField_rq_evidence@@type="text" @%>
+                                                                        <label>Evidence</label>
+                                                                    </div>
+                                                                </div>
+
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                        </div>
+
+
+                                        <div id="section3" class="col s12   ">
+                                                <!-- Section 3 -->
+                                                <div class="section">
+
+                                                    <div class="row ">
+                                                        <div class="col s12 pad-0">
+                                                            <!-- <h5 class="bot-20 pad-15" style="padding-top:0px;">Section 3</h5> -->
+                                                            <div class="pad-15">
+
+                                                                <div class="row">
+                                                                    <div class="input-field col s6">
+                                                                        <%@LW_HField_tb_approval->tb_trxno@@type="text" disabled @%>
+                                                                        <label>Approval No.</label>
+                                                                    </div>
+                                                                
+                                                                    <div class="input-field col s3">
+                                                                        <%@LW_HField_rq_statux@@type="text" @%>
+                                                                        <label>Sts</label>
+                                                                    </div>
+                                                                
+                                                                    <div class="input-field col s3">
+                                                                        <%@LW_HField_tb_status@@type="text" @%>
+                                                                        <label></label>
+                                                                    </div>
+                                                                </div>
+                                                                
+                                                                <div class="row">
+                                                                    <div class="input-field col s9">
+                                                                        <%@LW_HField_tb_uid@@type="text" @%>
+                                                                        <label>User</label>
+                                                                    </div>
+                                                                
+                                                                    <div class="input-field col s3">
+                                                                        <%@LW_HField_tb_step@@type="text" @%>
+                                                                        <label></label>
+                                                                    </div>
+                                                                </div>
+                                                                
+                                                                <div class="row">
+                                                                    <div class="input-field col s12">
+                                                                        <%@LW_HField_tb_uid1@@type="text" @%>
+                                                                        <label>User 1</label>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="row">
+                                                                    <div class="input-field col s3">
+                                                                        <%@LW_HField_tb_step1@@type="text" @%>
+                                                                    </div>
+                                                                
+                                                                    <div class="input-field col s3">
+                                                                        <%@LW_HField_tb_send1@@type="text" @%>
+                                                                    </div>
+                                                                
+                                                                    <div class="input-field col s3">
+                                                                        <%@LW_HField_tb_approk1@@type="text" @%>
+                                                                    </div>
+                                                                
+                                                                    <div class="input-field col s3">
+                                                                        <%@LW_HField_tb_apprDt1 +tb_apprTm1@@type="text" @%>
+                                                                    </div>
+                                                                </div>
+                                                                
+                                                                <div class="row">
+                                                                    <div class="input-field col s12">
+                                                                        <%@LW_HField_tb_uid2@@type="text" @%>
+                                                                        <label>User 2</label>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="row">
+                                                                    <div class="input-field col s3">
+                                                                        <%@LW_HField_tb_step2@@type="text" @%>
+                                                                    </div>
+                                                                
+                                                                    <div class="input-field col s3">
+                                                                        <%@LW_HField_tb_send2@@type="text" @%>
+                                                                    </div>
+                                                                
+                                                                    <div class="input-field col s3">
+                                                                        <%@LW_HField_tb_approk2@@type="text" @%>
+                                                                    </div>
+                                                                
+                                                                    <div class="input-field col s3">
+                                                                        <%@LW_HField_tb_apprDt2 +tb_apprTm2@@type="text" @%>
+                                                                    </div>
+                                                                </div>
+                                                                
+                                                                <div class="row">
+                                                                    <div class="input-field col s12">
+                                                                        <%@LW_HField_tb_uid2@@type="text" @%>
+                                                                        <label>User 3</label>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="row">
+                                                                    <div class="input-field col s3">
+                                                                        <%@LW_HField_tb_step3@@type="text" @%>
+                                                                    </div>
+                                                                
+                                                                    <div class="input-field col s3">
+                                                                        <%@LW_HField_tb_send3@@type="text" @%>
+                                                                    </div>
+                                                                
+                                                                    <div class="input-field col s3">
+                                                                        <%@LW_HField_tb_approk3@@type="text" @%>
+                                                                    </div>
+                                                                
+                                                                    <div class="input-field col s3">
+                                                                        <%@LW_HField_tb_apprDt3 +tb_apprTm3@@type="text" @%>
+                                                                    </div>
+                                                                </div>
+                                                                
+                                                                <div class="row">
+                                                                    <div class="input-field col s12">
+                                                                        <%@LW_HField_tb_uid4@@type="text" @%>
+                                                                        <label>User 4</label>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="row">
+                                                                    <div class="input-field col s3">
+                                                                        <%@LW_HField_tb_step4@@type="text" @%>
+                                                                    </div>
+                                                                
+                                                                    <div class="input-field col s3">
+                                                                        <%@LW_HField_tb_send4@@type="text" @%>
+                                                                    </div>
+                                                                
+                                                                    <div class="input-field col s3">
+                                                                        <%@LW_HField_tb_approk4@@type="text" @%>
+                                                                    </div>
+                                                                
+                                                                    <div class="input-field col s3">
+                                                                        <%@LW_HField_tb_apprDt4 +tb_apprTm4@@type="text" @%>
+                                                                    </div>
+                                                                </div>
+                                                                
+                                                                <div class="row">
+                                                                    <div class="input-field col s12">
+                                                                        <%@LW_HField_tb_attachfile@@type="text" @%>
+                                                                        <label>Attachment</label>
+                                                                    </div>
+                                                                </div>
+                                                                
+                                                                <div class="row">
+                                                                    <div class="input-field col s12">
+                                                                        <%@LW_HField_tb_attachdir@@type="text" @%>
+                                                                        <label>Attachment Dir.</label>
+                                                                    </div>
+                                                                </div>
+                                                                
+                                                                <div class="row">
+                                                                    <div class="input-field col s6">
+                                                                        <%@LW_HField_tb_subject@@type="text" @%>
+                                                                        <label>Subject</label>
+                                                                    </div>
+                                                                
+                                                                    <div class="input-field col s6">
+                                                                        <%@LW_HField_tb_descr@@type="text" @%>
+                                                                        <label>Descr</label>
+                                                                    </div>
+                                                                </div>
+                                                                    
+                                                                <div class="row">
+                                                                	<div class="input-field col s12">
+                                                                        <%@LW_HField_tb_note@@type="text" @%>
+                                                                        <label>Note</label>
+                                                                    </div>
+                                                                </div>
+                                                                
+                                                                <div class="row">
+                                                                    <div class="input-field col s12">
+                                                                        <%@LW_HField_tb_attachfile2@@type="text" @%>
+                                                                        <label>Attachment 2</label>
+                                                                    </div>
+                                                                </div>
+
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                        </div>
+
+
+                                    </div>
+                                
+
+                                <div class="row ">
+                                    <div class="col s12 pad-0">
+                                        <div class="container">
+                                            <!--   <iframe width=800 height=400 frameborder=yes src="../%LWeb_dir_R%/%@s_prnfile@%"></iframe> -->
+<!--                                             <iframe width=800 height=400 frameborder=yes
+                                                src="../%LWeb_dirEmail%/%@tb_approval->tb_attachfile@%"></iframe> -->
+                                        </div>
+
+                                        %@LW_onload@%
+                                    </div>
+                                </div>
+
+
+                            
+
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- END SECTION AREA  -->
+
+            </div>
+
+            <div class="backtotop">
+                <a class="btn-floating btn primary-bg">
+                    <i class="mdi mdi-chevron-up"></i>
+                </a>
+            </div>
+
+        </div>
+        <!-- END CONTENT AREA  -->
+
+
+
+    </form>
+
+
+
+    <script src="..%LWeb_dirMenu%/assets/press/assets/js/pwa.js"></script>
+
+    <!-- LOAD FILES AT PAGE END FOR FASTER LOADING -->
+    <!-- CORE JS FRAMEWORK - START -->
+    <script src="..%LWeb_dirMenu%/assets/press/modules/jquery/jquery-2.2.4.min.js"></script>
+    <script src="..%LWeb_dirMenu%/assets/press/modules/materialize/materialize.js"></script>
+    <script src="..%LWeb_dirMenu%/assets/press/modules/perfect-scrollbar/perfect-scrollbar.min.js"></script>
+    
+    <!-- CORE JS FRAMEWORK - END -->
+    
+    <!-- OTHER SCRIPTS INCLUDED ON THIS PAGE - START -->
+    <script src="..%LWeb_dirMenu%/assets/press/assets/js/common.js"></script>
+    <!-- OTHER SCRIPTS INCLUDED ON THIS PAGE - END -->
+
+    <!-- CORE TEMPLATE JS - START -->
+    
+    
+
+    
+
+    <!-- END CORE TEMPLATE JS - END -->
+    <script src="..%LWeb_dirMenu%/assets/press/assets/js/preloader.js"></script>
+
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script> -->
+    <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/3/jquery.inputmask.bundle.js"></script>
+    <script src="..%LWeb_dirMenu%/assets/inputmask/inputmask.date.extensions.js"></script>
+    
+    <!-- Script Untuk Disable Window.alert  -->
+        <script>
+        window.alert = function body_onload() { };
+    </script>
+    <!-- Script Untuk Disable Window.alert  -->
+                                                                
+                                                                
+    <script>
+        $(document).ready(function () {
+            if ($(' #status').val() == '@') {
+                $('#post1').attr('disabled', 'disabled');
+                $('#post2').attr('disabled', 'disabled');
+            }
+        });
+    </script>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+  $(":input").inputmask();
+  or
+  Inputmask().mask(document.querySelectorAll("input"));
+});
+  // $(":input").inputmask();
+  $("#phone").inputmask({"mask": "(999) 999-9999"});
+//   $("#tanggal").inputmask({"mask": "99/99/99"});
+  Inputmask({"mask": "99/99/99"}).mask(document.querySelectorAll("#tanggal"));
+
+</script>
+</body>
+</html>

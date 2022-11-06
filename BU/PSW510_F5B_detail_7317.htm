@@ -1,0 +1,107 @@
+<style>
+  .fixed_headers table{
+    border-collapse: collapse;
+    width: 100%;
+    margin-left: 3px;
+    margin-right: 3px;
+  }
+  .fixed_headers th {
+    background-color: #337ab7;
+    color: white;
+    font-size: 10px;
+    font-family : Arial;
+
+  }
+  .fixed_headers th,
+  .fixed_headers td {
+    text-align: left;
+    font-size: 8px;
+    font-family : Arial;
+  }
+  .fixed_headers td:nth-child, th:nth-child(odd){
+    text-align: center;
+    width: 150px;
+  }
+
+  .fixed_headers thead {
+    background-color: #337ab7;
+    color: white;
+    width: 100%;
+  }
+
+  .fixed_headers tbody {
+    display: block;
+    overflow: auto;
+    width: 800px;
+    height: 200px;
+    font-size: 11px;
+    color: black;
+  }
+
+  .fixed_headers thead tr {
+    display: block;
+    position: relative;
+  }
+  
+  .span1 {
+    height:14pt;
+    padding: 0;
+  }
+  
+</style>  
+<body onload="body_onload()" bgcolor=#fff text="#0000FF" style="margin-top:0; margin-left:0; font-size:8pt">
+
+  <table cellpadding=0 cellspacing=0 style="margin-top:1pt; margin-left:0; font-size:8pt; border-collapse:collapse; border-color:#95B8E7" border=1>
+
+    <thead>
+      <tr>
+        <th align="right">Seqno</th>
+        <th title="em_No">No</th>
+        <th title="em_Id">Code</th>
+        <th title="em_name">N a m e</th>
+        <th title="em_sex">s</th>
+        <th title="em_dob">DOB</th>
+        <th title="em_Descr">Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr bgcolor="#87CEEB">
+        <td><input class="form-control" style="width:30pt; height:14pt; font-size:8pt" name="LW_seqno" value="10"></td>
+        <td><input class="form-control" style="width:30pt; height:14pt; font-size:8pt" %@LW_HField_em_No1@%></td>
+        <td><input class="form-control" style="width:30pt; height:14pt; font-size:8pt" %@LW_HField_em_Id1@%></td>
+        <td><input class="form-control" style="width:150pt; height:14pt; font-size:8pt" %@LW_HField_em_name1@%></td>
+        <td><input class="form-control" style="width:30pt; height:14pt; font-size:8pt" %@LW_HField_em_sex1@%></td>
+        <td><input class="form-control" style="width:100pt; height:14pt; font-size:8pt" %@LW_HField_em_dob1@% placeholder="DD/MM/YYYY"></td>
+        <td><input class="form-control" style="width:200pt; height:14pt; font-size:8pt" %@LW_HField_em_Descr1@%></td>
+      </tr>
+      <tr bgcolor="#87CEEB">
+        <td><input class="form-control" style="width:30pt; height:14pt; font-size:8pt" name="LW_seqno" value="20"></td>
+        <td><input class="form-control" style="width:30pt; height:14pt; font-size:8pt" %@LW_HField_em_No2@%></td>
+        <td><input class="form-control" style="width:30pt; height:14pt; font-size:8pt" %@LW_HField_em_Id2@%></td>
+        <td><input class="form-control" style="width:150pt; height:14pt; font-size:8pt" %@LW_HField_em_name2@%></td>
+        <td><input class="form-control" style="width:30pt; height:14pt; font-size:8pt" %@LW_HField_em_sex2@%></td>
+        <td><input class="form-control" style="width:100pt; height:14pt; font-size:8pt" %@LW_HField_em_dob2@% placeholder="DD/MM/YYYY"></td>
+        <td><input class="form-control" style="width:200pt; height:14pt; font-size:8pt" %@LW_HField_em_Descr2@%></td>
+      </tr>
+      <tr bgcolor="#87CEEB">
+        <td><input class="form-control" style="width:30pt; height:14pt; font-size:8pt" name="LW_seqno" value="30"></td>
+        <td><input class="form-control" style="width:30pt; height:14pt; font-size:8pt" %@LW_HField_em_No3@%></td>
+        <td><input class="form-control" style="width:30pt; height:14pt; font-size:8pt" %@LW_HField_em_Id3@%></td>
+        <td><input class="form-control" style="width:150pt; height:14pt; font-size:8pt" %@LW_HField_em_name3@%></td>
+        <td><input class="form-control" style="width:30pt; height:14pt; font-size:8pt" %@LW_HField_em_sex3@%></td>
+        <td><input class="form-control" style="width:100pt; height:14pt; font-size:8pt" %@LW_HField_em_dob3@% placeholder="DD/MM/YYYY"></td>
+        <td><input class="form-control" style="width:200pt; height:14pt; font-size:8pt" %@LW_HField_em_Descr3@%></td>
+      </tr>
+      <tr bgcolor="#87CEEB">
+        <td><input class="form-control" style="width:30pt; height:14pt; font-size:8pt" name="LW_seqno" value="40"></td>
+        <td><input class="form-control" style="width:30pt; height:14pt; font-size:8pt" %@LW_HField_em_No4@%></td>
+        <td><input class="form-control" style="width:30pt; height:14pt; font-size:8pt" %@LW_HField_em_Id4@%></td>
+        <td><input class="form-control" style="width:150pt; height:14pt; font-size:8pt" %@LW_HField_em_name4@%></td>
+        <td><input class="form-control" style="width:30pt; height:14pt; font-size:8pt" %@LW_HField_em_sex4@%></td>
+        <td><input class="form-control" style="width:100pt; height:14pt; font-size:8pt" %@LW_HField_em_dob4@% placeholder="DD/MM/YYYY"></td>
+        <td><input class="form-control" style="width:200pt; height:14pt; font-size:8pt" %@LW_HField_em_Descr4@%></td>
+      </tr>
+    
+    </tbody>
+  </table>
+  %@LW_onload@%

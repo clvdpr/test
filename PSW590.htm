@@ -1,0 +1,240 @@
+<html>
+ <BODY onload="body_onload() " BGCOLOR="#DDFeFF" TEXT="#0000FF" style="margin-top:0; margin-left:0; position:absolute;font-size:8pt">
+  <TITLE>PR510 on Larona Web page</TITLE>
+
+  <style>
+	hr {color:sienna;}
+	p {
+	font-size: 12px;
+	font-family: "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+	}
+	body {background-image:url("images/back40.gif");}
+
+	input.button_save {
+		 background-image: url(..%LWeb_dirMenu%/PRwin_Menu_files/save-icon.png); /* 16px x 16px */
+		/* background-color: transparent;  make the button transparent */
+		 background-repeat: no-repeat;  /* make the background image appear only once */
+		 background-position: 0px 0px;  /* equivalent to 'top left' */
+		 /* background-position: left/right/center; */
+		 /*border: none;            assuming we don't want any borders */
+		 /*cursor: pointer;        /* make the cursor like hovering over an <a> element */
+		 height: 20px;           /* make this the size of your image */
+		 padding-left: 16px;     /* make text start to the right of the image */
+		 vertical-align: middle; /* align the text vertically centered */
+	}
+	input.button_reset {
+		 background-image: url(..%LWeb_dirMenu%/PRwin_Menu_files/reset-icon.png); /* 16px x 16px */
+		/* background-color: transparent;  make the button transparent */
+		 background-repeat: no-repeat;  /* make the background image appear only once */
+		 background-position: 0px 0px;  /* equivalent to 'top left' */
+		 /* background-position: left/right/center; */
+		 /*border: none;            assuming we don't want any borders */
+		 /*cursor: pointer;        /* make the cursor like hovering over an <a> element */
+		 height: 20px;           /* make this the size of your image */
+		 padding-left: 5px;     /* make text start to the right of the image */
+		 vertical-align: middle; /* align the text vertically centered */
+	}
+	.fixed-size  {
+	  width: 150px;
+	  font-size:8pt; 
+	  font-family: Sans Serif;
+	}
+	.fixed-size1  {
+	  width: 55px;
+	  font-size:8pt; 
+	  font-family: Sans Serif;
+	}
+	.fixed-size2  {
+	  width: 124px;
+	  font-size:8pt; 
+	  font-family: Sans Serif;
+	}
+	.fixed-size3  {
+	  width: 80px;
+	}
+	.fixed-size4  {
+	  width: 20px;
+	}
+	.fixed-size5  {
+	  width: 180px;
+	  font-size:8pt; 
+	  font-family: Sans Serif;
+	}
+	.fixed-size6  {
+	  width: 188px;
+	  font-size:8pt; 
+	  font-family: Sans Serif;
+	}
+	.fixed-size7  {
+	  width: 140px;
+	  font-size:8pt; 
+	  font-family: Sans Serif;
+	}
+	.fixed-size8  {
+	  width: 42px;
+	  font-size:8pt; 
+	  font-family: Sans Serif;
+	}
+	.fixed-size9  {
+	  width: 220px;
+	  font-size:8pt; 
+	  font-family: Sans Serif;
+	}
+	.button-table {
+		background-color:#4dbce9;
+	}
+	.form-title {
+	font-size: 15px;
+	font-family: "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+	}
+
+
+	@-moz-document url-prefix() {
+		 .fixed-size  {
+			width: 150px;
+		}
+	}
+  </style>
+   
+   <SCRIPT><!--
+	function confirm_del(msg){iret = confirm("confirm for deletion...\n"+msg);if (iret) {document.all.LW_fun.value="delete";PR590.submit();} }
+	//--></script>
+	<script><!--
+	function LW_F1(zhtm, zkey){var nw;window.open(zhtm,zkey,'scrollbars=yes,HEIGHT=400,WIDTH=400,alwaysRaised');}
+	//--></script>
+
+	<form name="PSW590" action="lnweb" method="post">
+ 	 <fieldset>
+     <legend>
+      <TABLE>
+       <tr>
+			<td><INPUT readonly TYPE=text name=LW_PrgNo value="PSW590" size=8>Employee Payroll</font></td>
+			<td><INPUT TYPE=hidden  name=LW_rmid value="%LWeb_rmid%"></td>
+			<td><INPUT TYPE=hidden  name=LW_TrxNo value="%LW_trxno%"></td>
+         <td><INPUT TYPE=hidden  name=LW_key value="%LW_key%"></td> 		 
+      </tr>
+ 		</TABLE>
+	  </legend>
+
+	  <TABLE border="0" cellpadding=0 cellspacing=0 style="table-layout:fixed; font-size:8pt; font-family: Sans Serif; height:8; border-collapse:collapse">
+	   <tr>
+	    <TD><p>Emp.No</p></TD><TD><%@LW_HField_s_noind@@class="fixed-size8"@%></td>
+	    <td></td><td></td>
+	    <TD><p>Badge Id.</p></TD><TD><%@LW_HField_em_badgeid@@class="fixed-size8"@%></td>
+	    <td></td><td></td><td></td>
+	    <TD colspan="3"><p>Ytd.</p></td>
+	    <TD colspan="2"><p>Current Period</p></td>	
+	   </tr>
+	   <tr>
+	    <TD><p>Department</p></TD>
+	    <TD colspan="3"><%@LW_HField_em_dept@@ class="fixed-size5"@%></td>
+	    <TD><p>Location</p></TD>
+	    <TD colspan="2"><%@LW_HField_em_loc@@class="fixed-size7"@%></td>
+		 <td></td>	    
+	    <TD><p>Net Salary</p></TD>
+	    <TD colspan="3"><%@LW_HField_em_y_nSal@@class="fixed-size7" disabled@%></td>
+	    <TD colspan="2"><%@LW_HField_em_c_nSal@@class="fixed-size7" disabled@%></td>
+	   </tr>
+	   <tr>
+	    <TD><p>Position</p></TD>
+	    <TD colspan="3"><%@LW_HField_em_jabat@@class="fixed-size5"@%></td>
+	    <TD><p>Job cd.</p></TD>
+	    <TD colspan="2"><%@LW_HField_em_jobcd@@class="fixed-size7"@%></td>
+	    <td></td>
+	    <TD><p>Tax All</p></TD>
+	    <TD colspan="3"><%@LW_HField_em_y_xall@@class="fixed-size7" disabled@%></td>
+	    <TD colspan="2"><%@LW_HField_em_c_xall@@class="fixed-size7" disabled@%></td>
+	   </tr>
+	   <tr>
+	    <TD><p>Level</p></TD>
+	    <TD colspan="3"><%@LW_HField_em_level@@class="fixed-size5"@%></td>
+	    <TD></TD>
+	    <TD colspan="2"></td>
+	    <td></td>
+	    <TD><p>Gross Salary</p></TD>
+	    <TD colspan="3"><%@LW_HField_em_y_gSal@@class="fixed-size7" disabled@%></td>
+	    <TD colspan="2"><%@LW_HField_em_c_gSal@@class="fixed-size7" disabled@%></td>
+	   </tr>
+	   <tr>
+	    <TD><p>N.P.W.P</p></TD>
+	    <TD colspan="3"><%@LW_HField_em_npwp@@class="fixed-size5"@%></td>
+	    <TD><p>Jamsostek</p></TD>
+	    <TD colspan="2"><%@LW_HField_em_astek@@class="fixed-size7"@%></td>
+	    <td></td>
+	    <TD><p>Net Bonus</p></TD>
+	    <TD colspan="3"><%@LW_HField_em_y_gBon@@class="fixed-size7" disabled@%></td>
+	    <TD colspan="2"><%@LW_HField_em_c_gBon@@class="fixed-size7" disabled@%></td>
+	   </tr>
+	   <tr>
+	    <TD><p>Date of hire</p></TD>
+	    <TD colspan="2"><%@LW_HField_em_doh@@class="fixed-size3"@%></td>
+	    <td></td>
+	    <TD><p>Resign</p></TD>
+	    <TD colspan="2"><%@LW_HField_em_dor@@class="fixed-size3"@%></td>
+		 <td></td>
+	    <TD><p>Tax.All on Bonus</p></TD>
+	    <TD colspan="3"><%@LW_HField_em_y_xallB@@class="fixed-size7" disabled@%></td>
+	    <TD colspan="2"><%@LW_HField_em_c_xallB@@class="fixed-size7" disabled@%></td>
+	   </tr>
+	   <tr>
+	    <TD><p>Period Type</p></TD>
+	    <TD colspan="2"><%@LW_HField_em_pertyp@SO100@%></td>
+	    <td></td>
+	    <TD><p>Golkar</p></TD>
+	    <TD colspan="3"><%@LW_HField_em_golkar@SO100@%></td>
+	    <TD><p>Gross Bonus</p></TD>
+	    <TD colspan="3"><%@LW_HField_em_y_gBon@@class="fixed-size7" disabled@%></td>
+	    <TD colspan="2"><%@LW_HField_em_c_gBon@@class="fixed-size7" disabled@%></td>
+	   </tr>
+	   <tr>
+	    <TD><p>Family sts</p></TD>
+	    <TD ><%@LW_HField_em_psts@@class="fixed-size8"@%></td>
+	    <TD ><%@LW_HField_em_panak@@class="fixed-size8"@%></td>
+	    <TD ><%@LW_HField_em_msts@@class="fixed-size8"@%></td>
+		 <td></td><td></td><td></td><td></td>
+	    <TD><p>Tax</p></TD>
+	    <TD colspan="3"><%@LW_HField_em_y_tax@@class="fixed-size7" disabled@%></td>
+	    <TD colspan="2"><%@LW_HField_em_c_tax@@class="fixed-size7" disabled@%></td>
+	   </tr>
+	   <tr>
+	    <TD><p>Base Salary</p></TD>
+	    <TD colspan="2"><%@LW_HField_em_gpokok@@class="fixed-size7"@%></td>
+	    <TD><p>Curn</p></TD>
+	    <TD colspan="2"><%@LW_HField_em_curncd@SO@%"></td>
+	    <TD><p>Grs/Net</p></TD>
+	    <TD><%@LW_HField_em_grossup@SO@%></td>
+	    <TD><p>Tax on Bonus</p></TD>
+	    <TD colspan="3"><%@LW_HField_em_y_taxB@@class="fixed-size7" disabled@%></td>
+	    <TD colspan="2"><%@LW_HField_em_c_taxB@@class="fixed-size7" disabled@%></td>
+	   </tr>
+	   <tr>
+	    <TD colspan="8"></TD>
+	    <TD><p>Prev. Netto</p></TD>
+	    <TD colspan="2"><%@LW_HField_em_pv_nett@@class="fixed-size7"@%></td>
+		 <TD><p>Prev.Net Income</p></TD>
+	    <TD colspan="2"><%@LW_HField_em_pv_nSal@@class="fixed-size7"@%></td>
+	   </tr>
+	   <tr>
+	    <TD colspan="8"></TD>
+	    <TD><p>Prev. Tax</p></TD>
+	    <TD colspan="2"><%@LW_HField_em_pv_tax@@class="fixed-size7"@%></td>
+		 <TD><p>Prev. Tax Allow</p></TD>
+	    <TD colspan="2"><%@LW_HField_em_pv_txal@@class="fixed-size7"@%></td>
+	   </tr>
+     </table>
+
+       %@LW_edit_@
+       %@LW_htm_PSW590_detail.htm@%
+       @else
+      <center>
+       <table><td>%@LW_record@%</td></table><iframe width=900 height=150 frameborder=yes src="../%LWeb_ifi%" id="form_head"></iframe>
+       </table>
+      </center>
+     LW_edit@%
+
+
+%@LW_onload@%
+   </fieldset>
+  </form> 
+ </body>
+</html>

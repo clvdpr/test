@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=yes" name="viewport">
+  <title>LARONA PRSLIP</title>
+
+  <!-- General CSS Files -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+  <link rel="stylesheet" href="..%LWeb_dirMenu%//assets/bootstrap-4.3.1/dist/css/bootstrap.min.css">
+  <!-- CSS Libraries -->
+
+  <!-- Template CSS -->
+  <link rel="stylesheet" href="..%LWeb_dirMenu%//assets/css/style.css">
+  <link rel="stylesheet" href="..%LWeb_dirMenu%//assets/css/components.css">
+
+  <style>
+.dropdown-menu {
+  top: 58px;
+}
+  
+  /* hide scrollbar but allow scrolling */
+body {
+  -ms-overflow-style: none; /* for Internet Explorer, Edge */
+  scrollbar-width: none; /* for Firefox */
+  overflow-y: scroll; 
+}
+
+body::-webkit-scrollbar {
+  display: none; /* for Chrome, Safari, and Opera */
+}
+
+  </style>
+
+</head>
+
+<body class="layout-3">
+  <div id="app">
+    <div class="">
+      
+      <nav class="navbar navbar-expand-lg main-navbar" style="height:55px background: blue">
+        <a href="#" class="navbar-brand sidebar-gone-hide">PRSLIP</a>
+        <div class="navbar-nav">
+          <a href="#" class="nav-link sidebar-gone-show" data-toggle="sidebar"><i class="fas fa-bars"></i></a>
+        </div>
+        
+        
+        <ul class="navbar-nav navbar-right ml-auto">
+          
+          
+          <li class="dropdown"><a href="#" data-toggle="dropdown" class="nav-link dropdown-toggle nav-link-lg nav-link-user">
+            <img alt="image" src="..%LWeb_dirImg%/%@pr010a->em_noind@%.jpg" class="rounded-circle mr-1" style="height:35px; width:35px;">
+            <div class="d-sm-none d-lg-inline-block">Hi, %@pr010a->em_name@%</div></a>
+            <div class="dropdown-menu dropdown-menu-right">
+              
+              <a href="features-activities.html" class="dropdown-item has-icon">
+              <a href="lnweb?manual%rmid%" target="blank" class="dropdown-item has-icon">
+                <i class="fas fa-bolt"></i> Manual
+              </a>
+              <a href="features-settings.html" class="dropdown-item has-icon">
+              <a href="%LWeb_dir%/login_info_dir.htm" class="dropdown-item has-icon">
+                <i class="fas fa-cog"></i> Dir.Info
+              </a>
+              <div class="dropdown-divider"></div>
+              <a href="lnweb?logout%rmid%" class="dropdown-item has-icon text-danger">
+                <i class="fas fa-sign-out-alt"></i> Logout
+              </a>
+            </div>
+          </li>
+        </ul>
+      </nav>
+
+      <nav class="navbar navbar-secondary navbar-expand-lg">
+        <div class="container">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a href="lnweb?PSW406%rmid%" target="bidang" class="nav-link"><i class="fas fa-envelope-open-text"></i><span>PAYROLL SLIP</span></a>
+            </li>
+            <li class="nav-item">
+              <a href="lnweb?PSW510%rmid%" target="bidang" class="nav-link"><i class="fas fa-user-edit"></i><span>PERSONAL DATA</span></a>
+            </li>
+            <li class="nav-item">
+              <a href="lnweb?PSW580%rmid%" target="bidang" class="nav-link"><i class="fas fa-user-edit"></i><span>PERSONAL Message</span></a>
+            </li>
+            <li class="nav-item dropdown">
+              <a href="#" data-toggle="dropdown" class="nav-link has-dropdown"><i class="fas fa-history"></i><span>HISTORY</span></a>
+              <ul class="dropdown-menu">
+                <li class="nav-item"><a href="lnweb?PXW570%rmid%" target="bidang" class="nav-link">Annual Tax (SPT)</a></li>
+                <li class="nav-item"><a href="lnweb?PSW660%rmid%" target="bidang" class="nav-link">Payroll History</a></li>
+                <li class="nav-item"><a href="lnweb?PSW406,px%rmid%" target="bidang" class="nav-link">Last Year Payroll Slip</a></li>
+              </ul>
+            </li>
+            <li class="nav-item dropdown">
+              <a href="#" data-toggle="dropdown" class="nav-link has-dropdown"><i class="fas fa-user-lock"></i><span>PERSONAL RECORDS</span></a>
+              <ul class="dropdown-menu">
+                <li class="nav-item"><a href="lnweb?PSW530%rmid%" target="bidang" class="nav-link">Personal Quotas</a></li>
+                <li class="nav-item"><a href="lnweb?PSW210%rmid%&s_Rtype=L" target="bidang" class="nav-link">Annual Leave Request</a></li>
+                <li class="nav-item"><a href="lnweb?PSW210%rmid%&s_Rtype=K" target="bidang" class="nav-link">Special Leave</a></li>
+                <li class="nav-item"><a href="lnweb?PSW210%rmid%&s_Rtype=M" target="bidang" class="nav-link">Medical Balance</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </nav>
+
+      
+
+      <!-- Main Content -->
+      <div class="main-content" style="min-height: 223px;padding-top: 107px;">
+        <section class="section">
+          <div class="myIframe"> 
+        <table class="w-100 h-100">
+            <tr>
+                <td class="gambar" align="center" style="background-color:white;background-repeat:no-repeat;">
+                  <iframe name=bidang id="mainIframe" frameborder=no allowfullscreen="yes" class="section-body w-100 h-100"></iframe>
+                </td>
+            </tr>
+        </table>
+    </div>   
+        </section>
+      </div>
+
+
+<!--       <footer class="main-footer">
+        <div class="footer-left">
+          
+        </div>
+        <div class="footer-right">
+          2.3.0
+        </div>
+      </footer> -->
+    </div>
+  </div>
+
+  <!-- General JS Scripts -->
+  <script src="..%LWeb_dirMenu%//assets/js/jquery-3.3.1.min.js"></script>
+  <script src="..%LWeb_dirMenu%//assets/bootstrap-4.3.1/dist/js/bootstrap.min.js"></script>
+  <script src="..%LWeb_dirMenu%//assets/popper.min.js"></script>
+  <script src="..%LWeb_dirMenu%//assets/jquery.nicescroll.min.js"></script>
+  <script src="..%LWeb_dirMenu%//assets/moment.min.js"></script>
+  <script src="..%LWeb_dirMenu%//assets/js/stisla.js"></script>
+
+  <!-- JS Libraies -->
+
+  <!-- Page Specific JS File -->
+
+  <!-- Template JS File -->
+  <script src="..%LWeb_dirMenu%//assets/js/scripts.js"></script>
+  <script src="..%LWeb_dirMenu%//assets/js/custom.js"></script>
+</body>
+</html>

@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no" name="viewport">
+	<title>Detail Personal Trx. Request</title>
+
+	<!-- General CSS Files -->
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+	<link rel="stylesheet" href="..%LWeb_dirMenu%//assets/bootstrap-4.3.1/dist/css/bootstrap.min.css">
+	<!-- CSS Libraries -->
+
+	<!-- Template CSS -->
+	<link rel="stylesheet" href="..%LWeb_dirMenu%//assets/css/style.css">
+	<link rel="stylesheet" href="..%LWeb_dirMenu%//assets/css/components.css">
+	<link rel="stylesheet" href="..%LWeb_dirMenu%//assets/css/jqueryui.css">
+	<script src="..%LWeb_dirMenu%/assets/js/jquery-3.3.1.min.js"></script>
+	<script src="..%LWeb_dirMenu%/assets/js/jqueryui.js"></script>
+	<style>
+    
+    		/* hide scrollbar but allow scrolling */
+body {
+  -ms-overflow-style: none; /* for Internet Explorer, Edge */
+  scrollbar-width: none; /* for Firefox */
+  overflow-y: scroll; 
+}
+
+body::-webkit-scrollbar {
+  display: none; /* for Chrome, Safari, and Opera */
+}
+    
+		.dropdown-menu {
+			top: 58px;
+		}
+		.form-group .control-label, .form-group > label { 
+			font-size: 14px;
+		}
+
+		.form-group, .row {
+			margin-bottom: 0px;
+		}
+
+        @media screen and (max-width: 600px) {
+        .form-group, .row{
+        width: 100%;
+        margin-top: 0;
+        margin-left: 0 !important;
+  }
+}
+
+	</style>
+
+	<script>
+		$(document).ready(function() {
+			$(".date").datepicker({
+				dateFormat: 'dd/mm/y',
+				changeMonth: true,
+				changeYear: true
+			});
+		})
+	</script>
+
+</head>
+
+<!-- <body onload="body_onload()"> -->
+	<body onload="body_onload()" style="background-color:#ffffff;">
+
+		<form name="PSW210" action="lnweb" method="post">
+            <div class="container">
+			<table>
+				<tr>
+					<td><INPUT TYPE=hidden name=LW_PrgNo value="PSW210_F5"></td>
+					<td><INPUT TYPE=hidden  name=LW_rmid value="%LWeb_rmid%"></td>
+					<td><INPUT TYPE=hidden  name=LW_key value="%LW_key%"></td>
+					<td><INPUT TYPE=hidden  name=LW_PrgBos value="%LWeb_prgbos%"></td>
+					<td><INPUT TYPE=hidden  name=LW_trxno value="%LW_trxno%"></td>
+					%LWeb_prgfun%
+				</tr>
+			</table>
+
+			<nav aria-label="breadcrumb" style="background-color:#ffffff;">
+				<ol class="breadcrumb" style="background-color:#ffffff;">
+					<li class="breadcrumb-item">Home</a></li>
+					<li class="breadcrumb-item active" aria-current="page">Personal Records</li>
+					<!--                   <li class="breadcrumb-item"><a href="lnweb?PSW210%rmid%&LW_trxno=%LW_trxno%">PS210 Leave Request</a></li> -->
+					<li class="breadcrumb-item">PS210 Leave Request</li>
+					<li class="breadcrumb-item active" aria-current="page"><b>PSW210_F5 Detail Personal Trx. Record</b></li>
+				</ol>
+
+			</nav>
+			<button name="LW_prgfun" type="submit" class="btn btn-primary" value="PSW210_F5_Post" title="Post Add">Post</button>
+			<button name="LW_prgfun" type="submit" class="btn btn-primary" value="Prn_Print" title="Print">Print</button>
+			<button name="LW_prgfun" type="submit" class="btn btn-primary" value="PSW210_Upload" title="Upload">Evidence Upload</button>
+			<button name="LW_prgfun" type="submit" class="btn btn-primary" value="Approval_Send" title="Approval Request Send">Send</button><br>
+
+			<div class="form-row" style="margin-left: 10px;">
+				<div class="col">
+					<div class="form-group row">
+						<label class="col-lg-2 col-form-label pr-0 pl-1">Period</label>
+						<div class="col-lg-6 pr-0 pl-2">
+							<%@LW_HField_PR_perDescr@@class="form-control form-control-sm" @%>
+						</div>
+					</div>
+
+					<div class="form-group row">
+						<label class="col-lg-2 col-form-label pr-0 pl-1">Emp. No.</label>
+						<div class="col-lg-2 pr-0 pl-2">
+							<%@LW_HField_er_noind@@class="form-control form-control-sm" @%>
+						</div>
+						<div class="col-lg-4 pr-0 pl-2">
+							<%@LW_HField_em_title+' '+em_name@@class="form-control form-control-sm" @%>
+						</div>
+					</div>
+
+					<div class="form-group row">
+						<label class="col-lg-2 col-form-label pr-0 pl-1">Record type</label>
+						<div class="col-lg-6 pr-0 pl-2">
+							<%@LW_HField_er_rtype@@class="form-control form-control-sm" @%>
+						</div>
+					</div>
+
+					<div class="form-group row">
+						<label class="col-lg-2 col-form-label pr-0 pl-1">Description</label>
+						<div class="col-lg-6 pr-0 pl-2">
+							<%@LW_HField_er_descr@@class="form-control form-control-sm" @%>
+						</div>
+					</div>
+
+					<div class="form-group row">
+						<label class="col-lg-2 col-form-label pr-0 pl-1"></label>
+						<div class="col-lg-6 pr-0 pl-2">
+						</div>
+					</div>
+
+					<div class="form-group row">
+						<label class="col-lg-2 col-form-label pr-0 pl-1">Addition (In)</label>
+						<div class="col-lg-3 pr-0 pl-2">
+							<%@LW_HField_er_qty_i@@class="form-control form-control-sm" @%>
+						</div>
+						<div class="col-lg-3 pr-0 pl-2">
+							<%@LW_HField_er_amt_i@@class="form-control form-control-sm" @%>
+						</div>
+					</div>
+
+					<div class="form-group row">
+						<label class="col-lg-2 col-form-label pr-0 pl-1">Deduction (Out)</label>
+						<div class="col-lg-3 pr-0 pl-2">
+							<%@LW_HField_er_qty_o@@class="form-control form-control-sm" @%>
+						</div>
+						<div class="col-lg-3 pr-0 pl-2">
+							<%@LW_HField_er_amt_o@@class="form-control form-control-sm" @%>
+						</div>
+					</div>
+
+					<div class="form-group row">
+						<label class="col-lg-2 col-form-label pr-0 pl-1">Balance</label>
+						<div class="col-lg-3 pr-0 pl-2">
+							<%@LW_HField_er_qty_i -er_qty_o@@class="form-control form-control-sm" @%>
+						</div>
+						<div class="col-lg-3 pr-0 pl-2">
+							<%@LW_HField_er_amt_i -er_amt_o@@class="form-control form-control-sm" @%>
+						</div>
+					</div>
+
+					<div class="form-group row">
+						<label class="col-lg-2 col-form-label pr-0 pl-1">Request No.</label>
+						<div class="col-lg-4 pr-0 pl-2">
+							<%@LW_HField_rq_noind +rq_rtype +rq_seqno@@class="form-control form-control-sm p-0" @%>
+						</div>
+						<div class="col-lg-2 pr-0 pl-2">
+							<%@LW_HField_rq_statux +rq_status@@class="form-control form-control-sm p-0" @%>
+						</div>
+					</div>
+
+					<div class="form-group row">
+						<label class="col-lg-2 col-form-label pr-0 pl-1">Start</label>
+						<div class="col-lg-2 pr-0 pl-2">
+							<%@LW_HField_rq_DtStart@@class="form-control form-control-sm date" autocomplete=off @%>
+						</div>
+						<label class="col-lg-2 col-form-label pr-0 pl-1">Days</label>
+						<div class="col-lg-2 pr-0 pl-2">
+							<%@LW_HField_rq_qday@@class="form-control form-control-sm date" @%>
+						</div>
+					</div>
+
+					<div class="form-group row">
+						<label class="col-lg-2 col-form-label pr-0 pl-1">End</label>
+						<div class="col-lg-2 pr-0 pl-2">
+							<%@LW_HField_rq_DtEnd@@class="form-control form-control-sm date" autocomplete=off @%>
+						</div>
+						<label class="col-lg-2 col-form-label pr-0 pl-1">Work day</label>
+						<div class="col-lg-2 pr-0 pl-2">
+							<%@LW_HField_rq_wday@@class="form-control form-control-sm" @%>
+						</div>
+					</div>
+
+					<div class="form-group row">
+						<label class="col-lg-2 col-form-label pr-0 pl-1">Unit</label>
+						<div class="col-lg-6 pr-0 pl-2">
+							<%@LW_HField_rq_uom@@class="form-control form-control-sm py-0 h-75"@%>
+						</div>
+					</div>
+
+					<div class="form-group row">
+						<label class="col-lg-2 col-form-label pr-0 pl-1">Claim amt.</label>
+						<div class="col-lg-3 pr-0 pl-2">
+							<%@LW_HField_rq_amt@@class="form-control form-control-sm" @%>
+						</div>
+						<div class="col-lg-3 pr-0 pl-2">
+							<%@LW_HField_rq_curncd@@class="form-control form-control-sm" @%>
+						</div>
+					</div>
+
+					<div class="form-group row">
+						<label class="col-lg-2 col-form-label pr-0 pl-1">Req. Descr.</label>
+						<div class="col-lg-6 pr-0 pl-2">
+							<%@LW_HField_rq_descr@@class="form-control form-control-sm" @%>
+						</div>
+					</div>
+
+					<div class="form-group row">
+						<label class="col-lg-2 col-form-label pr-0 pl-1">Req. Descr. 2</label>
+						<div class="col-lg-6 pr-0 pl-2">
+							<%@LW_HField_rq_descr2@@class="form-control form-control-sm" @%>
+						</div>
+					</div>
+
+					<div class="form-group row">
+						<label class="col-lg-2 col-form-label pr-0 pl-1">On Off days</label>
+						<div class="col-lg-6 pr-0 pl-2">
+							<%@LW_HField_rq_OnOffDays@@class="form-control form-control-sm" @%>
+						</div>
+					</div>
+
+					<div class="form-group row">
+						<label class="col-lg-2 col-form-label pr-0 pl-1">Evidence</label>
+						<div class="col-lg-6 pr-0 pl-2">
+							<%@LW_HField_rq_evidence@@class="form-control form-control-sm" @%>
+						</div>
+					</div>
+
+				</div>
+
+
+				<div class="col">
+
+					<div class="form-group row">
+						<label class="col-lg-2 col-form-label pr-0 pl-1">Dept</label>
+						<div class="col-lg-6 pr-0 pl-2">
+							<%@LW_HField_em_dept@@class="form-control form-control-sm" @%>
+						</div>
+					</div>
+
+					<div class="form-group row">
+						<label class="col-lg-2 col-form-label pr-0 pl-1">Shift Grp.</label>
+						<div class="col-lg-6 pr-0 pl-2">
+							<%@LW_HField_em_shftGrp@@class="form-control form-control-sm" @%>
+						</div>
+					</div>
+
+					<div class="form-group row">
+						<label class="col-lg-2 col-form-label pr-0 pl-1">LeaveMedi</label>
+						<div class="col-lg-6 pr-0 pl-2">
+							<%@LW_HField_em_leavemedi@@class="form-control form-control-sm" @%>
+						</div>
+					</div>
+
+					<div class="form-group row">
+						<label class="col-lg-2 col-form-label pr-0 pl-1">U. Approval</label>
+						<div class="col-lg-6 pr-0 pl-2">
+							<%@LW_HField_em_userApprv@@class="form-control form-control-sm" @%>
+						</div>
+					</div>
+
+					<div class="form-group row">
+						<label class="col-lg-2 col-form-label pr-0 pl-1">Approval No.</label>
+						<div class="col-lg-2 pr-0 pl-2">
+							<%@LW_HField_tb_approval->tb_trxno@@class="form-control form-control-sm p-0" @%>
+						</div>
+						<label class="col-lg-1 col-form-label pr-0">sts</label>
+						<div class="col-lg-1 pr-0 pl-2">
+							<%@LW_HField_tb_statux@@class="form-control form-control-sm p-0" @%>
+						</div>
+						<div class="col-lg-2 pr-0 pl-2">
+							<%@LW_HField_tb_status@@class="form-control form-control-sm p-0" @%>
+						</div>
+					</div>
+
+					<div class="form-group row">
+						<label class="col-lg-2 col-form-label pr-0 pl-1">U. Approval</label>
+						<div class="col-lg-6 pr-0 pl-2">
+							<%@LW_HField_em_userApprv@@class="form-control form-control-sm" @%>
+						</div>
+					</div>
+
+					<div class="form-group row">
+						<label class="col-lg-2 col-form-label pr-0 pl-1">User</label>
+						<div class="col-lg-2 pr-0 pl-2">
+							<%@LW_HField_tb_uid@@class="form-control form-control-sm p-0" @%>
+						</div>
+						<div class="col-lg-1 pr-0 pl-2">
+							<%@LW_HField_tb_step@@class="form-control form-control-sm" @%>
+						</div>
+					</div>
+
+					<div class="form-group row">
+						<label class="col-lg-2 col-form-label pr-0 pl-1">User 1</label>
+						<div class="col-lg-2 pr-0 pl-2">
+							<%@LW_HField_tb_uid1@@class="form-control form-control-sm p-0" @%>
+						</div>
+						<div class="col-lg-1 pr-0 pl-2">
+							<%@LW_HField_tb_step1@@class="form-control form-control-sm" @%>
+						</div>
+						<div class="col-lg-1 pr-0 pl-2">
+							<%@LW_HField_tb_send1@@class="form-control form-control-sm" @%>
+						</div>
+						<div class="col-lg-1 pr-0 pl-2">
+							<%@LW_HField_tb_approk1@@class="form-control form-control-sm p-0" @%>
+						</div>
+						<div class="col-lg-1 pr-0 pl-2">
+							<%@LW_HField_tb_apprDt1 +tb_apprTm1@@class="form-control form-control-sm" @%>
+						</div>
+					</div>
+
+					<div class="form-group row">
+						<label class="col-lg-2 col-form-label pr-0 pl-1">&nbsp;</label>
+						<div class="col-lg-6 pr-0 pl-2">
+							<%@LW_HField_tb_remark1@@class="form-control form-control-sm" @%>
+						</div>
+					</div>
+
+
+					<div class="form-group row">
+						<label class="col-lg-2 col-form-label pr-0 pl-1">User 2</label>
+						<div class="col-lg-2 pr-0 pl-2">
+							<%@LW_HField_tb_uid2@@class="form-control form-control-sm p-0" @%>
+						</div>
+						<div class="col-lg-1 pr-0 pl-2">
+							<%@LW_HField_tb_step2@@class="form-control form-control-sm" @%>
+						</div>
+						<div class="col-lg-1 pr-0 pl-2">
+							<%@LW_HField_tb_send2@@class="form-control form-control-sm" @%>
+						</div>
+						<div class="col-lg-1 pr-0 pl-2">
+							<%@LW_HField_tb_approk2@@class="form-control form-control-sm p-0" @%>
+						</div>
+						<div class="col-lg-1 pr-0 pl-2">
+							<%@LW_HField_tb_apprDt2 +tb_apprTm2@@class="form-control form-control-sm" @%>
+						</div>
+					</div>
+
+					<div class="form-group row">
+						<label class="col-lg-2 col-form-label pr-0 pl-1">&nbsp;</label>
+						<div class="col-lg-6 pr-0 pl-2">
+							<%@LW_HField_tb_remark2@@class="form-control form-control-sm" @%>
+						</div>
+					</div>
+
+					<div class="form-group row">
+						<label class="col-lg-2 col-form-label pr-0 pl-1">User 3</label>
+						<div class="col-lg-2 pr-0 pl-2">
+							<%@LW_HField_tb_uid3@@class="form-control form-control-sm p-0" @%>
+						</div>
+						<div class="col-lg-1 pr-0 pl-2">
+							<%@LW_HField_tb_step3@@class="form-control form-control-sm" @%>
+						</div>
+						<div class="col-lg-1 pr-0 pl-2">
+							<%@LW_HField_tb_send3@@class="form-control form-control-sm" @%>
+						</div>
+						<div class="col-lg-1 pr-0 pl-2">
+							<%@LW_HField_tb_approk3@@class="form-control form-control-sm p-0" @%>
+						</div>
+						<div class="col-lg-1 pr-0 pl-2">
+							<%@LW_HField_tb_apprDt3 +tb_apprTm3@@class="form-control form-control-sm" @%>
+						</div>
+					</div>
+                        <div class="form-group row">
+						<label class="col-lg-2 col-form-label pr-0 pl-1">&nbsp;</label>
+						<div class="col-lg-6 pr-0 pl-2">
+							<%@LW_HField_tb_remark3@@class="form-control form-control-sm" @%>
+						</div>
+					</div>
+                        
+                        <div class="form-group row">
+						<label class="col-lg-2 col-form-label pr-0 pl-1">User 4</label>
+						<div class="col-lg-2 pr-0 pl-2">
+							<%@LW_HField_tb_uid4@@class="form-control form-control-sm p-0" @%>
+						</div>
+						<div class="col-lg-1 pr-0 pl-2">
+							<%@LW_HField_tb_step4@@class="form-control form-control-sm" @%>
+						</div>
+						<div class="col-lg-1 pr-0 pl-2">
+							<%@LW_HField_tb_send4@@class="form-control form-control-sm" @%>
+						</div>
+						<div class="col-lg-1 pr-0 pl-2">
+							<%@LW_HField_tb_approk4@@class="form-control form-control-sm p-0" @%>
+						</div>
+						<div class="col-lg-1 pr-0 pl-2">
+							<%@LW_HField_tb_apprDt4 +tb_apprTm4@@class="form-control form-control-sm" @%>
+						</div>
+					</div>
+
+					<div class="form-group row">
+						<label class="col-lg-2 col-form-label pr-0 pl-1">&nbsp;</label>
+						<div class="col-lg-6 pr-0 pl-2">
+							<%@LW_HField_tb_remark4@@class="form-control form-control-sm" @%>
+						</div>
+					</div>
+
+					<div class="form-group row">
+						<label class="col-lg-2 col-form-label pr-0 pl-1">Attachment Dir.</label>
+						<div class="col-lg-6 pr-0 pl-2">
+							<%@LW_HField_tb_attachdir@@class="form-control form-control-sm" @%>
+						</div>
+					</div>
+
+					<div class="form-group row">
+						<label class="col-lg-2 col-form-label pr-0 pl-1">Attachment</label>
+						<div class="col-lg-6 pr-0 pl-2">
+							<%@LW_HField_tb_attachfile@@class="form-control form-control-sm" @%>
+						</div>
+					</div>
+
+					<div class="form-group row">
+						<label class="col-lg-2 col-form-label pr-0 pl-1">Subject</label>
+						<div class="col-lg-6 pr-0 pl-2">
+							<%@LW_HField_tb_subject@@class="form-control form-control-sm" @%>
+						</div>
+					</div>
+
+					<div class="form-group row">
+						<label class="col-lg-2 col-form-label pr-0 pl-1">Note</label>
+						<div class="col-lg-6 pr-0 pl-2">
+							<%@LW_HField_tb_note@@class="form-control form-control-sm" @%>
+						</div>
+					</div>
+
+					<div class="form-group row">
+						<label class="col-lg-2 col-form-label pr-0 pl-1">Descr</label>
+						<div class="col-lg-6 pr-0 pl-2">
+							<%@LW_HField_tb_descr@@class="form-control form-control-sm" @%>
+						</div>
+					</div>
+
+					<div class="form-group row">
+						<label class="col-lg-2 col-form-label pr-0 pl-1">Attachment 2</label>
+						<div class="col-lg-6 pr-0 pl-2">
+							<%@LW_HField_tb_attachfile2@@class="form-control form-control-sm" @%>
+						</div>
+					</div>
+
+				</div>
+
+			</div>
+
+			<div class="container card">
+				<div class="form-group row">
+					<label class="col-sm-1 col-form-label">Lpx Option</label>
+					<div class="col-sm-5">
+						<%@LW_HField_lpx_option@@class="form-control form-control-sm p-0 h-75"@%>
+					</div>
+				</div>
+
+				<div class="form-group row">
+					<label class="col-sm-1 col-form-label">Printers File</label>
+					<div class="col-sm-5">
+						<%@LW_HField_s_prnfile@@class="form-control form-control-sm" @%>
+					</div>
+				</div>
+
+			</div>
+        </div>
+		</form>
+		<div class="container">
+			<!--   <iframe width=800 height=400 frameborder=yes src="../%LWeb_dir_R%/%@s_prnfile@%"></iframe> -->
+			<iframe width=800 height=400 frameborder=yes src="../%LWeb_dirEmail%/%@tb_approval->tb_attachfile@%"></iframe>
+		</div>
+
+		%@LW_onload@%
+
+
+		<!-- General JS Scripts -->
+
+		<script src="..%LWeb_dirMenu%/assets/bootstrap-4.3.1/dist/js/bootstrap.min.js"></script>
+		<script src="..%LWeb_dirMenu%/assets/popper.min.js"></script>
+		<script src="..%LWeb_dirMenu%/assets/jquery.nicescroll.min.js"></script>
+		<script src="..%LWeb_dirMenu%/assets/moment.min.js"></script>
+		<script src="..%LWeb_dirMenu%/assets/js/stisla.js"></script>
+		<script src="..%LWeb_dirMenu%/assets/main/assets/js/dashforge.calendar.js"></script>
+
+		<!-- JS Libraies -->
+
+		<!-- Page Specific JS File -->
+
+		<!-- Template JS File -->
+		<script src="..%LWeb_dirMenu%/assets/js/scripts.js"></script>
+		<script src="..%LWeb_dirMenu%/assets/js/custom.js"></script>
+	</body>
+	</html>

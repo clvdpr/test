@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no" name="viewport" />
+    <title>Payroll Slip</title>
+ 
+    <!-- General CSS Files -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous" />
+    <link rel="stylesheet" href="..%LWeb_dirMenu%//assets/bootstrap-5.2.0/dist/css/bootstrap.min.css" />
+
+    <!-- CSS Libraries -->
+
+    <!-- Template CSS -->
+    <link rel="stylesheet" href="..%LWeb_dirMenu%//assets/css/style.css" />
+    <link rel="stylesheet" href="..%LWeb_dirMenu%//assets/css/components.css" />
+
+    <style>
+        @media only screen and (min-width: 768px) {
+            body {
+                overflow-y: hidden;
+/*                 Sembunyikan vertical scrollbar */
+                overflow-x: hidden;
+                /* Sembunyikan horizontal scrollbar */
+            }
+        }
+
+        @media only screen and (max-width: 768px) {
+            nav {
+                display: none;
+            }
+        }
+
+        /* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+        @media screen and (max-width: 600px) {
+        .col-sm-10, .col-sm-5, .row{
+        width: 100%;
+        margin-top: 0;
+        margin-left: 0 !important;
+  }
+}
+    </style>
+</head>
+
+<body onload="body_onload()" style="background-color:#ffffff;">
+
+<form name="PSW210" action="lnweb" method="post">
+
+  
+
+      <div class="container">
+
+              <nav aria-label="breadcrumb" style="background-color:#ffffff;">
+                <ol class="breadcrumb" style="background-color:#ffffff;">
+                  <li class="breadcrumb-item">Home</a></li>
+                  <li class="breadcrumb-item">Personal Records</a></li>
+                  <li class="breadcrumb-item active" aria-current="page"><b>PSW210 Leave Request Record</b></li>
+                </ol>
+              </nav>
+
+              <!-- Hidden for Endpoint -->
+            <!-- <div class="row my-3"> -->
+            <input class="form-control" type="hidden" name="LW_PrgNo" value="PSW210" />
+            <!-- </div> -->
+            <!-- <div class="row my-3"> -->
+            <input class="form-control" type="hidden" name="LW_rmid" value="%LWeb_rmid%" />
+            <!-- </div> -->
+            <!-- <div class="row my-3"> -->
+              <input class="form-control" type="hidden" name="LW_trxno" value="%LW_trxno%" />
+              <!-- </div> -->
+            <!-- <div class="row my-3"> -->
+            <input class="form-control" type="hidden" name="LW_key" value="%LW_key%" />
+            <!-- </div> -->
+            <!-- Hidden for Endpoint -->
+
+
+                  <div class="my-2 row">
+                    <div class="col-sm-3">
+                      <button name="LW_prgfun" type="submit" class="btn btn-primary" id="PSW210_F5" value="PSW210_F5" title="Detail">Create/View Request</button>
+                    </div>
+                  </div>
+                  
+                <div class="my-2 row">
+                    <label class="col-sm-2 col-form-label">Period</label>
+                    <div class="col-sm-10">
+                        <%@LW_HField_PR_perDescr@@class="form-control form-control-sm" @%>
+                    </div>
+                </div>
+
+                    <div class="my-2 row">
+                      <label class="col-sm-2 col-form-label">Emp. No.</label>
+                      <div class="col-sm-3" style="margin-left: 0px;">
+                        <%@LW_HField_em_noind@@class="form-control form-control-sm" @%>
+                      </div>
+
+                      <div class="col-sm-7" style="margin-left: 0px;">
+                      <%@LW_HField_em_name@@class="form-control form-control-sm"@%>
+                      </div>
+                      
+                    </div>
+
+                    <div class="my-2 row">
+                      <label class="col-sm-2 col-form-label">Dept</label>
+                      <div class="col-sm-10">
+                        <%@LW_HField_em_dept@@class="form-control form-control-sm"@%>
+                      </div>
+                    </div>
+
+                    <div class="my-2 row">
+                      <label class="col-sm-2 col-form-label">Record Type</label>
+                      <div class="col-sm-10">
+                        <%@LW_HField_er_rtype@@class="form-control form-control-sm" @%>
+                      </div>
+                    </div>
+
+                    <div class="my-2 row">
+                      <label class="col-sm-2 col-form-label">Starting date</label>
+                      <div class="col-sm-5 row" style="margin-left: 0px;">
+                        <%@LW_HField_er_dtStart@@class="form-control form-control-sm"@%>
+                      </div>
+                        <label class="col-sm-1 col-form-label lrn" style="margin-left: 10px;">End date</label>
+                      <div class="col-sm-4" >
+                        <%@LW_HField_er_dtEnd@@class="form-control form-control-sm" @%>
+                      </div>
+                    </div>
+
+                    <div class="my-2 row">
+                      <label class="col-sm-2 col-form-label">Quota</label>
+                      <div class="col-sm-5 row" style="margin-left: 0px;">
+                        <%@LW_HField_er_qty_q@@class="form-control form-control-sm"@%>
+                      </div>
+
+                      <div class="col-sm-5 row" style="margin-left: 10px;">
+                      <%@LW_HField_er_amt_q@@class="form-control form-control-sm"@%>
+                      </div>
+                    </div>
+
+                    <div class="my-2 row">
+                        <label class="col-sm-2 col-form-label">Addition (In)</label>
+                        <div class="col-sm-5 row" style="margin-left: 0px;">
+                        <%@LW_HField_er_qty_i@@class="form-control form-control-sm"@%>
+                        </div>
+  
+                        <div class="col-sm-5 row" style="margin-left: 10px;">
+                        <%@LW_HField_er_amt_i@@class="form-control form-control-sm"@%>
+                        </div>
+                    </div>
+
+                    <div class="my-2 row">
+                        <label class="col-sm-2 col-form-label">Deduction (Out)</label>
+                        <div class="col-sm-5 row" style="margin-left: 0px;">
+                        <%@LW_HField_er_qty_o@@class="form-control form-control-sm"@%>
+                        </div>
+  
+                        <div class="col-sm-5 row" style="margin-left: 10px;">
+                        <%@LW_HField_er_amt_o@@class="form-control form-control-sm"@%>
+                        </div>
+                    </div>
+
+                    <div class="my-2 row">
+                        <label class="col-sm-2 col-form-label">Balance</label>
+                        <div class="col-sm-5 row" style="margin-left: 0px;">
+                            <%@LW_HField_er_qty_q +er_qty_i -er_qty_o@@class="form-control form-control-sm"@%>
+                        </div>
+  
+                        <div class="col-sm-5 row" style="margin-left: 10px;">
+                            <%@LW_HField_er_amt_q +er_amt_i -er_amt_o@@class="form-control form-control-sm"@%>
+                        </div>
+                    </div>
+                
+        </div>
+</form>
+                <div class="container" style="background-color:#ffffff;">
+                    <div class="example" id="iframe">
+                        <!--<script>$('#iframe').load(('..%LWeb_ifi%').replace(/\s/g,'%20'));</script> -->
+                        <iframe style="border: none; overflow: visible;" width="100%" height="480px" src="..%LWeb_ifi%" id="form_head"></iframe>
+                    </div>
+                </div>
+ %@LW_onload@%
+
+                        
+ 
+<!-- General JS Scripts -->
+<script src="..%LWeb_dirMenu%//assets/js/jquery-3.3.1.min.js"></script>
+<script src="..%LWeb_dirMenu%//assets/bootstrap-5.2.0/dist/js/bootstrap.min.js"></script>
+<script src="..%LWeb_dirMenu%//assets/popper.min.js"></script>
+<script src="..%LWeb_dirMenu%//assets/jquery.nicescroll.min.js"></script>
+<script src="..%LWeb_dirMenu%//assets/moment.min.js"></script>
+<script src="..%LWeb_dirMenu%//assets/js/stisla.js"></script>
+
+<!-- JS Libraies -->
+
+<!-- Page Specific JS File -->
+
+<!-- Template JS File -->
+<script src="..%LWeb_dirMenu%//assets/js/scripts.js"></script>
+<script src="..%LWeb_dirMenu%//assets/js/custom.js"></script>
+
+</body>
+</html>

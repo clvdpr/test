@@ -1,0 +1,8 @@
+<html>
+  <body>
+    <script>
+      window.alert('Your leave submission has been sent to your line manager.');
+      document.location = 'lnweb?PSW210%rmid%&s_Rtype=L';
+    </script>
+  </body>
+</html>

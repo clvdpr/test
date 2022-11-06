@@ -1,0 +1,110 @@
+<html>
+  <head>
+    <!-- CORE CSS FRAMEWORK START -->
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.12.1/css/dataTables.bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/fixedheader/3.2.4/css/fixedHeader.bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/responsive/2.3.0/css/responsive.bootstrap.min.css" />
+    <!-- CORE CSS FRAMEWORK END -->
+
+    <!-- CORE JS FRAMEWORK START -->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script type="text/javascript" src="https://cdn.datatables.net/1.12.1/js/jquery.dataTables.min.js"></script>
+    <script type="text/javascript" src="https://cdn.datatables.net/1.12.1/js/dataTables.bootstrap.min.js"></script>
+    <script type="text/javascript" src="https://cdn.datatables.net/fixedheader/3.2.4/js/dataTables.fixedHeader.min.js"></script>
+    <script type="text/javascript" src="https://cdn.datatables.net/responsive/2.3.0/js/dataTables.responsive.min.js"></script>
+    <script type="text/javascript" src="https://cdn.datatables.net/responsive/2.3.0/js/responsive.bootstrap.min.js"></script>
+    <!-- CORE JS FRAMEWORK END -->
+
+    <!-- TABLE STYLE  -->
+    <link href="%LWeb_dirMenu%/assets/press/tablestyle.css" type="text/css" rel="stylesheet" media="screen" />
+    <!-- TABLE STYLE -->
+
+    <!-- TABLE SCRIPT -->
+    <script type="text/javascript" src="%LWeb_dirMenu%/assets/press/tablescript.js"></script>
+    <!-- TABLE SCRIPT -->
+
+    <!-- /* Tb_print color function */ -->
+    <style>
+      body {
+        dir: ltr !important;
+        align: left !important;
+      }
+      /* Header Table  */
+      .display > thead > tr > th {
+        background-color: %LW_color_CH_bg% !important;
+        color: %LW_color_re_tx%;
+      }
+
+      /* Background Body  */
+      .bodylw,
+      .tabs .tab a.active,
+      .tabs .indicator,
+      .input-field.col:read-only,
+      .input-field:read-only {
+        background: %LW_color_bg% !important;
+        color: %LW_color_tx% !important;
+      }
+
+      /* Background Header  */
+      .headerlw,
+      .pagehead-bg {
+        background: %LW_color_hd_bg% !important;
+        color: %LW_color_hd_tx% !important;
+        border-color: #6ealcc !important;
+      }
+
+      /* Button Color  */
+      .buttonlw {
+        background: %LW_color_hd_bg% !important;
+        color: %LW_color_hd_tx% !important;
+      }
+
+      /* ==============================TABLE============================ */
+
+      /* Header Table  */
+      .display > thead > tr > th {
+        background: %LW_color_ch_bg% !important;
+        color: %LW_color_ch_tx%;
+      }
+
+      tr.odd {
+        background: %LW_color_ro_bg% !important;
+        color: %LW_color_ro_tx% !important;
+      }
+
+      tr.even {
+        background: %LW_color_re_bg% !important;
+        color: %LW_color_re_tx% !important;
+      }
+
+      html {
+        background: %LW_color_bg% !important;
+        color: %LW_color_bg% !important;
+      }
+
+      .pagination > .active > a {
+        background: %LW_color_ch_bg% !important;
+        color: %LW_color_ch_tx% !important;
+      }
+
+      .pagination > li > a {
+        color: %LW_color_ch_bg% !important;
+      }
+    </style>
+    <!-- /* Tb_print color function */ -->
+  </head>
+  <!-- HEAD END-->
+
+  <table onClick="det_upload()" selected="det_upload()" id="example" class="ui celled table display nowrap" style="width: 100%; margin-top: 0px !important">
+    <thead>
+      <tr class="reset-style">
+        <th title="rq_noind">No.</th>
+        <th title="em_BankCd">Bank CD</th>
+        <th title="em_bankDs">Bank Description</th>
+        <th title="em_bankAc">Account No</th>
+        <th title="em_bankNa">Account Name</th>
+        <th title="em_BankDa">Description a</th>
+        <th title="em_BankDb">Description b</th>
+      </tr>
+    </thead>
